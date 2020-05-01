@@ -12,6 +12,7 @@ web/.htaccess
 
 # Logs
 *.log
+web/app/themes/estateagency/ressources/yarn.*
 
 # Dotenv
 .env
@@ -20,6 +21,7 @@ web/.htaccess
 
 # Dependencies
 /vendor
+/web/app/themes/estateagency/ressources/node_modules
 
 # WP-CLI
 wp-cli.local.yml
