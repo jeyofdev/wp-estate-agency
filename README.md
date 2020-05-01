@@ -19,6 +19,7 @@ For this theme, I use the [Azenta](https://colorlib.com/wp/template/azenta/) tem
 ```sh
 $ cd web/app/themes/estateagency/ressources
 $ yarn install
+$ composer install
 ```
 
 

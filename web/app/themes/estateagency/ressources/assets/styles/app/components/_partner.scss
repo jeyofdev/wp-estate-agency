@@ -1,0 +1,37 @@
+/* ---------------------------
+    Partner Logo Carousel
+--------------------------- */
+
+.contact-partner .partner-carousel {
+    border-top: none;
+}
+
+.partner-carousel {
+    padding: 27px 0;
+    border-top: 1px solid $theme-lighten-300;
+
+    .owl-carousel .owl-item img {
+        width: auto;
+    }
+}
+
+.partner-carousel .partner-logo {
+    min-height: 80px;
+    display: table;
+
+    img {
+        opacity: .6;
+        filter: grayscale(1);
+        transition: all .3s;
+    }
+
+    &:hover img {
+        opacity: 1;
+        filter: grayscale(0);
+    }
+
+    .partner-logo-tablecell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

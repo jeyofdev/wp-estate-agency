@@ -1,0 +1,15 @@
+/* -------------------------
+    Latest Blog Section
+------------------------- */
+
+.blog-section.latest-blog {
+    padding-bottom: 60px;
+
+    .section-title {
+        margin-bottom: 50px;
+    }
+
+    .single-blog-item:hover .sb-pic {
+        box-shadow: 0 3px 15px rgba(12, 35, 34, .2);
+    }
+}

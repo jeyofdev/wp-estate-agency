@@ -1,0 +1,161 @@
+/* -----------------------
+    Footer
+----------------------- */
+
+.footer-text {
+    padding-top: 70px;
+    padding-bottom: 35px;
+}
+
+.footer-text .footer-logo {
+    margin-bottom: 30px;
+
+    .logo {
+        margin-bottom: 34px;
+
+        a {
+            display: inline-block;
+        }
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+}
+
+.footer-text .footer-logo .newslatter-form {
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 46px;
+        border: none;
+        font-size: 16px;
+        color: $theme-lighten-500;
+        background: rgba(255, 255, 255, .2);
+        padding-left: 20px;
+
+        &::-webkit-input-placeholder {
+            color: $theme-lighten-500;
+        }
+
+        &::-moz-placeholder {
+            color: $theme-lighten-500;
+        }
+
+        &:-ms-input-placeholder {
+            color: $theme-lighten-500;
+        }
+
+        &::-ms-input-placeholder {
+            color: $theme-lighten-500;
+        }
+
+        &::placeholder {
+            color: $theme-lighten-500;
+        }
+    }
+}
+
+.footer-text .footer-logo .newslatter-form button {
+    background: $theme-primary;
+    border: 1px solid $theme-primary;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    display: inline-block;
+
+    i {
+        font-size: 18px;
+        color: $theme-light;
+    }
+}
+
+.footer-text .footer-widget {
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    h4 {
+        font-size: 22px;
+        color: $theme-light;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        width: 50%;
+        float: left;
+
+        li {
+            list-style: none;
+
+            i {
+                color: $theme-primary;
+            }
+
+            a {
+                font-size: 14px;
+                color: $theme-lighten-500;
+                line-height: 36px;
+            }
+        }
+    }
+}
+
+.footer-text .footer-widget ul.social {
+    width: 100%;
+
+    li {
+        position: relative;
+        padding-left: 28px;
+
+        i {
+            color: $theme-lighten-500;
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        a {
+            line-height: 40px;
+        }
+    }
+}
+
+.footer-text .footer-widget ul.contact-option {
+    width: 100%;
+
+    li {
+        font-size: 14px;
+        color: $theme-lighten-500;
+        line-height: 36px;
+
+        i {
+            margin-right: 4px;
+        }
+    }
+}
+
+.copyright-text {
+    text-align: center;
+    padding: 13px 0 15px;
+    border-top: 1px solid #363636;
+
+    p {
+        font-size: 14px;
+        color: $theme-secondary;
+        margin-bottom: 0;
+
+        a {
+            color: $theme-primary;
+        }
+
+        i {
+            color: $theme-info;
+        }
+    }
+}

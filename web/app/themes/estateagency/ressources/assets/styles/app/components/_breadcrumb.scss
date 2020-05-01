@@ -1,0 +1,48 @@
+/* -----------------------
+    Breadcrumb
+----------------------- */
+
+.breadcrumb-section {
+    background: $theme-lighten-100;
+    padding: 50px 0 52px;
+
+    &.contact-page {
+        background: $theme-light;
+    }
+}
+
+.breadcrumb-text {
+    text-align: center;
+
+    h2 {
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+}
+
+.breadcrumb-text .breadcrumb-option a {
+    display: inline-block;
+    font-size: 18px;
+    color: $theme-darken;
+    margin-right: 20px;
+    position: relative;
+
+    i {
+        color: $theme-primary;
+    }
+
+    &:after {
+        position: absolute;
+        right: -14px;
+        top: 1px;
+        content: "";
+        font-family: "FontAwesome";
+    }
+}
+
+.breadcrumb-text .breadcrumb-option span {
+    display: inline-block;
+    font-size: 18px;
+    color: $theme-lighten-500;
+}

@@ -1,0 +1,168 @@
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f2f4f5 !default;
+$gray-200: #ebebeb !default;
+$gray-300: #e5e5e5 !default;
+$gray-400: #959595 !default;
+$gray-500: #aaaab3 !default;
+$gray-600: #707079 !default;
+$gray-700: #495057 !default;
+$gray-800: #19191a !default;
+$gray-900: #111 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+    (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+    ),
+    $grays
+);
+
+$blue:        #007bff !default;
+$indigo:      #6610f2 !default;
+$purple:      #6f42c1 !default;
+$pink:        #e83e8c !default;
+$red:         #dc3545 !default;
+$orange:      #e1481f !default;
+$yellow:      #ffc107 !default;
+$green:       #28a745 !default;
+$teal:        #20c997 !default;
+$cyan:        #2cbdb8 !default;
+$facebook:    #3973e8;
+$instagram:   #f74d91;
+$twitter:     #29bfe8;
+
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+    (
+        "blue":       $blue,
+        "indigo":     $indigo,
+        "purple":     $purple,
+        "pink":       $pink,
+        "red":        $red,
+        "orange":     $orange,
+        "yellow":     $yellow,
+        "green":      $green,
+        "teal":       $teal,
+        "cyan":       $cyan,
+        "white":      $white,
+        "gray":       $gray-600,
+        "gray-dark":  $gray-800
+    ),
+    $colors
+);
+
+$primary:       $cyan !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $orange !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $white !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+    (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+    ),
+    $theme-colors
+);
+
+$theme-primary:             $primary !default;
+$theme-secondary:           $secondary !default;
+$theme-info:                $info !default;
+
+$theme-light:               $white !default;
+$theme-dark:                $black !default;
+
+$theme-lighten:             $gray-200 !default;
+$theme-darken:              $gray-800 !default;
+
+$theme-lighten-100:         $gray-100 !default;
+$theme-lighten-300:         $gray-300 !default;
+$theme-lighten-400:         $gray-400 !default;
+$theme-lighten-500:         $gray-500 !default;
+$theme-darken-900:          $gray-900 !default;
+
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+$font-family-theme:           "Poppins", sans-serif !default;
+// stylelint-enable value-keyword-case
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$h1-font-size:                $font-size-base * 4.375 !default;
+$h2-font-size:                $font-size-base * 2.25 !default;
+$h3-font-size:                $font-size-base * 1.875 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.125 !default;
+$h6-font-size:                $font-size-base !default;
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 479px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1170px
+) !default;

@@ -1,0 +1,219 @@
+/* --------------------
+    Nav Responsive
+--------------------- */
+
+@include media-breakpoint-down(md) {
+    .offcanvas-menu-overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, .7);
+        z-index: 98;
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+        transition: .3s;
+
+        &.active {
+            visibility: visible;
+        }
+    }
+
+    .canvas-open {
+        position: absolute;
+        right: 40px;
+        top: 34px;
+        font-size: 22px;
+        width: 30px;
+        height: 30px;
+        color: $theme-darken;
+        border: 1px solid $theme-darken;
+        border-radius: 2px;
+        line-height: 33px;
+        text-align: center;
+        z-index: 100;
+        display: block;
+        cursor: pointer;
+    }
+
+    .offcanvas-menu-wrapper {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        z-index: 999;
+        background: $theme-light;
+        text-align: center;
+        overflow-y: auto;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s;
+        padding: 50px 30px 30px 30px;
+        display: block;
+
+        &.show-offcanvas-menu-wrapper {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .canvas-close {
+            font-size: 22px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid $theme-darken;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+
+        .language-bar {
+            margin-bottom: 30px;
+        }
+    }
+
+    .offcanvas-menu-wrapper .language-bar .language-option {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding: 18px 0 19px;
+
+        img {
+            margin-right: 2px;
+        }
+
+        span {
+            font-size: 14px;
+            color: $theme-darken;
+            display: inline-block;
+            margin-right: 2px;
+        }
+
+        i {
+            color: $theme-darken;
+            font-size: 13px;
+        }
+    }
+
+    .offcanvas-menu-wrapper .language-bar .language-option:hover .flag-dropdown {
+        top: 45px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .offcanvas-menu-wrapper .language-bar .language-option .flag-dropdown {
+        position: absolute;
+        right: 0;
+        top: 65px;
+        background: $theme-light;
+        min-width: 130px;
+        transition: all .3s;
+        opacity: 0;
+        visibility: hidden;
+        border: 1px solid $theme-lighten-300;
+        z-index: 99;
+    }
+
+    .offcanvas-menu-wrapper .language-bar .language-option .flag-dropdown ul li {
+        list-style: none;
+
+        a {
+            font-size: 14px;
+            color: $theme-darken;
+            display: block;
+            padding: 10px 15px;
+            text-align: left;
+            transition: all .3s;
+
+            &:hover {
+                color: $theme-primary;
+            }
+        }
+    }
+
+    .offcanvas-menu-wrapper .language-bar .property-btn .property-sub {
+        display: inline-block;
+        background: $theme-primary;
+        font-size: 14px;
+        color: $theme-light;
+        padding: 12px 30px;
+    }
+
+    .offcanvas-menu-wrapper .main-menu {
+        text-align: left;
+
+        ul li {
+            list-style: none;
+            border-bottom: 1px solid $theme-lighten-300;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                font-size: 14px;
+                color: $theme-darken;
+                font-weight: 500;
+                text-transform: uppercase;
+                display: block;
+                padding: 6px 0;
+                transition: all .3s;
+
+                &:hover {
+                    color: $theme-primary;
+                }
+            }
+        }
+    }
+
+    .offcanvas-menu-wrapper .nav-logo-right {
+        text-align: right;
+
+        ul li {
+            list-style: none;
+            padding: 25px 0 25px;
+
+            i {
+                float: left;
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                text-align: center;
+                border: 2px solid $theme-lighten-300;
+                line-height: 45px;
+                color: $theme-primary;
+                font-size: 20px;
+                margin-right: 14px;
+            }
+        }
+    }
+
+    .offcanvas-menu-wrapper .nav-logo-right ul li .info-text {
+        overflow: hidden;
+        text-align: left;
+
+        span {
+            font-size: 14px;
+            color: $theme-secondary;
+            line-height: 15px;
+            display: inline-block;
+        }
+
+        p {
+            color: $theme-darken;
+            margin-bottom: 0;
+            line-height: 18px;
+            margin-top: 4px;
+
+            span {
+                color: $theme-secondary;
+                font-size: 16px;
+            }
+        }
+    }
+}

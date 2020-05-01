@@ -1,0 +1,137 @@
+/* -----------------------
+    Hero
+----------------------- */
+
+.hero-section {
+    position: relative;
+}
+
+.single-hero-item {
+    padding-top: 125px;
+    height: 750px;
+}
+
+.single-hero-item .hero-text {
+    background: rgba(28, 28, 28, .6);
+    padding: 48px 0 44px;
+    text-align: center;
+
+    .room-location {
+        font-size: 14px;
+        color: $theme-lighten-500;
+
+        i {
+            color: $theme-primary;
+        }
+    }
+
+    h2 {
+        font-size: 44px;
+        color: $theme-light;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+.single-hero-item .hero-text .room-price {
+    margin-bottom: 45px;
+
+    span {
+        font-size: 14px;
+        color: $theme-lighten-500;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    p {
+        color: $theme-light;
+        font-size: 22px;
+        margin-bottom: 0;
+        display: inline-block;
+        font-weight: 600;
+    }
+}
+
+.single-hero-item .hero-text .room-features li {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    margin-right: 65px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    i {
+        font-size: 24px;
+        color: $theme-primary;
+    }
+
+    p {
+        font-size: 14px;
+        color: $theme-light;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+}
+
+.thumbs {
+    position: absolute !important;
+    left: 50%;
+    bottom: 70px;
+    max-width: 503px;
+    background: $theme-light;
+    border: 3px solid $theme-light;
+    height: 100px;
+    transform: translateX(-251.3px);
+
+    .item img {
+        width: auto;
+        cursor: pointer;
+    }
+}
+
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-down(sm) {
+    .single-hero-item .hero-text .room-features li {
+        margin-right: 45px;
+    }
+
+    .thumbs {
+        max-width: 460px;
+        height: 92px;
+        transform: translateX(-230px);
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .single-hero-item .hero-text .room-features li {
+        margin-right: 13px;
+        margin-bottom: 10px;
+    }
+
+    .thumbs {
+        max-width: 300px;
+        height: 89px;
+        transform: translateX(-150px);
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .single-hero-item {
+        padding-top: 125px;
+        height: auto;
+        padding-bottom: 100px;
+
+        .hero-text h2 {
+            font-size: 38px;
+        }
+    }
+
+    .thumbnail-pic {
+        display: none;
+    }
+}

@@ -1,0 +1,96 @@
+/* -------------------------------
+    Property Single Header
+-------------------------------- */
+
+.pd-hero-section {
+    height: 500px;
+    padding-top: 100px;
+}
+
+.pd-hero-text {
+    background: rgba(28, 28, 28, .6);
+    padding: 35px 0 32px;
+    text-align: center;
+
+    .room-location {
+        font-size: 14px;
+        color: $theme-lighten-500;
+
+        i {
+            color: $theme-primary;
+        }
+    }
+
+    h2 {
+        font-size: 44px;
+        color: $theme-light;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+.pd-hero-text .room-price {
+    margin-bottom: 34px;
+
+    span {
+        font-size: 14px;
+        color: $theme-lighten-500;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    p {
+        color: $theme-light;
+        font-size: 22px;
+        margin-bottom: 0;
+        display: inline-block;
+        font-weight: 600;
+    }
+}
+
+.pd-hero-text .room-features li {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    margin-right: 65px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    i {
+        font-size: 24px;
+        color: $theme-primary;
+    }
+
+    p {
+        font-size: 14px;
+        color: $theme-light;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+}
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-down(sm) {
+    .pd-hero-text .room-features li {
+        margin-right: 45px;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .pd-hero-section {
+        padding-top: 70px;
+    }
+
+    .pd-hero-text .room-features li {
+        margin-right: 16px;
+        margin-bottom: 10px;
+    }
+
+    .pd-hero-text h2 {
+        font-size: 25px;
+    }
+}

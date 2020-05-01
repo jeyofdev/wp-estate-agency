@@ -1,0 +1,124 @@
+/* -------------------------------
+    Property Single Details
+-------------------------------- */
+
+.pd-details-text .pd-details-tab {
+    margin-bottom: 55px;
+}
+
+.pd-details-text .pd-details-tab .tab-item ul {
+    background: $theme-lighten-100;
+    border: 1px solid $theme-lighten;
+
+    li a {
+        font-size: 16px;
+        color: $theme-secondary;
+        display: inline-block;
+        padding: 12px 23px;
+
+        &.active {
+            color: $theme-light;
+            background: $theme-primary;
+        }
+    }
+}
+
+.pd-details-text .pd-details-tab .tab-content .property-more-table {
+    padding-left: 30px;
+    border: 1px solid $theme-lighten;
+    border-top: none;
+    padding-bottom: 6px;
+
+    table tbody tr {
+        border-bottom: 1px solid $theme-lighten;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        td {
+            font-size: 16px;
+            color: $theme-secondary;
+            padding: 8px 0;
+
+            &.pt-name {
+                width: 36%;
+            }
+
+            &.p-value {
+                color: $theme-darken;
+            }
+        }
+    }
+
+    .left-table {
+        width: 48%;
+        float: left;
+        margin-right: 25px;
+    }
+
+    .right-table {
+        width: 49%;
+    }
+}
+
+.pd-details-text .pd-details-tab .tab-content {
+    .pd-table-desc {
+        border: 1px solid $theme-lighten;
+        border-top: none;
+        padding: 25px;
+    }
+
+    .pd-table-amenities {
+        border: 1px solid $theme-lighten;
+        border-top: none;
+        padding: 25px;
+    }
+}
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-only(lg) {
+    .pd-details-text .pd-details-tab .tab-content .property-more-table {
+        .left-table {
+            margin-right: 28px;
+        }
+
+        .right-table {
+            width: 48%;
+        }
+
+        table tbody tr td.p-value {
+            padding-left: 20px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .pd-details-text .pd-details-tab .tab-content .property-more-table table tbody tr td.p-value {
+        padding-left: 20px;
+    }
+}
+
+@include media-breakpoint-only(md) {
+    .pd-details-text .pd-details-tab .tab-content .property-more-table .right-table {
+        width: 48%;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .pd-details-text .pd-details-tab .tab-content .property-more-table {
+        .left-table {
+            width: 100%;
+        }
+
+        .right-table {
+            width: 100%;
+        }
+
+        table tbody tr:last-child {
+            border-bottom: 1px solid $theme-lighten;
+        }
+    }
+}

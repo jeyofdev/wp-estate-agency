@@ -1,0 +1,79 @@
+/* -------------------------------
+    Single Post Header
+-------------------------------- */
+
+.blog-details-hero {
+    height: 400px;
+    padding-top: 95px;
+}
+
+.bd-hero-text {
+    text-align: center;
+
+    span {
+        display: inline-block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        padding: 5px 14px;
+        background: $theme-primary;
+        color: $theme-light;
+    }
+
+    h2 {
+        font-size: 46px;
+        font-weight: 600;
+        color: $theme-light;
+        line-height: 60px;
+        margin-top: 30px;
+        margin-bottom: 18px;
+    }
+
+    ul li {
+        display: inline-block;
+        list-style: none;
+        font-size: 16px;
+        color: $theme-lighten-500;
+        margin-right: 25px;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            right: -16px;
+            top: 0;
+            content: "|";
+            color: $theme-lighten-500;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        i {
+            color: $theme-primary;
+        }
+    }
+}
+
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-down(sm) {
+    .bd-hero-text h2 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .bd-hero-text h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+}

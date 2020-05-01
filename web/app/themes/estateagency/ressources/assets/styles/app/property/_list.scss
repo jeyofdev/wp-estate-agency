@@ -1,0 +1,130 @@
+/* -----------------------
+    Property List
+----------------------- */
+
+.property-section h4.property-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 34px;
+}
+
+.property-list .single-property-item {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $theme-lighten-300;
+    margin-bottom: 40px;
+
+    &:last-child {
+        padding-bottom: 0;
+        border: none;
+    }
+}
+
+.property-list .single-property-item .property-pic img {
+    min-width: 100%;
+    height: 280px;
+}
+
+.property-list .single-property-item .property-text {
+    .s-text {
+        font-size: 10px;
+        color: $theme-light;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: $theme-primary;
+        display: inline-block;
+        padding: 3px 20px;
+    }
+
+    h5.r-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        margin-bottom: 18px;
+    }
+}
+
+.property-list .single-property-item .property-text .room-price {
+    margin-bottom: 12px;
+
+    span {
+        font-size: 14px;
+        color: $theme-secondary;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    h5 {
+        color: $theme-primary;
+        font-weight: 600;
+        display: inline-block;
+    }
+}
+
+.property-list .single-property-item .property-text .properties-location {
+    font-size: 14px;
+    color: $theme-darken;
+    margin-bottom: 15px;
+
+    i {
+        color: $theme-primary;
+        margin-right: 4px;
+    }
+}
+
+.property-list .single-property-item .property-text .room-features li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 45px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    i {
+        font-size: 24px;
+        color: $theme-primary;
+    }
+
+    p {
+        font-size: 14px;
+        color: $theme-darken;
+        margin-bottom: 0;
+        margin-top: 4px;
+    }
+}
+
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-only(md) {
+    .property-list .single-property-item .property-pic img {
+        height: auto;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .properties-title {
+        margin-bottom: 30px;
+    }
+
+    .property-list .single-property-item .property-pic img {
+        height: auto;
+    }
+
+    .single-property-item .property-text {
+        padding-top: 30px;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .single-property-item .property-text .room-features li {
+        margin-right: 16px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,65 @@
+/* -------------------------------
+    Single Post Social & Tags
+-------------------------------- */
+
+.tag-share-option {
+    border-top: 1px solid $theme-lighten;
+    padding-top: 35px;
+    margin-bottom: 100px;
+}
+
+.tag-share-option .tags {
+    float: left;
+
+    a {
+        display: inline-block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 5px 14px;
+        background: $theme-primary;
+        color: $theme-light;
+        margin-right: 14px;
+
+        &:last-child {
+            background: $theme-lighten-300;
+            color: $theme-secondary;
+        }
+    }
+}
+
+.tag-share-option .social-share {
+    float: right;
+
+    span {
+        display: inline-block;
+        font-size: 16px;
+        color: $theme-darken;
+    }
+
+    a {
+        display: inline-block;
+        font-size: 16px;
+        color: $theme-lighten-500;
+        transition: all .3s;
+        margin-left: 25px;
+
+        &:hover {
+            color: $theme-primary;
+        }
+    }
+}
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-down(sm) {
+    .tag-share-option .tags {
+        float: none;
+        margin-bottom: 15px;
+    }
+
+    .tag-share-option .social-share {
+        float: none;
+    }
+}

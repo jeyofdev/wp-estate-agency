@@ -1,0 +1,63 @@
+/* -----------------------
+    Testimonial Slider
+----------------------- */
+
+.testimonial-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.testimonial-section .section-title {
+    margin-bottom: 42px;
+
+    h2 {
+        color: $theme-light;
+        margin-top: 0;
+    }
+}
+
+.testimonial-slider.owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 36px;
+
+    button {
+        display: inline-block;
+        width: 20px;
+        height: 4px;
+        background: rgba(255, 255, 255, .2);
+        margin-right: 10px;
+
+        &.owl-dot.active {
+            background: $theme-primary;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.testimonial-slider .ts-item {
+    text-align: center;
+
+    p {
+        font-size: 20px;
+        color: $theme-light;
+        line-height: 32px;
+        margin-bottom: 30px;
+    }
+
+    .ti-author h5 {
+        font-size: 20px;
+        font-weight: 600;
+        color: $theme-primary;
+        line-height: 30px;
+    }
+
+    .ti-author span {
+        font-size: 12px;
+        color: $theme-secondary;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}

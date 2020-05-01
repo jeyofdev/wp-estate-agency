@@ -1,0 +1,207 @@
+/* -------------------------------
+    Property Sidebar
+-------------------------------- */
+
+.property-sidebar h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 34px;
+}
+
+.property-sidebar .sidebar-btn {
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    .bt-item {
+        width: 50%;
+        float: left;
+
+        input[type=radio] {
+            display: none;
+
+            &:checked + label {
+                background: $theme-lighten;
+                color: $theme-secondary;
+            }
+        }
+    }
+
+    label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        background: $theme-primary;
+        color: $theme-light;
+        text-align: center;
+        cursor: pointer;
+        padding: 14px 0 12px;
+    }
+}
+
+.property-sidebar .sidebar-search {
+    margin-bottom: 75px;
+
+    .nice-select {
+        width: 100%;
+        height: 50px;
+        background: $theme-lighten-100;
+        border-radius: 0;
+        border: 1px solid $theme-lighten;
+        line-height: 46px;
+        margin-bottom: 20px;
+
+        &:after {
+            border-bottom: 2px solid $theme-lighten-500;
+            border-right: 2px solid $theme-lighten-500;
+            height: 7px;
+            right: 20px;
+            margin-top: -5px;
+            width: 7px;
+        }
+    }
+
+    span {
+        font-size: 16px;
+        color: #707079;
+    }
+}
+
+.property-sidebar .sidebar-search .nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+    width: 100%;
+    border-radius: 0;
+    margin-top: 0;
+}
+
+.property-sidebar .sidebar-search .room-size-range {
+    width: 100%;
+    margin-bottom: 17px;
+
+    .price-text {
+        margin-bottom: 12px;
+
+        label {
+            display: inline-block;
+            font-size: 14px;
+            color: $theme-secondary;
+            margin-bottom: 0;
+        }
+
+        input {
+            display: inline-block;
+            width: 165px;
+            font-size: 16px;
+            color: $theme-darken;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+    }
+
+    .ui-widget.ui-widget-content {
+        background: $theme-lighten-300;
+        border-radius: 0;
+    }
+}
+
+.property-sidebar .sidebar-search .price-range-wrap {
+    width: 100%;
+    margin-bottom: 35px;
+
+    .price-text {
+        margin-bottom: 9px;
+
+        label {
+            display: inline-block;
+            font-size: 14px;
+            color: $theme-secondary;
+            margin-bottom: 0;
+        }
+
+        input {
+            display: inline-block;
+            width: 165px;
+            font-size: 16px;
+            color: $theme-darken;
+            border: none;
+            background: transparent;
+        }
+    }
+
+    .ui-widget.ui-widget-content {
+        background: $theme-lighten-300;
+        height: 4px;
+        border: none;
+        border-radius: 0;
+    }
+}
+
+.property-sidebar .sidebar-search button.search-btn {
+    width: 100%;
+    font-size: 16px;
+    height: 50px;
+    background: $theme-primary;
+    color: $theme-light;
+    border: none;
+    border: 1px solid $theme-primary;
+    cursor: pointer;
+}
+
+.property-sidebar .best-agents h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 34px;
+}
+
+.property-sidebar .best-agents .ba-item {
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: block;
+
+    .ba-pic {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .ba-text {
+        overflow: hidden;
+
+        h5 {
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        span {
+            font-size: 14px;
+            display: inline-block;
+            color: $theme-lighten-500;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 14px;
+            color: $theme-primary;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-down(md) {
+    .property-details-section .property-sidebar {
+        padding-top: 30px;
+    }
+}
+
+@include media-breakpoint-only(md) {
+    .property-sidebar {
+        margin-bottom: 40px;
+    }
+}

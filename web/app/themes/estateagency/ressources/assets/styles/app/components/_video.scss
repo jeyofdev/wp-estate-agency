@@ -1,0 +1,38 @@
+/* -----------------------
+    Video Section
+----------------------- */
+
+.video-section {
+    padding: 150px 0;
+}
+
+.video-text {
+    text-align: center;
+
+    .play-btn {
+        height: 70px;
+        width: 70px;
+        background: $theme-primary;
+        display: inline-block;
+        border-radius: 50%;
+        font-size: 25px;
+        color: $theme-light;
+        text-align: center;
+        line-height: 73px;
+    }
+
+    h4 {
+        color: $theme-light;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 13px;
+        margin-top: 35px;
+    }
+
+    h2 {
+        font-size: 44px;
+        color: $theme-light;
+        font-weight: 600;
+    }
+}

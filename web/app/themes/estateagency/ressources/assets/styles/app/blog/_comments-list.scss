@@ -1,0 +1,125 @@
+/* -------------------
+    Comments list
+-------------------- */
+
+.comment-option {
+    margin-bottom: 60px;
+
+    h4 {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+}
+
+.comment-option .single-comment-item {
+    margin-bottom: 30px;
+
+    &.first-comment .sc-text {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: -21px;
+            top: 0;
+            width: 1px;
+            height: 257px;
+            background: $theme-lighten-300;
+            content: "";
+        }
+    }
+
+    &.second-comment .sc-text {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: -21px;
+            top: 0;
+            width: 1px;
+            height: 97px;
+            background: $theme-lighten-300;
+            content: "";
+        }
+    }
+
+    .reply-comment {
+        padding-left: 38px;
+        margin-bottom: 50px;
+    }
+
+    .sc-author {
+        float: left;
+        margin-right: 50px;
+
+        img {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.comment-option .single-comment-item .sc-text {
+    display: table;
+
+    span {
+        font-size: 12px;
+        color: $theme-primary;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 600;
+    }
+
+    h5 {
+        font-weight: 600;
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+
+    .comment-btn {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: inline-block;
+        border: 1px solid $theme-lighten-300;
+        color: $theme-secondary;
+        padding: 5px 28px 5px 24px;
+        margin-right: 5px;
+        transition: all .3s;
+
+        &:hover {
+            border-color: $theme-primary;
+            background: $theme-primary;
+            color: $theme-light;
+        }
+    }
+}
+
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-only(md) {
+    .comment-option .single-comment-item.first-comment .sc-text:before {
+        height: 185px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .comment-option .single-comment-item.first-comment .sc-text:before {
+        height: 185px;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .comment-option .single-comment-item .sc-text .comment-btn {
+        margin-bottom: 5px;
+    }
+
+    .comment-option .single-comment-item .sc-author {
+        float: none;
+    }
+}

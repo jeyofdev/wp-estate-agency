@@ -1,0 +1,51 @@
+/* ----------------------------
+	Property Single Map
+---------------------------- */
+
+.pd-details-text .property-map {
+    margin-bottom: 55px;
+
+    h4 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+}
+
+.pd-details-text .property-map .map-inside {
+    height: 320px;
+    position: relative;
+
+    iframe {
+        width: 100%;
+    }
+
+    .icon {
+        font-size: 18px;
+        color: $theme-light;
+        width: 34px;
+        height: 34px;
+        background: $theme-primary;
+        text-align: center;
+        line-height: 34px;
+        display: inline-block;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 140px;
+        transform: translateX(-17px);
+        z-index: 1;
+
+        &:after {
+            position: absolute;
+            left: -3px;
+            top: -3px;
+            width: 40px;
+            height: 40px;
+            background: rgba(44, 189, 184, .4);
+            content: "";
+            z-index: -1;
+            border-radius: 50%;
+        }
+    }
+}

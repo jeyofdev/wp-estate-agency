@@ -1,0 +1,90 @@
+/* -------------------------------
+    Property Single Content
+-------------------------------- */
+
+.property-details-section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.pd-details-text {
+    position: relative;
+
+    .pd-details-social {
+        position: absolute;
+        left: -65px;
+        top: 0;
+        max-width: 40px;
+
+        a {
+            display: inline-block;
+            font-size: 14px;
+            color: $theme-secondary;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid $theme-lighten;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transition: all .3s;
+
+            &:hover {
+                background: $theme-primary;
+                color: $theme-light;
+                border-color: $theme-primary;
+            }
+        }
+    }
+}
+
+.pd-details-text .property-more-pic {
+    margin-bottom: 55px;
+
+    .product-pic-zoom {
+        margin-bottom: 10px;
+
+        img {
+            min-width: 100%;
+        }
+    }
+}
+
+.pd-details-text .property-more-pic .product-thumbs .product-thumbs-track .pt {
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    .active {
+        border: 2px solid $theme-secondary;
+    }
+}
+
+.pd-details-text .pd-desc {
+    margin-bottom: 54px;
+
+    h4 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-down(md) {
+    .pd-details-text .pd-details-social {
+        position: relative;
+        left: 0;
+        top: 0;
+        max-width: initial;
+
+        a {
+            margin-right: 10px;
+        }
+    }
+}
