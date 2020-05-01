@@ -13,5 +13,10 @@ Config::define('SCRIPT_DEBUG', true);
 
 ini_set('display_errors', '1');
 
+// php errors handler
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
+
 // Enable plugin and theme updates and installation from the admin
 Config::define('DISALLOW_FILE_MODS', false);

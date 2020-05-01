@@ -1,0 +1,1 @@
+/Users/jeremygregoire/Sites/sites/wp-estate-agency/web/app/plugins/query-monitor/wp-content/db.php
