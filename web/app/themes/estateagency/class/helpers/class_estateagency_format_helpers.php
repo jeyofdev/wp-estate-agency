@@ -40,4 +40,14 @@ class EstateAgencyFormatHelpers
     
         return "(+{$prefix}) {$firstNum} {$othersNum}";
     }
+
+
+
+    /**
+     * Format date
+     */
+    public static function format_date () : string
+    {
+        return sprintf(__("%s", "estateagency"), get_the_date("jS M, Y"));
+    }
 }
