@@ -1,6 +1,28 @@
 <?php
 
 /**
+ * Set the reply link class of a comment
+ */
+function estateagency_comment_reply_class (string $class) : string
+{
+    $class = str_replace("comment-reply-link", "comment-btn", $class);
+    return $class;
+}
+
+
+
+/**
+ * Set the edit link class of a comment
+ */
+function estateagency_comment_edit_class (string $class) : string
+{
+    $class = str_replace("comment-edit-link", "comment-btn", $class);
+    return $class;
+}
+
+
+
+/**
  * Set the comment form fields
  */
 function estateagency_comment_form_fields (array $fields) : array
@@ -74,6 +96,8 @@ function no_comment_fields_custom_order($fields) {
 
 
 
+add_filter("comment_reply_link", "estateagency_comment_reply_class");
+add_filter("edit_comment_link", "estateagency_comment_edit_class");
 add_filter("comment_form_default_fields", "estateagency_comment_form_fields");
 add_filter("comment_form_defaults", "estateagency_comment_form");
 add_filter("comment_form_fields", "no_comment_fields_custom_order");

@@ -13,42 +13,8 @@
     }
 }
 
-.comment-option .single-comment-item {
-    margin-bottom: 30px;
-
-    &.first-comment .sc-text {
-        position: relative;
-
-        &:before {
-            position: absolute;
-            left: -21px;
-            top: 0;
-            width: 1px;
-            height: 257px;
-            background: $theme-lighten-300;
-            content: "";
-        }
-    }
-
-    &.second-comment .sc-text {
-        position: relative;
-
-        &:before {
-            position: absolute;
-            left: -21px;
-            top: 0;
-            width: 1px;
-            height: 97px;
-            background: $theme-lighten-300;
-            content: "";
-        }
-    }
-
-    .reply-comment {
-        padding-left: 38px;
-        margin-bottom: 50px;
-    }
-
+.comment-option .comment .single-comment-item,
+.comment-option .comment .reply {
     .sc-author {
         float: left;
         margin-right: 50px;
@@ -58,6 +24,36 @@
             width: 70px;
             border-radius: 50%;
         }
+    }
+}
+
+.comment-option .comment .single-comment-item {
+    margin-bottom: 30px;
+
+    .sc-text {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+
+        &:before {
+            position: absolute;
+            left: -21px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: $theme-lighten-300;
+            content: "";
+        }
+    }
+}
+
+.comment-option .comment .reply {
+    padding-left: 0;
+
+    .single-comment-item {
+        padding-left: 38px;
+        margin-bottom: 50px;
     }
 }
 
@@ -103,13 +99,13 @@
 /* ------------------------------ Responsive Media Styles ------------------------------ */
 
 @include media-breakpoint-only(md) {
-    .comment-option .single-comment-item.first-comment .sc-text:before {
+    .comment-option .single-comment-item.parent .sc-text:before {
         height: 185px;
     }
 }
 
 @include media-breakpoint-down(sm) {
-    .comment-option .single-comment-item.first-comment .sc-text:before {
+    .comment-option .single-comment-item.parent .sc-text:before {
         height: 185px;
     }
 }

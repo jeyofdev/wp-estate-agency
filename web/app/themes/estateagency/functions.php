@@ -10,5 +10,7 @@ require_once "inc/customize.php";
 require_once "class/helpers/class_estateagency_format_helpers.php";
 require_once "class/options/class_estateagency_option_agency.php";
 require_once "class/class_estateagency_title.php";
+require_once "class/walkers/class_estateagency_comment_walker.php";
+
 
 EstateAgencyOptionAgency::register();
