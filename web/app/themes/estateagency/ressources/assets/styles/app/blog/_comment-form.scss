@@ -2,47 +2,102 @@
     Comments Form
 -------------------------------- */
 
-.leave-comment {
+.comment-respond {
     margin-bottom: 74px;
 
     h4 {
         font-size: 22px;
         font-weight: 600;
         line-height: 32px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+
+        > a {
+            color: $theme-dark;
+
+            &:hover {
+                color: $theme-dark !important;
+            }
+        }
+
+        a:hover {
+            color: $theme-primary;
+            text-decoration: underline;
+        }
     }
 }
 
-.leave-comment form input {
+.comment-respond .comment-form {
+    grid-auto-flow: dense;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+
+    a:hover {
+        color: $theme-primary;
+        text-decoration: underline;
+    }
+
+    .form-group {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 0;
+    }
+
+    .full {
+        grid-column: 1 / -1;
+    }
+
+    .form-submit {
+        margin-bottom: 0;
+    }
+}
+
+.comment-respond form input {
     width: 100%;
     height: 50px;
     border: 1px solid $theme-lighten;
     padding-left: 20px;
     font-size: 16px;
     color: #aaaab3;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     transition: all .3s;
 
     &:focus {
         border-color: $theme-primary;
         color: #19191a;
     }
+
+    &.site-btn {
+        color: $theme-light;
+        width: auto;
+    }
 }
 
-.leave-comment form textarea {
+.comment-respond form textarea {
     width: 100%;
     border: 1px solid $theme-lighten;
     padding-left: 20px;
     padding-top: 8px;
-    height: 116px;
     font-size: 16px;
     color: $theme-lighten-500;
-    margin-bottom: 43px;
+    margin-bottom: 20px;
     transition: all .3s;
     resize: none;
 
     &:focus {
         border-color: $theme-primary;
         color: $theme-darken;
+    }
+}
+
+
+
+/* ------------------------------ Responsive Media Styles ------------------------------ */
+
+@include media-breakpoint-up(sm) {
+    .comment-respond .comment-form {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -60,6 +60,13 @@
                         </div>
                     </div>
                 </div>
+
+
+                <!-- Single post comment -->
+                <?php if (comments_open() || absint(get_comments_number())) : ?>
+                    <?php comments_template(); ?>
+                <?php endif; ?>
+                <!-- Single post comment end -->
             </div>
         </section>
         <!-- Single post content End -->
