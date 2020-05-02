@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 
-<h1>Hello wold !!!</h1>
+<!-- breadcrumb -->
+<?php get_template_part("template-parts/breadcrumb"); ?>
 
 
 <?php get_footer(); ?>
