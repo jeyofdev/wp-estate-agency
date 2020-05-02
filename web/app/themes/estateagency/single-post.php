@@ -29,6 +29,41 @@
         </section>
         <!--  Single post header end -->
 
+        <!-- Single post content -->
+        <section class="blog-details-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1 offset-lg-1">
+                        <div class="blog-details-social">
+                            <h6><?= __("Share:", "estateagency"); ?></h6>
+                            <div class="social-list">
+                                <?php get_template_part("template-parts/single-post/share"); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 blog-details-content">
+                        <?= the_content(); ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="tag-share-option">
+                            <div class="tags">
+                                <?php foreach (get_the_tags() as $tag) : ?>
+                                    <a href="#"><?= $tag->name; ?></a>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="social-share">
+                                <span><?= __("Share:", "estateagency"); ?></span>
+                                <?php get_template_part("template-parts/single-post/share"); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Single post content End -->
+
     <?php endwhile; ?>
 <?php endif; ?>
 

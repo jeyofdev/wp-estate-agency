@@ -21,7 +21,7 @@
         color: $theme-light;
         margin-right: 14px;
 
-        &:last-child {
+        &:nth-child(even) {
             background: $theme-lighten-300;
             color: $theme-secondary;
         }
