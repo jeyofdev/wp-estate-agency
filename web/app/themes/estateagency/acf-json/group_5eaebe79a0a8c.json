@@ -85,7 +85,14 @@
                     "type": "number",
                     "instructions": "",
                     "required": 1,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5eaec2917471b",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -122,8 +129,8 @@
         },
         {
             "key": "field_5eaebf6601162",
-            "label": "Rooms",
-            "name": "rooms",
+            "label": "specifications",
+            "name": "specifications",
             "type": "group",
             "instructions": "",
             "required": 1,
@@ -317,9 +324,9 @@
             "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_5eaebeb126244",
-                    "label": "Home area",
-                    "name": "home_area",
+                    "key": "field_5eaebeeb26245",
+                    "label": "Total area",
+                    "name": "total_area",
                     "type": "number",
                     "instructions": "",
                     "required": 1,
@@ -338,9 +345,9 @@
                     "step": ""
                 },
                 {
-                    "key": "field_5eaebeeb26245",
-                    "label": "Lot area",
-                    "name": "lot_area",
+                    "key": "field_5eaebeb126244",
+                    "label": "Home area",
+                    "name": "home_area",
                     "type": "number",
                     "instructions": "",
                     "required": 1,
@@ -399,5 +406,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1588512844
+    "modified": 1588525442
 }

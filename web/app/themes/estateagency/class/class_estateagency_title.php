@@ -43,8 +43,8 @@ class EstateAgencyTitle {
         } elseif (is_category()) {
             self::$pageTitle = single_cat_title(__("Articles of the category : ", "estateagency"));
         } elseif (is_tag()) {
-            self::$pageTitle = single_cat_title(__("Articles of the tag : ", "estateagency"));
-        }else {
+            self::$pageTitle = single_tag_title(__("Articles of the tag : ", "estateagency"));
+        } else {
             self::$pageTitle = get_the_title();
         }
     }

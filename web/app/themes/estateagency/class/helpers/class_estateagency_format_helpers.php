@@ -50,4 +50,17 @@ class EstateAgencyFormatHelpers
     {
         return sprintf(__("%s", "estateagency"), get_the_date("jS M, Y"));
     }
+
+
+
+    /**
+     * Format Price
+     *
+     * @return string|null
+     */
+    public static function format_price(): ?string
+    {
+        $price = number_format_i18n(get_sub_field("price"));
+        return $price;
+    }
 }
