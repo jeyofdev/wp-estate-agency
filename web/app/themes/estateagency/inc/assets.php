@@ -11,4 +11,15 @@ function estateagency_assets () : void
 
 
 
+/**
+ * Register and enqueue styles & scripts for administation
+ */
+function estateagency_assets_admin () : void
+{
+    wp_enqueue_style("estateagency_admin_styles", get_template_directory_uri() . "/assets/styles/admin.css");
+}
+
+
+
 add_action("wp_enqueue_scripts", "estateagency_assets");
+add_action('admin_enqueue_scripts', 'estateagency_assets_admin');

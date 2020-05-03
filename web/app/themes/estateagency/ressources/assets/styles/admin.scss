@@ -1,0 +1,28 @@
+/* -------------------------------
+    Column Properties
+-------------------------------- */
+
+.post-type-property {
+    .manage-column {
+        &.column-reference {
+            width: 10%;
+        }
+
+        &.column-thumbnail {
+            width: 8.5%;
+        }
+
+        &.column-agent,
+        &.column-contract_type {
+            width: 13.5%;
+        }
+
+        &.column-title {
+            width: 33.33333%;
+        }
+    }
+
+    .wrap .wp-list-table.widefat.posts #the-list tr * {
+        vertical-align: middle;
+    }
+}

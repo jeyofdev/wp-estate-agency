@@ -7,6 +7,7 @@ require_once "inc/images.php";
 require_once "inc/post-types.php";
 require_once "inc/comments.php";
 require_once "inc/customize.php";
+require_once "inc/admin.php";
 
 require_once "class/helpers/class_estateagency_format_helpers.php";
 require_once "class/options/class_estateagency_option_agency.php";
