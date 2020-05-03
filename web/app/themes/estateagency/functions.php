@@ -4,6 +4,7 @@ require_once "inc/supports.php";
 require_once "inc/assets.php";
 require_once "inc/menus.php";
 require_once "inc/images.php";
+require_once "inc/post-types.php";
 require_once "inc/comments.php";
 require_once "inc/customize.php";
 
