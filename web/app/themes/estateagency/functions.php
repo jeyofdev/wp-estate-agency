@@ -14,3 +14,5 @@ require_once "class/walkers/class_estateagency_comment_walker.php";
 
 
 EstateAgencyOptionAgency::register();
+
+

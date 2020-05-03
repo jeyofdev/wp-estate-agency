@@ -40,7 +40,11 @@ class EstateAgencyTitle {
     {
         if (is_home()) {
             self::$pageTitle = single_post_title();
-        } else {
+        } elseif (is_category()) {
+            self::$pageTitle = single_cat_title(__("Articles of the category : ", "estateagency"));
+        } elseif (is_tag()) {
+            self::$pageTitle = single_cat_title(__("Articles of the tag : ", "estateagency"));
+        }else {
             self::$pageTitle = get_the_title();
         }
     }
@@ -56,8 +60,35 @@ class EstateAgencyTitle {
             self::$pageTitle = null;
         } else if (is_home()) {
             self::$pageTitle = __("Blog Default", "estateagency");
+        } else if (is_category()) {
+            self::$pageTitle = self::AddBreadcrumbMultiple ("News", "Categorie", "category_name");
+        } else if (is_tag()) {
+            self::$pageTitle = self::AddBreadcrumbMultiple ("News", "Tag", "tag");
         } else {
             self::$pageTitle = get_the_title();
         }
+    }
+
+
+
+    /**
+     * Set breadcrumb on multiple levels
+     *
+     * @param string $page the name of the page
+     * @param string $levelTitleOne The term type
+     * @param string $key the url parameter key to retrieve
+     * 
+     * @return string
+     */
+    private static function AddBreadcrumbMultiple (string $page, string $levelTitleOne, string $key) : string
+    {
+        global $wp_query;
+
+        $title = '<a href="' . get_page_link(get_option("page_for_posts")) . '">' . $page . '</a>';
+        $title .= '</span>';
+        $title .= "<span>" . __("{$levelTitleOne} ", "estateagency") . "</span>";
+        $title .= " <span>" . ucfirst(str_replace("-", " ", $wp_query->query_vars[$key]));
+
+        return $title;
     }
 }

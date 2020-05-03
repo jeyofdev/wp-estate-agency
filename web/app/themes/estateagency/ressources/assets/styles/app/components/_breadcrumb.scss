@@ -25,12 +25,18 @@
     display: inline-block;
     font-size: 18px;
     color: $theme-darken;
-    margin-right: 20px;
     position: relative;
 
     i {
         color: $theme-primary;
     }
+}
+
+.breadcrumb-text .breadcrumb-option span {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 20px;
 
     &:after {
         position: absolute;
@@ -38,11 +44,18 @@
         top: 1px;
         content: "";
         font-family: "FontAwesome";
+        color: $theme-dark;
     }
-}
 
-.breadcrumb-text .breadcrumb-option span {
-    display: inline-block;
-    font-size: 18px;
-    color: $theme-lighten-500;
+    &:last-child {
+        color: $theme-lighten-500;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &:nth-child(n+2) {
+        color: $theme-lighten-500;
+    }
 }

@@ -15,7 +15,9 @@
                     <div class="col-lg-12">
                         <div class="bd-hero-text">
                             <?php foreach (get_the_category() as $category) : ?>
-                                <span><?= $category->name; ?></span>
+                                <a href="<?= get_category_link($category); ?>">
+                                    <span><?= $category->name; ?></span>
+                                </a>
                             <?php endforeach; ?>
                             <h2><?= the_title() ?></h2>
                             <ul>
@@ -37,7 +39,7 @@
                         <div class="blog-details-social">
                             <h6><?= __("Share:", "estateagency"); ?></h6>
                             <div class="social-list">
-                                <?php get_template_part("template-parts/single-post/share"); ?>
+                                <?php get_template_part("template-parts/posts/post-share"); ?>
                             </div>
                         </div>
                     </div>
@@ -50,12 +52,12 @@
                         <div class="tag-share-option">
                             <div class="tags">
                                 <?php foreach (get_the_tags() as $tag) : ?>
-                                    <a href="#"><?= $tag->name; ?></a>
+                                    <a href="<?= get_tag_link($tag); ?>"><?= $tag->name; ?></a>
                                 <?php endforeach; ?>
                             </div>
                             <div class="social-share">
                                 <span><?= __("Share:", "estateagency"); ?></span>
-                                <?php get_template_part("template-parts/single-post/share"); ?>
+                                <?php get_template_part("template-parts/posts/post-share"); ?>
                             </div>
                         </div>
                     </div>
@@ -88,7 +90,7 @@
                     <?php if ($query->have_posts()) : ?>
                         <?php while ($query->have_posts()) : $query->the_post(); ?>
                             <div class="col-lg-6">
-                                <?php get_template_part("template-parts/posts-list"); ?>
+                                <?php get_template_part("template-parts/posts/post-card"); ?>
                             </div>
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
