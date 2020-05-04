@@ -10,7 +10,10 @@ function estateagency_image_size () : void
     add_image_size("post_thumbnail_featured_image", 555, 253, true);
     add_image_size("property_thumbnail_admin", 100, 100, true);
     add_image_size("property_thumbnail", 262, 280, true);
+    add_image_size("property_single_thumbnail", 1920, 500, true);
 }
+
+
 
 add_action("after_setup_theme", "estateagency_image_size");
 
@@ -31,4 +34,22 @@ function estateagency_post_thumbnail (string $size = "post-thumbnail", int $widt
 
 
     return $postThumbnail;
+}
+
+
+
+/**
+ * Set the thumbnail for single post & property
+ */
+function estateagency_post_thumbnail_background (?string $size = "post_single_thumbnail", ?string $imageDefaultFolder = "blog") : ?string
+{
+    global $post;
+
+    if (has_post_thumbnail()) {
+        $thumbnail = get_the_post_thumbnail_url($post->ID, $size);
+    } else {
+        $thumbnail = get_template_directory_uri() . "/assets/images/" . $imageDefaultFolder . "/default.jpg";
+    }
+
+    return $thumbnail;
 }

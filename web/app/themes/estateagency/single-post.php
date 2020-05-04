@@ -5,10 +5,7 @@
     <?php while (have_posts()) : the_post(); ?>
 
         <!-- Single post header -->
-        <?php if (has_post_thumbnail()) : ?>
-            <?php $postThumbnail = get_the_post_thumbnail_url($post->ID, "post_single_thumbnail"); ?>
-        <?php endif; ?>
-        <section class="blog-details-hero set-bg" data-setbg="<?= $postThumbnail; ?>">
+        <section class="blog-details-hero set-bg" data-setbg="<?= estateagency_post_thumbnail_background("post_single_thumbnail"); ?>">
             <div class="mask"></div>
             <div class="container">
                 <div class="row">

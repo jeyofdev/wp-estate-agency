@@ -36,52 +36,12 @@
 
                                             <?php if (have_rows("overview")) : ?>
                                                 <?php while (have_rows("overview")) : the_row() ?>
-                                                    <div class="room-price">
-                                                    <span><?= __("Start From:", "estateagency"); ?></span>
-                                                        <?php foreach (get_the_terms($post->ID, "property_contract_type") as $term) : ?>
-                                                            <?php if ($term->slug === "sale") : ?>
-                                                                <h5><?= sprintf(__("$%s", EstateAgencyFormatHelpers::format_price(), "estateagency"), EstateAgencyFormatHelpers::format_price()); ?></h5>
-                                                            <?php elseif ($term->slug === "rent") : ?>
-                                                                <h5><?= sprintf(__("$%s / month", EstateAgencyFormatHelpers::format_price(), "estateagency"), EstateAgencyFormatHelpers::format_price()); ?></h5>
-                                                            <?php endif; ?>
-                                                        <?php endforeach; ?>
-                                                    </div>
+                                                    <?php get_template_part("template-parts/property/price"); ?>
                                                     <div class="properties-location"><i class="icon_pin"></i> <?= get_sub_field("address"); ?></div>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
                                             <p><?= the_excerpt(); ?></p>
-                                            <ul class="room-features">
-                                                <?php if (have_rows("surface")) : ?>
-                                                    <?php while (have_rows("surface")) : the_row() ?>
-                                                        <li>
-                                                            <i class="fa fa-arrows"></i>
-                                                            <p><?= __(get_sub_field("total_area") . " sqft", "estateagency"); ?></p>
-                                                        </li>
-                                                    <?php endwhile; ?>
-                                                <?php endif; ?>
-                                                <?php if (have_rows("rooms")) : ?>
-                                                    <?php while (have_rows("specifications")) : the_row() ?>
-                                                        <li>
-                                                            <i class="fa fa-bed"></i>
-                                                            <p><?= sprintf(_n("%d Bedroom", "%d Bedrooms", get_sub_field("bedrooms"), "estateagency"), get_sub_field("bedrooms")); ?></p>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-bath"></i>
-                                                            <p><?= sprintf(_n("%d Bathroom", "%d Bathrooms", get_sub_field("bathrooms"), "estateagency"), get_sub_field("bathrooms")); ?></p>
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-car"></i>
-                                                            <p>
-                                                                <?php if (get_sub_field("garage") !== "no") : ?>
-                                                                    <?= sprintf(_n("%d Garage", "%d Garages", get_sub_field("number_of_garages"), "estateagency"), get_sub_field("number_of_garages")); ?>
-                                                                <?php else : ?>
-                                                                    <?= __("0 garage", "estateagency"); ?>
-                                                                <?php endif; ?>
-                                                            </p>
-                                                        </li>
-                                                    <?php endwhile; ?>
-                                                <?php endif; ?>
-                                            </ul>
+                                            <?php get_template_part("template-parts/property/room-features"); ?>
                                         </div>
                                     </div>
                                 </div>
