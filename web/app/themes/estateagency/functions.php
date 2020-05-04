@@ -17,3 +17,24 @@ require_once "class/walkers/class_estateagency_comment_walker.php";
 require_once "class/walkers/class_estateagency_contract_types_radio_walker.php";
 
 EstateAgencyOptionAgency::register();
+
+
+
+/**
+ * Check if a specification of the property exists
+ */
+function estateagency_check_specification_exist (?string $fieldToCheck, string $fieldToReturn) : string
+{
+    $unit = null;
+
+    if ($fieldToReturn === "garage_size") {
+        $unit = __(" sqft", "estateagency");
+    }
+    if (get_sub_field($fieldToCheck) !== "no") {
+        $value = '<td class="p-value">' . get_sub_field($fieldToReturn) . $unit . '</td>';
+    } else {
+        $value = '<td class="p-value">0</td>';
+    }
+
+    return $value;
+}
