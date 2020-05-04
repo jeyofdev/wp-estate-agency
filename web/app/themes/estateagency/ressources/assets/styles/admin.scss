@@ -26,3 +26,21 @@
         vertical-align: middle;
     }
 }
+
+
+
+/* -------------------------------
+    Column Agents
+-------------------------------- */
+
+.post-type-agent {
+    .manage-column {
+        &.column-thumbnail {
+            width: 10%;
+        }
+    }
+
+    .wrap .wp-list-table.widefat.posts #the-list tr * {
+        vertical-align: middle;
+    }
+}
