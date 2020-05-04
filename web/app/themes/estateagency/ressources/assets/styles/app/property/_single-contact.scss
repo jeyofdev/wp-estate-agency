@@ -45,6 +45,24 @@
 }
 
 .pd-details-text .property-contactus .agent-contact-form {
+    .alert {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: .75rem 1.25rem;
+
+        &.alert-danger {
+            color: #721c24;
+            background: #f8d7da;
+            border: 2px solid #f5c6cb;
+        }
+
+        &.alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border: 2px solid #c3e6cb;
+        }
+    }
+
     input {
         width: 100%;
         height: 40px;
@@ -54,6 +72,11 @@
         background: $theme-lighten-100;
         color: $theme-lighten-500;
         font-size: 14px;
+
+        &.site-btn {
+            width: auto;
+            padding-left: 30px;
+        }
     }
 
     textarea {

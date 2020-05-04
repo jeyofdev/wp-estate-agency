@@ -78,10 +78,10 @@
 .site-btn {
     display: inline-block;
     font-size: 14px;
-    color: $theme-light;
-    background: $theme-primary;
+    color: $theme-light !important;
+    background: $theme-primary !important;
     padding: 8px 30px 10px;
-    border: 1px solid $theme-primary;
+    border: 1px solid $theme-primary !important;
 }
 
 

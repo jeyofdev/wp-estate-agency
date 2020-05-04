@@ -208,13 +208,10 @@
                                         <?php endwhile; ?>
                                         <?php wp_reset_postdata(); ?>
                                     <?php endif; ?>
+
+                                    <!-- Form -->
                                     <div class="col-lg-6 offset-lg-1">
-                                        <form action="#" class="agent-contact-form">
-                                            <input type="text" placeholder="Name*">
-                                            <input type="text" placeholder="Email">
-                                            <textarea placeholder="Messages"></textarea>
-                                            <button type="submit" class="site-btn">Send Message</button>
-                                        </form>
+                                        <?= do_shortcode('[contact-form-7 id="133" title="agent" html_class="agent-contact-form"]'); ?>
                                     </div>
                                 </div>
                             </div>
