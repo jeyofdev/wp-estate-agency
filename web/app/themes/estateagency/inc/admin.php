@@ -73,7 +73,7 @@ function estateagency_add_custom_columns_agent_content ($column, $postId) : void
  */
 function estateagency_term_radio_checklist ($args) : array
 {
-    if ((!empty( $args["taxonomy"])) && ($args["taxonomy"] === "property_contract_type" || $args["taxonomy"] === "property_type")) {
+    if ((!empty( $args["taxonomy"])) && ($args["taxonomy"] === "property_contract_type" || $args["taxonomy"] === "property_type" || $args["taxonomy"] === "property_agent")) {
         if (empty($args["walker"]) || is_a($args["walker"], "Walker") ) {
             $args['walker'] = new EstateAgencyTaxonomyRadioChecklistWalker();
         }
@@ -200,7 +200,10 @@ function estateagency_init_meta_box () : void
 	add_meta_box( "property_contract_typediv", "Contract types", "estateagency_remove_most_used_meta_box", "property" , "side");  
 	
 	remove_meta_box('property_typediv', 'property', 'normal'); 
-	add_meta_box( "property_typediv", "Types", "estateagency_remove_most_used_meta_box", "property" , "side");   
+	add_meta_box( "property_typediv", "Types", "estateagency_remove_most_used_meta_box", "property" , "side");  
+	
+	remove_meta_box('property_agentdiv', 'property', 'normal'); 
+	add_meta_box( "property_agentdiv", "Agents", "estateagency_remove_most_used_meta_box", "property" , "side");   
 }
 
 
