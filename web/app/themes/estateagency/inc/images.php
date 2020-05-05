@@ -18,6 +18,8 @@ function estateagency_image_size () : void
     add_image_size("property_feature_thumbnail", 360, 220, true);
     add_image_size("property_feature_agent_thumbnail", 36, 36, true);
     add_image_size("skill_thumbnail", 100, 100, true);
+    add_image_size("property_home_hero_large_thumbnail", 1920, 750, true);
+    add_image_size("property_home_hero_thumbnail", 164, 94, true);
 }
 
 
