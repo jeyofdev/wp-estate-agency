@@ -3,6 +3,44 @@
 
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
+        <!-- How It Works Section -->
+        <section class="howit-works spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?php if (have_rows("how_it_work")) : ?>
+                            <?php while (have_rows("how_it_work")) : the_row() ?>
+                                <?php get_template_part("template-parts/section/section-title"); ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <?php 
+                    $query = new WP_Query([
+                        "post_type" => "skill"
+                    ]);
+                ?>
+
+                <div class="row">
+                    <?php if ($query->have_posts()) : ?>
+                        <?php while ($query->have_posts()) : $query->the_post(); ?>
+                            <div class="col-lg-4">
+                                <div class="single-howit-works">
+                                    <?= estateagency_post_thumbnail($post, "skill_thumbnail", 100, 100); ?>
+                                    <h4><?= the_title(); ?></h4>
+                                    <p><?= the_content(); ?></p>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works Section End -->
+
+
         <!-- Feature property section  -->
         <section class="feature-section spad">
             <div class="container">
@@ -128,6 +166,7 @@
             </div>
         </section>
         <!-- Feature property section end -->
+
 
         <!-- Top properties section  -->
         <div class="top-properties-section spad">

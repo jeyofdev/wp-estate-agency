@@ -78,7 +78,7 @@ function estateagency_add_post_type () : void
         "supports" => ["title", "editor", "thumbnail"],
         "show_in_rest" => false,
         "taxonomies" => [],
-        "has_archive" => true,
+        "has_archive" => false,
     ]);
 
 
@@ -117,7 +117,46 @@ function estateagency_add_post_type () : void
         "supports" => ["title", "editor", "thumbnail"],
         "show_in_rest" => false,
         "taxonomies" => [],
-        "has_archive" => true,
+        "has_archive" => false,
+    ]);
+
+
+
+    register_post_type("skill", [
+        "label" => __("Skill", "estateagency"),
+        "labels" => [
+            "name"                     => __("Skills", "estateagency"),
+            "singular_name"            => __("Skill", "estateagency"),
+            "edit_item"                => __("Edit skill", "estateagency"),
+            "new_item"                 => __("New skill", "estateagency"),
+            "view_item"                => __("View skill", "estateagency"),
+            "view_items"               => __("View skills", "estateagency"),
+            "search_items"             => __("Search skills", "estateagency"),
+            "not_found"                => __("No skills found.", "estateagency"),
+            "not_found_in_trash"       => __("No skills found in Trash", "estateagency"),
+            "all_items"                => __("All skills", "estateagency"),
+            "archives"                 => __("Partner skill", "estateagency"),
+            "attributes"               => __("Skill attributes", "estateagency"),
+            "insert_into_item"         => __("Insert into skill", "estateagency"),
+            "uploaded_to_this_item"    => __("Uploaded to this skill", "estateagency"),
+            "filter_items_list"        => __("Filter skills list", "estateagency"),
+            "items_list_navigation"    => __("Skills list navigation", "estateagency"),
+            "items_list"               => __("Skills list", "estateagency"),
+            "item_published"           => __("Skill published.", "estateagency"),
+            "item_published_privately" => __("Skill published privately.", "estateagency"),
+            "item_reverted_to_draft"   => __("Skill reverted to draft.", "estateagency"),
+            "item_scheduled"           => __("Skill scheduled.", "estateagency"),
+            "item_updated"             => __("Skill updated.", "estateagency"),
+        ],
+        "public" => true,
+        "hierarchical" => false,
+        "exclude_from_search" => true,
+        "menu_position" => 40,
+        "menu_icon" => "dashicons-lightbulb",
+        "supports" => ["title", "editor", "thumbnail"],
+        "show_in_rest" => false,
+        "taxonomies" => [],
+        "has_archive" => false,
     ]);
 
 
