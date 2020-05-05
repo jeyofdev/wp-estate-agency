@@ -3,7 +3,7 @@
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
         <!-- Single property header -->
-        <section class="pd-hero-section set-bg" data-setbg="<?= estateagency_post_thumbnail_background('property_single_thumbnail', 'properties'); ?>">
+        <section class="pd-hero-section set-bg" data-setbg="<?= estateagency_post_thumbnail_background($post, 'property_single_thumbnail', 'properties'); ?>">
             <div class="mask"></div>
             <div class="container">
                 <div class="row">
@@ -187,7 +187,7 @@
                                         <?php while ($queryAgent->have_posts()) : $queryAgent->the_post(); ?>
                                             <div class="col-lg-5">
                                                 <div class="agent-desc">
-                                                    <?= estateagency_post_thumbnail("property_single_agent", 336, 224); ?>
+                                                    <?= estateagency_post_thumbnail($post, "property_single_agent", 336, 224); ?>
                                                     <div class="agent-title">
                                                         <h5><?= the_title(); ?></h5>
                                                         <span><?= get_field("job"); ?></span>

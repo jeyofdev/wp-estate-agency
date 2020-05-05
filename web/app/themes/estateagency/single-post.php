@@ -5,7 +5,7 @@
     <?php while (have_posts()) : the_post(); ?>
 
         <!-- Single post header -->
-        <section class="blog-details-hero set-bg" data-setbg="<?= estateagency_post_thumbnail_background("post_single_thumbnail"); ?>">
+        <section class="blog-details-hero set-bg" data-setbg="<?= estateagency_post_thumbnail_background($post, "post_single_thumbnail"); ?>">
             <div class="mask"></div>
             <div class="container">
                 <div class="row">

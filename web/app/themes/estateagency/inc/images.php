@@ -13,6 +13,7 @@ function estateagency_image_size () : void
     add_image_size("property_single_thumbnail", 1920, 500, true);
     add_image_size("property_single_agent", 336, 224);
     add_image_size("agent_slider_thumbnail", 200, 200, true);
+    add_image_size("partner_thumbnail", 65, 65, true);
 }
 
 
@@ -24,11 +25,9 @@ add_action("after_setup_theme", "estateagency_image_size");
 /**
  * Set the thumbnails size to use for posts
  */
-function estateagency_post_thumbnail (string $size = "post-thumbnail", int $width, int $height, ?string $imageDefaultFolder = "blog") : string
+function estateagency_post_thumbnail (WP_POST $post, string $size = "post-thumbnail", int $width, int $height, ?string $imageDefaultFolder = "blog") : string
 {
-    global $post;
-
-    if (has_post_thumbnail()) {
+    if (has_post_thumbnail($post->ID)) {
         $postThumbnail = get_the_post_thumbnail($post->ID, $size);
     } else {
         $postThumbnail = '<img width="' . $width . '" height="' . $height . '" src="' . get_template_directory_uri() . '/assets/images/' . $imageDefaultFolder . '/default.jpg">';
@@ -43,10 +42,8 @@ function estateagency_post_thumbnail (string $size = "post-thumbnail", int $widt
 /**
  * Set the thumbnail for single post & property
  */
-function estateagency_post_thumbnail_background (?string $size = "post_single_thumbnail", ?string $imageDefaultFolder = "blog") : ?string
+function estateagency_post_thumbnail_background (WP_POST $post, ?string $size = "post_single_thumbnail", ?string $imageDefaultFolder = "blog") : ?string
 {
-    global $post;
-
     if (has_post_thumbnail()) {
         $thumbnail = get_the_post_thumbnail_url($post->ID, $size);
     } else {

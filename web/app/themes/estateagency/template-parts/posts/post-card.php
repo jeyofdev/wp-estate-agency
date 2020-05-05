@@ -11,9 +11,9 @@
     <div class="sb-pic">
         <a href="<?= the_permalink(); ?>">
             <?php if (is_home()) : ?>
-                <?= estateagency_post_thumbnail("post-thumbnail", 360, 253); ?>
+                <?= estateagency_post_thumbnail($post, "post-thumbnail", 360, 253); ?>
             <?php else : ?>
-                <?= estateagency_post_thumbnail("post_thumbnail_featured_image", 555, 253); ?>
+                <?= estateagency_post_thumbnail($post, "post_thumbnail_featured_image", 555, 253); ?>
             <?php endif; ?>
         </a>
     </div>

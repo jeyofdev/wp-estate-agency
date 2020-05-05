@@ -30,10 +30,11 @@
 
 
 /* -------------------------------
-    Column Agents
+    Column Agents & partners
 -------------------------------- */
 
-.post-type-agent {
+.post-type-agent,
+.post-type-partner {
     .manage-column {
         &.column-thumbnail {
             width: 10%;

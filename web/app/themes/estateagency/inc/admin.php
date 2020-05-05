@@ -42,7 +42,7 @@ function estateagency_add_custom_columns_property_content ($column, $postId) : v
 
 
 /**
- * Add custom columns in the properties list of the administration
+ * Add custom columns in the agent list of the administration
  */
 function estateagency_add_custom_columns_agent ($columns) : array
 {
@@ -60,6 +60,33 @@ function estateagency_add_custom_columns_agent ($columns) : array
  * Set the content of custom columns in the agent list of the administration
  */
 function estateagency_add_custom_columns_agent_content ($column, $postId) : void
+{
+    if ($column === "thumbnail") {
+        the_post_thumbnail("property_thumbnail_admin", $postId);
+    }
+}
+
+
+
+/**
+ * Add custom columns in the partners list of the administration
+ */
+function estateagency_add_custom_columns_partner ($columns) : array
+{
+	return [
+        "cb" => $columns["cb"],
+        "thumbnail" => __("Thumbnail", "estateagency"),
+		"title" => $columns["title"],
+		"date" => $columns["date"],
+    ];
+}
+
+
+
+/**
+ * Set the content of custom columns in the partners list of the administration
+ */
+function estateagency_add_custom_columns_partner_content ($column, $postId) : void
 {
     if ($column === "thumbnail") {
         the_post_thumbnail("property_thumbnail_admin", $postId);
@@ -212,5 +239,7 @@ add_filter("manage_property_posts_columns", "estateagency_add_custom_columns_pro
 add_filter("manage_property_posts_custom_column", "estateagency_add_custom_columns_property_content", 10, 2);
 add_filter("manage_agent_posts_columns", "estateagency_add_custom_columns_agent");
 add_filter("manage_agent_posts_custom_column", "estateagency_add_custom_columns_agent_content", 10, 2);
+add_filter("manage_partner_posts_columns", "estateagency_add_custom_columns_partner");
+add_filter("manage_partner_posts_custom_column", "estateagency_add_custom_columns_partner_content", 10, 2);
 add_filter("wp_terms_checklist_args", "estateagency_term_radio_checklist");
 add_action("admin_menu", "estateagency_init_meta_box");

@@ -24,7 +24,7 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="property-pic">
-                                            <?= estateagency_post_thumbnail("property_thumbnail", 262, 280, "properties"); ?>
+                                            <?= estateagency_post_thumbnail($post, "property_thumbnail", 262, 280, "properties"); ?>
                                         </div>
                                     </div>
                                     <div class="col-md-8">

@@ -82,6 +82,45 @@ function estateagency_add_post_type () : void
     ]);
 
 
+
+    register_post_type("partner", [
+        "label" => __("Agent", "estateagency"),
+        "labels" => [
+            "name"                     => __("Partners", "estateagency"),
+            "singular_name"            => __("Partner", "estateagency"),
+            "edit_item"                => __("Edit partner", "estateagency"),
+            "new_item"                 => __("New partner", "estateagency"),
+            "view_item"                => __("View partner", "estateagency"),
+            "view_items"               => __("View partners", "estateagency"),
+            "search_items"             => __("Search partners", "estateagency"),
+            "not_found"                => __("No partners found.", "estateagency"),
+            "not_found_in_trash"       => __("No partners found in Trash", "estateagency"),
+            "all_items"                => __("All partners", "estateagency"),
+            "archives"                 => __("Partner archive", "estateagency"),
+            "attributes"               => __("Partner attributes", "estateagency"),
+            "insert_into_item"         => __("Insert into partner", "estateagency"),
+            "uploaded_to_this_item"    => __("Uploaded to this partner", "estateagency"),
+            "filter_items_list"        => __("Filter partners list", "estateagency"),
+            "items_list_navigation"    => __("Partners list navigation", "estateagency"),
+            "items_list"               => __("Partners list", "estateagency"),
+            "item_published"           => __("Partner published.", "estateagency"),
+            "item_published_privately" => __("Partner published privately.", "estateagency"),
+            "item_reverted_to_draft"   => __("Partner reverted to draft.", "estateagency"),
+            "item_scheduled"           => __("Partner scheduled.", "estateagency"),
+            "item_updated"             => __("Partner updated.", "estateagency"),
+        ],
+        "public" => true,
+        "hierarchical" => false,
+        "exclude_from_search" => true,
+        "menu_position" => 40,
+        "menu_icon" => "dashicons-portfolio",
+        "supports" => ["title", "editor", "thumbnail"],
+        "show_in_rest" => false,
+        "taxonomies" => [],
+        "has_archive" => true,
+    ]);
+
+
     register_taxonomy("property_contract_type", "property", [
         "labels" => [
             "name"                       => __( "Contract types", "estateagency"),
