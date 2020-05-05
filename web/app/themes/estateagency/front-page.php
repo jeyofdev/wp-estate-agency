@@ -3,19 +3,85 @@
 
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
+        <!-- Top Properties Section Begin -->
+        <div class="top-properties-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="properties-title">
+                            <?php if (have_rows("top_properties")) : ?>
+                                <?php while (have_rows("top_properties")) : the_row() ?>
+                                    <?php get_template_part("template-parts/section/section-title"); ?>
+                                    <a href="<?= home_url('/property'); ?>" class="top-property-all"><?= get_sub_field("button_label"); ?></a>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <?php
+                $args = [
+                    "post_type" => "property",
+                    "posts_per_page" => 5,
+                    "tax_query" => [
+                        [
+                            "taxonomy" => "property_contract_type",
+                            "field"    => "slug",
+                            "terms"    => "sale",
+                        ]
+                    ]
+                ];
+
+                $query = new WP_Query($args);
+            ?>
+            <div class="container">
+                <div class="top-properties-carousel owl-carousel">
+                    <?php if ($query->have_posts()) : ?>
+                        <?php while ($query->have_posts()) : $query->the_post(); ?>
+                            <div class="single-top-properties">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="stp-pic">
+                                            <?= estateagency_post_thumbnail($post, "top_property_home_thumbnail", 262, 280, "properties"); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="stp-text">
+                                            <div class="s-text"><?= sprintf(__("For %s", $value, "estateagency"), get_the_terms($post->ID, "property_contract_type")[0]->name); ?></div>
+                                            <a href="<?= the_permalink(); ?>">
+                                                <h2 class="r-title"><?= the_title(); ?></h2>
+                                            </a>
+                                            <?php if (have_rows("overview")) : ?>
+                                                <?php while (have_rows("overview")) : the_row() ?>
+                                                    <?php get_template_part("template-parts/property/price"); ?>
+                                                    <div class="properties-location"><i class="icon_pin"></i> <?= get_sub_field("address"); ?></div>
+                                                <?php endwhile; ?>
+                                            <?php endif; ?>
+                                            <p><?= the_excerpt(); ?></p>
+                                            <?php get_template_part("template-parts/property/room-features"); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+        <!-- Top Properties Section End -->
+
         <!-- Agent section-->
         <section class="agent-section spad">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-title">
-                            <?php if (have_rows("agents")) : ?>
-                                <?php while (have_rows("agents")) : the_row() ?>
-                                    <span><?= get_sub_field("subtitle"); ?></span>
-                                    <h2><?= get_sub_field("title"); ?></h2>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
+                        <?php if (have_rows("agents")) : ?>
+                            <?php while (have_rows("agents")) : the_row() ?>
+                                <?php get_template_part("template-parts/section/section-title"); ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
 
@@ -60,14 +126,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-title">
-                            <?php if (have_rows("lasts_posts")) : ?>
-                                <?php while (have_rows("lasts_posts")) : the_row() ?>
-                                    <span><?= get_sub_field("subtitle"); ?></span>
-                                    <h2><?= get_sub_field("title"); ?></h2>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
+                        <?php if (have_rows("lasts_posts")) : ?>
+                            <?php while (have_rows("lasts_posts")) : the_row() ?>
+                                <?php get_template_part("template-parts/section/section-title"); ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="row">

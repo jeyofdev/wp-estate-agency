@@ -10,6 +10,7 @@ function estateagency_image_size () : void
     add_image_size("post_thumbnail_featured_image", 555, 253, true);
     add_image_size("property_thumbnail_admin", 100, 100, true);
     add_image_size("property_thumbnail", 262, 280, true);
+    add_image_size("top_property_home_thumbnail", 555, 380, true);
     add_image_size("property_single_thumbnail", 1920, 500, true);
     add_image_size("property_single_agent", 336, 224);
     add_image_size("agent_slider_thumbnail", 200, 200, true);
