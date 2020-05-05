@@ -54,6 +54,42 @@
             </div>
         </section>
         <!-- Agent section end -->
+
+        <!-- Latest posts section -->
+        <section class="blog-section latest-blog spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <?php if (have_rows("lasts_posts")) : ?>
+                                <?php while (have_rows("lasts_posts")) : the_row() ?>
+                                    <span><?= get_sub_field("subtitle"); ?></span>
+                                    <h2><?= get_sub_field("title"); ?></h2>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php
+                        $query = new WP_Query([
+                            "post_type" => "post",
+                            "posts_per_page" => 3
+                        ]);
+                    ?>
+
+                    <?php if ($query->have_posts()) : ?>
+                        <?php while ($query->have_posts()) : $query->the_post(); ?>
+                            <div class="col-lg-4">
+                                <?php get_template_part("template-parts/posts/post-card"); ?>
+                            </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </section>
+        <!-- Latest posts section End -->
     <?php endwhile; ?>
 <?php endif; ?>
 
