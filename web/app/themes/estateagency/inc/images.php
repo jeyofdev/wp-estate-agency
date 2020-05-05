@@ -15,6 +15,8 @@ function estateagency_image_size () : void
     add_image_size("property_single_agent", 336, 224);
     add_image_size("agent_slider_thumbnail", 200, 200, true);
     add_image_size("partner_thumbnail", 65, 65, true);
+    add_image_size("property_feature_thumbnail", 360, 220, true);
+    add_image_size("property_feature_agent_thumbnail", 36, 36, true);
 }
 
 

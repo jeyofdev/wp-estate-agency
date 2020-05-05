@@ -11,6 +11,8 @@
     <?php foreach (get_the_terms($post->ID, "property_contract_type") as $term) : ?>
         <?php if (is_single()) : ?>
             <?php $tag = "p"; ?>
+        <?php elseif (is_front_page()) : ?>
+            <?php $tag = "h4"; ?>
         <?php else : ?>
             <?php $tag = "h5"; ?>
         <?php endif; ?>

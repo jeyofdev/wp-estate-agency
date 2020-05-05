@@ -3,7 +3,133 @@
 
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-        <!-- Top Properties Section Begin -->
+        <!-- Feature property section  -->
+        <section class="feature-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?php if (have_rows("featured_properties")) : ?>
+                            <?php while (have_rows("featured_properties")) : the_row() ?>
+                                <?php get_template_part("template-parts/section/section-title"); ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <?php
+                    $queryAgent = new WP_Query([
+                        "post_type" => "agent"
+                    ]);
+        
+                    $args = [
+                        "post_type" => "property",
+                        "posts_per_page" => 5,
+                    ];
+
+                    $queryProperty = new WP_Query($args);
+                ?>
+
+                <div class="row">
+                    <div class="feature-carousel owl-carousel">
+                        <?php if ($queryProperty->have_posts()) : ?>
+                            <?php while ($queryProperty->have_posts()) : $queryProperty->the_post(); ?>
+                                <div class="col-lg-4">
+                                    <div class="feature-item">
+                                        <div class="fi-pic set-bg" data-setbg="<?= estateagency_post_thumbnail_background($post, 'property_feature_thumbnail', 'properties'); ?>">
+                                            <div class="pic-tag">
+                                            <div class="f-text"><?= __("feature", "estateagency"); ?></div>
+                                            <div class="s-text"><?= get_the_terms($post->ID, "property_contract_type")[0]->name; ?></div>
+                                            </div>
+                                            <div class="feature-author">
+                                                <div class="fa-pic">
+                                                    <?php foreach ($queryAgent->posts as $postAgent) : ?>
+                                                        <?php if ($postAgent->post_name === get_the_terms($post->ID, "property_agent")[0]->slug) : ?>
+                                                            <?= estateagency_post_thumbnail($postAgent, "property_feature_agent_thumbnail", 36, 36); ?>
+                                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                                </div>
+                                                <div class="fa-text">
+                                                    <?php if (has_post_thumbnail($post)) : ?>
+                                                        <span><?= get_the_terms($post->ID, "property_agent")[0]->name; ?></span>
+                                                    <?php else : ?>
+                                                        <span class="dark"><?= get_the_terms($post->ID, "property_agent")[0]->name; ?></span>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fi-text">
+                                            <div class="inside-text">
+                                                <h4><?= the_title(); ?></h4>
+                                                <?php if (have_rows("overview")) : ?>
+                                                    <?php while (have_rows("overview")) : the_row() ?>
+                                                        <ul>
+                                                            <li><i class="fa fa-map-marker"></i> 
+                                                                <?php if (strlen(get_sub_field("address")) > 28) : ?>
+                                                                    <?= substr(get_sub_field("address"), 0, 28) . "..."; ?></li>
+                                                                <?php else : ?>
+                                                                    <?= get_sub_field("address"); ?></li>
+                                                                <?php endif; ?>
+                                                            <li><i class="fa fa-tag"></i><?= get_the_terms($post->ID, "property_type")[0]->name; ?></li>
+                                                        </ul>
+                                                        <h5 class="price">
+                                                            <?php foreach (get_the_terms($post->ID, "property_contract_type") as $term) : ?>
+                                                                <?php if ($term->slug === "sale") : ?>
+                                                                    <?= sprintf(__("$%s", EstateAgencyFormatHelpers::format_price(), "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
+                                                                <?php elseif ($term->slug === "rent") : ?>
+                                                                    <?= sprintf(__("month", "estateagency") . "%s<span>/" . __("month", "estateagency") . "</span>", EstateAgencyFormatHelpers::format_price()); ?>
+                                                                <?php endif; ?>
+                                                            <?php endforeach; ?>
+                                                        </h5>
+
+                                                        
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?>
+                                            </div>
+                                            <ul class="room-features">
+                                                <?php if (have_rows("surface")) : ?>
+                                                    <?php while (have_rows("surface")) : the_row() ?>
+                                                        <li>
+                                                            <i class="fa fa-arrows"></i>
+                                                            <p><?= get_sub_field("total_area") . __(" sqft", "estateagency"); ?></p>
+                                                        </li>
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?>
+                                                <?php if (have_rows("rooms")) : ?>
+                                                    <?php while (have_rows("specifications")) : the_row() ?>
+                                                        <li>
+                                                            <i class="fa fa-bed"></i>
+                                                            <p><?= get_sub_field("bedrooms"); ?></p>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-bath"></i>
+                                                            <p><?= get_sub_field("bathrooms"); ?></p>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-car"></i>
+                                                            <p>
+                                                                <?php if (get_sub_field("garage") !== "no") : ?>
+                                                                    <?= get_sub_field("number_of_garages"); ?>
+                                                                <?php else : ?>
+                                                                    <?= 0; ?>
+                                                                <?php endif; ?>
+                                                            </p>
+                                                        </li>
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Feature property section end -->
+
+        <!-- Top properties section  -->
         <div class="top-properties-section spad">
             <div class="container">
                 <div class="row">
@@ -35,6 +161,7 @@
 
                 $query = new WP_Query($args);
             ?>
+
             <div class="container">
                 <div class="top-properties-carousel owl-carousel">
                     <?php if ($query->have_posts()) : ?>
@@ -54,7 +181,9 @@
                                             </a>
                                             <?php if (have_rows("overview")) : ?>
                                                 <?php while (have_rows("overview")) : the_row() ?>
-                                                    <?php get_template_part("template-parts/property/price"); ?>
+                                                    <div class="room-price">
+                                                        <?php get_template_part("template-parts/property/price"); ?>
+                                                    </div>
                                                     <div class="properties-location"><i class="icon_pin"></i> <?= get_sub_field("address"); ?></div>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
@@ -70,7 +199,8 @@
                 </div>
             </div>
         </div>
-        <!-- Top Properties Section End -->
+        <!-- Top properties section End -->
+
 
         <!-- Agent section-->
         <section class="agent-section spad">
@@ -120,6 +250,7 @@
             </div>
         </section>
         <!-- Agent section end -->
+
 
         <!-- Latest posts section -->
         <section class="blog-section latest-blog spad">
