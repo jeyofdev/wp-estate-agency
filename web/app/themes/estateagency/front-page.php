@@ -3,7 +3,7 @@
 
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-        <!-- Hero Section Begin -->
+        <!-- Hero section -->
         <section class="hero-section">
             <?php
                 $args = [
@@ -66,7 +66,7 @@
                 </div>
             <?php endif; ?>
         </section>
-        <!-- Hero Section End -->
+        <!-- Hero section end -->
 
 
         <!-- How It Works Section -->
@@ -74,11 +74,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <?php if (have_rows("how_it_work")) : ?>
-                            <?php while (have_rows("how_it_work")) : the_row() ?>
-                                <?php get_template_part("template-parts/section/section-title"); ?>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                        <?= get_title_section("work_title", "work_subtitle"); ?>
                     </div>
                 </div>
 
@@ -112,11 +108,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <?php if (have_rows("featured_properties")) : ?>
-                            <?php while (have_rows("featured_properties")) : the_row() ?>
-                                <?php get_template_part("template-parts/section/section-title"); ?>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                        <?= get_title_section("featured_properties_title", "featured_properties_subtitle"); ?>
                     </div>
                 </div>
 
@@ -240,12 +232,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="properties-title">
-                            <?php if (have_rows("top_properties")) : ?>
-                                <?php while (have_rows("top_properties")) : the_row() ?>
-                                    <?php get_template_part("template-parts/section/section-title"); ?>
-                                    <a href="<?= home_url('/property'); ?>" class="top-property-all"><?= get_sub_field("button_label"); ?></a>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
+                            <?= get_title_section("top_properties_title", "top_properties_subtitle"); ?>
+                            <a href="<?= home_url('/property'); ?>" class="top-property-all"><?= get_sub_field("button_label"); ?></a>
                         </div>
                     </div>
                 </div>
@@ -309,64 +297,15 @@
 
         <!-- Agent section-->
         <section class="agent-section spad">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <?php if (have_rows("agents")) : ?>
-                            <?php while (have_rows("agents")) : the_row() ?>
-                                <?php get_template_part("template-parts/section/section-title"); ?>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </div>
-                </div>
-
-                <?php 
-                    $query = new WP_Query([
-                        "post_type" => "agent"
-                    ]);
-                ?>
-
-                <div class="row">
-                    <div class="agent-carousel owl-carousel">
-                        <?php if ($query->have_posts()) : ?>
-                            <?php while ($query->have_posts()) : $query->the_post(); ?>
-                                <div class="col-lg-3">
-                                    <div class="single-agent">
-                                        <div class="sa-pic">
-                                            <?= estateagency_post_thumbnail($post, "agent_slider_thumbnail", 200, 200); ?>
-                                            <div class="hover-social">
-                                                <?php if (have_rows("social_media")) : ?>
-                                                    <?php while (have_rows("social_media")) : the_row() ?>
-                                                        <a class="facebook" href="https://www.facebook.com/<?= get_sub_field("facebook"); ?>/"><i class="fa fa-facebook"></i></a>
-                                                        <a class="twitter"href="https://twitter.com/<?= get_sub_field("twitter"); ?>/"><i class="fa fa-twitter"></i></a>
-                                                        <a class="instagram" href="https://www.instagram.com/<?= get_sub_field("instagram"); ?>/"><i class="fa fa-instagram"></i></a>
-                                                    <?php endwhile; ?>
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
-                                        <h5><?= the_title(); ?> <span><?= get_field("job"); ?></span></h5>
-                                    </div>
-                                </div>
-                            <?php endwhile; ?>
-                            <?php wp_reset_postdata(); ?>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
+            <?php get_template_part("template-parts/section/section-agents"); ?>
         </section>
-        <!-- Agent section end -->
-
 
         <!-- Latest posts section -->
         <section class="blog-section latest-blog spad">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <?php if (have_rows("lasts_posts")) : ?>
-                            <?php while (have_rows("lasts_posts")) : the_row() ?>
-                                <?php get_template_part("template-parts/section/section-title"); ?>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                        <?= get_title_section("latest_posts_title", "latest_posts_subtitle"); ?>
                     </div>
                 </div>
                 <div class="row">

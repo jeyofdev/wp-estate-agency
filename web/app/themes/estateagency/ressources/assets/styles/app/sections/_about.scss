@@ -21,9 +21,16 @@
 }
 
 .about-section .video-text {
+    position: relative;
     height: 500px;
     padding-top: 150px;
     margin-bottom: 42px;
+    background-size: cover;
+    background-position: center center;
+
+    &.empty {
+        background: lighten($theme-secondary, 30%);
+    }
 
     h4 {
         font-size: 22px;

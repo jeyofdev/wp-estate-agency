@@ -5,7 +5,8 @@
  */
 
 ?>
+
 <div class="section-title">
-    <span><?= get_sub_field("subtitle"); ?></span>
-    <h2><?= get_sub_field("title"); ?></h2>
+    <span><?= get_field("subtitle"); ?></span>
+    <h2><?= get_field("title"); ?></h2>
 </div>

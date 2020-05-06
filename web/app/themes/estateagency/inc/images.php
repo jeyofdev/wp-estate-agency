@@ -20,6 +20,8 @@ function estateagency_image_size () : void
     add_image_size("skill_thumbnail", 100, 100, true);
     add_image_size("property_home_hero_large_thumbnail", 1920, 750, true);
     add_image_size("property_home_hero_thumbnail", 164, 94, true);
+    add_image_size("testimonial_background", 1920, 540, true);
+    add_image_size("testimonial_video_background", 1140, 500, true);
 }
 
 
@@ -33,6 +35,7 @@ add_action("after_setup_theme", "estateagency_image_size");
  */
 function estateagency_post_thumbnail (WP_POST $post, string $size = "post-thumbnail", int $width, int $height, ?string $imageDefaultFolder = "blog") : string
 {
+    
     if (has_post_thumbnail($post->ID)) {
         $postThumbnail = get_the_post_thumbnail($post->ID, $size);
     } else {

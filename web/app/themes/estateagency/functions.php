@@ -39,3 +39,23 @@ function estateagency_check_specification_exist (?string $fieldToCheck, string $
 
     return $value;
 }
+
+
+
+/**
+ * Display the title and the sub-title of a section
+ *
+ * @param string $fieldTitle name of the field title
+ * @param string $fieldSubtitle name of the field subtitle
+ * 
+ * @return string
+ */
+function get_title_section (string $fieldTitle, string $fieldSubtitle) : string
+{
+    $output = '<div class="section-title">';
+    $output .= '<span>' . get_field($fieldSubtitle) . '</span>';
+    $output .= '<h2>' . get_field($fieldTitle) . '</h2>';
+    $output .= '</div>';
+
+    return $output;
+}
