@@ -84,7 +84,14 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "page",
+                "operator": "==",
+                "value": "5"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
                 "operator": "==",
                 "value": "templates\/template-about.php"
             }
@@ -98,5 +105,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1588756840
+    "modified": 1588766670
 }

@@ -29,7 +29,6 @@
                         <?php else : ?>
                             <div class="video-text set-bg empty" data-setbg="">
                         <?php endif; ?>
-                            <div class="mask"></div>
                             <a href="<?= the_field("video_url"); ?>" class="play-btn video-popup">
                                 <i class="fa fa-play"></i>
                             </a>
