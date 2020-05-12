@@ -26,12 +26,8 @@ class EstateagencyBestAgentsWidget extends WP_Widget
         echo $args["before_widget"];
 
         // title
-        if (isset($instance["title"])) {
-            $title = apply_filters("widget_title", $instance["title"]);
-            echo $args["before_title"] . $title . $args["after_title"];
-        } else {
-            $title = __("Best Agents", "estateagency");
-        }
+        $title = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"]) : __("Best Agents", "estateagency");
+        echo $args["before_title"] . $title . $args["after_title"];
 
         // get number agents to display
         $number = (!empty($instance["number"])) ? absint($instance["number"]) : 3;

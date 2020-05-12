@@ -63,4 +63,36 @@ class EstateAgencyFormatHelpers
         $price = number_format_i18n(get_field("price"));
         return $price;
     }
+
+
+
+    /**
+     * Format opening hours
+     */
+    public static function format_opening_hours () : string
+    {
+        $openingHours = get_option(EstateagencyOptionAgency::OPENING_HOURS);
+        $characterToDelete = ["-", "_"];
+
+        $parts = explode(" ", $openingHours);
+        foreach ($parts as $k => $v) {
+            if (in_array($v, $characterToDelete)) {
+                unset($parts[$k]);
+            } else {
+                $newParts[] = $v;
+            }
+        }
+        
+        $dayFirst = substr($newParts[0], 0, 3);
+        $daySecond = substr($newParts[1], 0, 3);
+
+        if (get_locale() === "en_US" || get_locale() === "en_EN") {
+            $openingHours = $dayFirst . " - " . $daySecond . ", " . $newParts[2] . " " . strtoupper($newParts[3]) . " - " . strtoupper($newParts[4]) . " " . strtoupper($newParts[5]);
+        } else {
+            $openingHours = $dayFirst . " - " . $daySecond . ", " . $newParts[2] . "h - " . $newParts[4] . "h";
+        }
+        
+
+        return $openingHours;
+    }
 }

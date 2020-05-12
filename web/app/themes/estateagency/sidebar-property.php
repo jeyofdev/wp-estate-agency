@@ -5,11 +5,19 @@
 ?>
 
 <?php if (!dynamic_sidebar("property")) : ?>
-    <h4>Search Property</h4>
-    <?= the_widget('EstateagencySearchPropertyWidget'); ?>
+    <?= the_widget("EstateagencySearchPropertyWidget", [], [
+        "before_widget" => '',
+        "after_widget" => '',
+        "before_title" => '<h4>',
+        "after_title" => '</h4>'
+    ]); ?>
 
     <div class="best-agents">
-        <h4>Best Agents</h4>
-        <?= the_widget('EstateagencyBestAgentsWidget'); ?>
+        <?= the_widget("EstateagencyBestAgentsWidget", [], [
+            "before_widget" => '',
+            "after_widget" => '',
+            "before_title" => '<h4>',
+            "after_title" => '</h4>'
+        ]); ?>
     </div>
 <?php endif; ?>

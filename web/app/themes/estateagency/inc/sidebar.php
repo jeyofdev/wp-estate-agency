@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Register a sidebar
+ * Register a sidebar linked to property pages
  */
-function estateagency_sidebar () : void
+function estateagency_property_sidebar () : void
 {
     register_widget(EstateagencyBestAgentsWidget::class);
     register_widget(EstateagencySearchPropertyWidget::class);
@@ -20,4 +20,24 @@ function estateagency_sidebar () : void
 
 
 
-add_action("widgets_init", "estateagency_sidebar");
+/**
+ * Register a sidebar linked to footer
+ */
+function estateagency_footer_sidebar () : void
+{
+    register_widget(EstateagencyContactWidget::class);
+
+    register_sidebar([
+        "id" => "footer",
+        "name" => __("Footer sidebar", "estateagency"),
+        "before_widget" => '',
+        "after_widget" => '',
+        "before_title" => '<h4>',
+        "after_title" => '</h4>'
+    ]);
+}
+
+
+
+add_action("widgets_init", "estateagency_property_sidebar");
+add_action("widgets_init", "estateagency_footer_sidebar");

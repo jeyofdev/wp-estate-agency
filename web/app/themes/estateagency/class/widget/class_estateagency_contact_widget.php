@@ -1,15 +1,15 @@
 <?php
 
-class EstateagencySearchPropertyWidget extends WP_Widget
+class EstateagencyContactWidget extends WP_Widget
 {
     public $fields = [];
 
 
     public function __construct()
     {
-        parent::__construct("estateagency_search_property_widget", __("Search Property", "estateagency"), [
-            "classname" => "search_property",
-			"description" => __("Search properties according to one or more filters."),
+        parent::__construct("estateagency_contact_widget", __("Contact", "estateagency"), [
+            "classname" => "contact",
+			"description" => __("Display contact modes."),
 			"customize_selective_refresh" => true,
         ]);
 
@@ -23,15 +23,24 @@ class EstateagencySearchPropertyWidget extends WP_Widget
     public function widget ($args, $instance)
     {
         echo $args["before_widget"];
+        ?>
 
-        // title
-        $title = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"]) : __("Search Property", "estateagency");
-        echo $args["before_title"] . $title . $args["after_title"];
+        <div class="col-lg-3">
+            <div class="footer-widget">
+                <?php
+                    // title
+                    $title = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"]) : __("Contact Us", "estateagency");
+                    echo $args["before_title"] . $title . $args["after_title"];
 
-        $template = locate_template("template-parts/widget/search-property.php");
-        if (!empty($template)) {
-            include($template);
-        }
+                    $template = locate_template("template-parts/widget/contact.php");
+                    if (!empty($template)) {
+                        include($template);
+                    }
+                ?>
+            </div>
+        </div>
+
+        <?php
 
         echo $args["after_widget"];
     }

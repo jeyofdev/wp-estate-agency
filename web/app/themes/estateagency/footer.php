@@ -43,6 +43,13 @@
         <?php endif; ?>
             <!-- <div class="mask"></div> -->
             <div class="container">
+                <div class="footer-text">
+                    <div class="row">
+                        <?php get_sidebar("footer"); ?>
+                        
+                    </div>
+                </div>
+
                 <div class="copyright-text">
                     <p>
                         <p>
