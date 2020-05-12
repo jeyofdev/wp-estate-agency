@@ -202,6 +202,14 @@
                             <!-- Agent contact end -->
                         </div>
                     </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-3">
+                        <div class="property-sidebar">
+                            <?php get_sidebar("property"); ?>
+                        </div>
+                    </div>
+                    <!-- Sidebar end -->
                 </div>
             </div>
         </section>

@@ -6,6 +6,7 @@ require_once "inc/menus.php";
 require_once "inc/images.php";
 require_once "inc/text.php";
 require_once "inc/post-types.php";
+require_once "inc/sidebar.php";
 require_once "inc/forms.php";
 require_once "inc/comments.php";
 require_once "inc/customize.php";
@@ -13,6 +14,7 @@ require_once "inc/admin.php";
 
 require_once "class/helpers/class_estateagency_format_helpers.php";
 require_once "class/options/class_estateagency_option_agency.php";
+require_once "class/widget/class_estateagency_best_agents_widget.php";
 require_once "class/class_estateagency_title.php";
 require_once "class/walkers/class_estateagency_comment_walker.php";
 require_once "class/walkers/class_estateagency_contract_types_radio_walker.php";

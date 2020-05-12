@@ -26,6 +26,15 @@
 <section class="property-section spad">
     <div class="container">
         <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="property-sidebar">
+                    <?php get_sidebar("property"); ?>
+                </div>
+            </div>
+            <!-- Sidebar end -->
+
+            <!-- Properties list -->
             <div class="col-lg-9">
                 <h4 class="property-title"><?= __("Property", "estateagency"); ?></h4>
                 <?php if ($query->have_posts()) : ?>
@@ -61,6 +70,7 @@
                     </div>
                 <?php endif; ?>
             </div>
+            <!-- Properties list end -->
         </div>
     </div>
 </section>
