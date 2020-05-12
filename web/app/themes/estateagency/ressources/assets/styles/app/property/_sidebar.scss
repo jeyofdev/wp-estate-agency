@@ -43,6 +43,56 @@
 .property-sidebar .sidebar-search {
     margin-bottom: 75px;
 
+    .form-group {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        height: 64px;
+
+        input[type=number],
+        .room-size-range,
+        .price-range-wrap {
+            width: 100%;
+            height: 50px;
+            border-radius: 0;
+            border: 1px solid #ebebeb;
+            line-height: 46px;
+            margin-bottom: 20px;
+            // overflow: hidden;
+            background: lighten($theme-lighten, 3%);
+            color: $theme-secondary;
+        }
+
+        label {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            background: lighten($theme-lighten, 3%);
+            color: $theme-secondary;
+            font-size: 16px;
+            height: 50px;
+            min-width: 90px;
+            padding-left: 14px;
+            order: -1;
+            transition: color .3s;
+            margin-bottom: 0;
+        }
+
+        .nice-select,
+        input {
+            background: lighten($theme-lighten, 3%);
+            color: $theme-secondary;
+            padding-left: 96px;
+            border: none;
+
+            &.range {
+                font-size: 16px;
+            }
+        }
+    }
+
     .nice-select {
         width: 100%;
         height: 50px;
@@ -51,6 +101,7 @@
         border: 1px solid $theme-lighten;
         line-height: 46px;
         margin-bottom: 20px;
+        padding-right: 20px;
 
         &:after {
             border-bottom: 2px solid $theme-lighten-500;
@@ -80,56 +131,67 @@
 .property-sidebar .sidebar-search .room-size-range {
     width: 100%;
     margin-bottom: 17px;
+    padding-left: 96px;
+
+    input {
+        padding-left: 0;
+    }
 
     .price-text {
         margin-bottom: 12px;
 
-        label {
-            display: inline-block;
-            font-size: 14px;
-            color: $theme-secondary;
-            margin-bottom: 0;
-        }
+        // label {
+        //     display: inline-block;
+        //     font-size: 14px;
+        //     color: $theme-secondary;
+        //     margin-bottom: 0;
+        // }
 
-        input {
-            display: inline-block;
-            width: 165px;
-            font-size: 16px;
-            color: $theme-darken;
-            border: none;
-            outline: none;
-            background: transparent;
-        }
+        // input {
+        //     display: inline-block;
+        //     width: 165px;
+        //     font-size: 16px;
+        //     color: $theme-darken;
+        //     border: none;
+        //     outline: none;
+        //     background: transparent;
+        // }
     }
 
     .ui-widget.ui-widget-content {
         background: $theme-lighten-300;
         border-radius: 0;
+        width: 97%;
     }
 }
 
 .property-sidebar .sidebar-search .price-range-wrap {
     width: 100%;
     margin-bottom: 35px;
+    padding-left: 96px;
+
+    input {
+        padding-left: 0;
+    }
 
     .price-text {
         margin-bottom: 9px;
 
-        label {
-            display: inline-block;
-            font-size: 14px;
-            color: $theme-secondary;
-            margin-bottom: 0;
-        }
+        // label {
+        //     display: inline-block;
+        //     font-size: 14px;
+        //     color: $theme-secondary;
+        //     margin-bottom: 0;
+        // }
 
-        input {
-            display: inline-block;
-            width: 165px;
-            font-size: 16px;
-            color: $theme-darken;
-            border: none;
-            background: transparent;
-        }
+        // input {
+        //     display: inline-block;
+        //     width: 165px;
+        //     font-size: 16px;
+        //     color: $theme-darken;
+        //     border: none;
+        //     background: transparent;
+        // }
     }
 
     .ui-widget.ui-widget-content {
@@ -137,6 +199,7 @@
         height: 4px;
         border: none;
         border-radius: 0;
+        width: 97%;
     }
 }
 

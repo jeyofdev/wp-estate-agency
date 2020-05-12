@@ -1,16 +1,6 @@
 <?php get_header(); ?>
 
 
-<?php
-    $args = [
-        "post_type" => "property",
-        "posts_per_page" => 3
-    ];
-
-    $query = new WP_Query($args);
-?>
-
-
 <!-- Property list -->
 <section class="property-section spad">
     <div class="container">
@@ -27,9 +17,9 @@
             <!-- Properties list -->
             <div class="col-lg-9">
                 <h4 class="property-title"><?= __("Property", "estateagency"); ?></h4>
-                <?php if ($query->have_posts()) : ?>
+                <?php if (have_posts()) : ?>
                     <div class="property-list">
-                        <?php while ($query->have_posts()) : $query->the_post(); ?>
+                        <?php while (have_posts()) : the_post(); ?>
                             <div class="single-property-item">
                                 <div class="row">
                                     <div class="col-md-4">

@@ -9,7 +9,8 @@ function estateagency_add_custom_columns_property ($columns) : array
         "cb" => $columns["cb"],
         "thumbnail" => __("Thumbnail", "estateagency"),
         "title" => $columns["title"],
-        "agent" => __("Agent", "estateagency"),
+		"agent" => __("Agent", "estateagency"),
+		"city" => __("City", "estateagency"),
         "contract_type" => __("Contract type", "estateagency"),
         "date" => $columns["date"],
     ];
@@ -33,6 +34,12 @@ function estateagency_add_custom_columns_property_content ($column, $postId) : v
     }
     elseif ($column === "contract_type") {
         $terms = get_the_terms($postId, "property_contract_type");
+        foreach ($terms as $term) {
+            echo $term->name;
+        }
+    }
+    elseif ($column === "city") {
+        $terms = get_the_terms($postId, "property_city");
         foreach ($terms as $term) {
             echo $term->name;
         }
@@ -100,7 +107,7 @@ function estateagency_add_custom_columns_partner_content ($column, $postId) : vo
  */
 function estateagency_term_radio_checklist ($args) : array
 {
-    if ((!empty( $args["taxonomy"])) && ($args["taxonomy"] === "property_contract_type" || $args["taxonomy"] === "property_type" || $args["taxonomy"] === "property_agent")) {
+    if ((!empty( $args["taxonomy"])) && ($args["taxonomy"] === "property_contract_type" || $args["taxonomy"] === "property_type" || $args["taxonomy"] === "property_agent") || $args["taxonomy"] === "property_city") {
         if (empty($args["walker"]) || is_a($args["walker"], "Walker") ) {
             $args['walker'] = new EstateAgencyTaxonomyRadioChecklistWalker();
         }
@@ -230,7 +237,10 @@ function estateagency_init_meta_box () : void
 	add_meta_box( "property_typediv", "Types", "estateagency_remove_most_used_meta_box", "property" , "side");  
 	
 	remove_meta_box('property_agentdiv', 'property', 'normal'); 
-	add_meta_box( "property_agentdiv", "Agents", "estateagency_remove_most_used_meta_box", "property" , "side");   
+	add_meta_box( "property_agentdiv", "Agents", "estateagency_remove_most_used_meta_box", "property" , "side");
+	
+	remove_meta_box('property_citydiv', 'property', 'normal'); 
+	add_meta_box( "property_citydiv", "Agents", "estateagency_remove_most_used_meta_box", "property" , "side");
 }
 
 

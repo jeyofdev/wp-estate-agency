@@ -275,6 +275,32 @@ function estateagency_add_post_type () : void
         "hierarchical" => true,
         "meta_box_cb" => "post_categories_meta_box"
     ]);
+
+
+    register_taxonomy("property_city", "property", [
+        "labels" => [
+            "name"                       => __( "Cities", "estateagency"),
+            "singular_name"              => __( "Cities", "estateagency"),
+            "search_items"               => __( "Search Cities", "estateagency"),
+            "popular_items"              => __( "Popular Cities", "estateagency"),
+            "all_items"                  => __( "All Cities", "estateagency"),
+            "edit_item"                  => __( "Edit City", "estateagency"),
+            "view_item"                  => __( "View City", "estateagency"),
+            "update_item"                => __( "Update City", "estateagency"),
+            "add_new_item"               => __( "Add New City", "estateagency"), 
+            "new_item_name"              => __( "New City Name", "estateagency"),
+            "separate_items_with_commas" => __( "Separate Cities with commas", "estateagency"),
+            "add_or_remove_items"        => __( "Add or remove Cities", "estateagency"),
+            "choose_from_most_used"      => __( "Choose from the most used Cities", "estateagency"),
+            "not_found"                  => __( "No Cities found.", "estateagency"),
+            "no_terms"                   => __( "No Cities", "estateagency"),
+            "items_list_navigation"      => __( "Cities list navigation", "estateagency"),
+            "items_list"                 => __( "Cities list", "estateagency"),
+            "back_to_items"              => __( "&larr; Back to Cities", "estateagency"),
+        ],
+        "hierarchical" => true,
+        "meta_box_cb" => "post_categories_meta_box"
+    ]);
 }
 
 

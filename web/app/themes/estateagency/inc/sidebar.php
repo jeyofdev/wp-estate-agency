@@ -6,6 +6,7 @@
 function estateagency_sidebar () : void
 {
     register_widget(EstateagencyBestAgentsWidget::class);
+    register_widget(EstateagencySearchPropertyWidget::class);
 
     register_sidebar([
         "id" => "property",
