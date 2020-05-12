@@ -24,6 +24,7 @@ function estateagency_image_size () : void
     add_image_size("testimonial_video_background", 1140, 500, true);
     add_image_size("home_testimonial_video_background", 1920, 500, true);
     add_image_size("property_agent_sidebar", 100, 80, true);
+    add_image_size("footer_background", 1920, 400, true);
 }
 
 
