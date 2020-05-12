@@ -79,34 +79,6 @@
                     "step": ""
                 },
                 {
-                    "key": "field_5eaec26c7471a",
-                    "label": "Price",
-                    "name": "price",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5eaec2917471b",
-                                "operator": "!=empty"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "$",
-                    "min": "",
-                    "max": "",
-                    "step": ""
-                },
-                {
                     "key": "field_5eaec2db7471d",
                     "label": "Amenities",
                     "name": "amenities",
@@ -128,10 +100,10 @@
             ]
         },
         {
-            "key": "field_5eaebf6601162",
-            "label": "specifications",
-            "name": "specifications",
-            "type": "group",
+            "key": "field_5eba4f55347e6",
+            "label": "Price",
+            "name": "price",
+            "type": "number",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -140,179 +112,19 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "row",
-            "sub_fields": [
-                {
-                    "key": "field_5eaebf7d01163",
-                    "label": "Bathrooms",
-                    "name": "bathrooms",
-                    "type": "range",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": 1,
-                    "max": 10,
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_5eaebf9b01164",
-                    "label": "Bedrooms",
-                    "name": "bedrooms",
-                    "type": "range",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": 1,
-                    "max": 10,
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_5eaebfcc01165",
-                    "label": "Total rooms",
-                    "name": "total_rooms",
-                    "type": "range",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": 1,
-                    "max": "",
-                    "step": 30,
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_5eaec01f01166",
-                    "label": "Garage",
-                    "name": "garage",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "no": "no",
-                        "yes": "yes"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "default_value": "",
-                    "layout": "horizontal",
-                    "return_format": "value",
-                    "save_other_choice": 0
-                },
-                {
-                    "key": "field_5eaec0d3367bd",
-                    "label": "number of garages",
-                    "name": "number_of_garages",
-                    "type": "range",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5eaec01f01166",
-                                "operator": "==",
-                                "value": "yes"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": 1,
-                    "max": 5,
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_5eaec04d01167",
-                    "label": "Parking",
-                    "name": "parking",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "no": "no",
-                        "yes": "yes"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "default_value": "",
-                    "layout": "horizontal",
-                    "return_format": "value",
-                    "save_other_choice": 0
-                },
-                {
-                    "key": "field_5eaec111367be",
-                    "label": "number of parkings",
-                    "name": "number_of_parkings",
-                    "type": "range",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5eaec04d01167",
-                                "operator": "==",
-                                "value": "yes"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": 1,
-                    "max": 5,
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
-            "key": "field_5eaebe8c26243",
-            "label": "Surface",
-            "name": "surface",
-            "type": "group",
+            "key": "field_5eba51c16198d",
+            "label": "Total rooms",
+            "name": "total_rooms",
+            "type": "range",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -321,80 +133,217 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "row",
-            "sub_fields": [
-                {
-                    "key": "field_5eaebeeb26245",
-                    "label": "Total area",
-                    "name": "total_area",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "m²",
-                    "min": "",
-                    "max": "",
-                    "step": ""
-                },
-                {
-                    "key": "field_5eaebeb126244",
-                    "label": "Home area",
-                    "name": "home_area",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "m²",
-                    "min": "",
-                    "max": "",
-                    "step": ""
-                },
-                {
-                    "key": "field_5eaebf0c26246",
-                    "label": "Garage Size",
-                    "name": "garage_size",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5eaec01f01166",
-                                "operator": "==",
-                                "value": "yes"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "m²",
-                    "min": "",
-                    "max": "",
-                    "step": ""
-                }
-            ]
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5eb9719a7969a",
+            "label": "bedrooms",
+            "name": "bedrooms",
+            "type": "range",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5eb98a3c452a6",
+            "label": "Bathrooms",
+            "name": "bathrooms",
+            "type": "range",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5eb98c297182e",
+            "label": "Garage",
+            "name": "garage",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "no",
+                "yes": "yes"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5eb98d0a5d0f2",
+            "label": "Number of garages",
+            "name": "number_of_garages",
+            "type": "range",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eb98c297182e",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5eb9a07daee37",
+            "label": "Parking",
+            "name": "parking",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "no",
+                "yes": "yes"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5eb9a097aee38",
+            "label": "Number of parkings",
+            "name": "number_of_parkings",
+            "type": "range",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eb9a07daee37",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5eba50b6ebe26",
+            "label": "Total area",
+            "name": "total_area",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "m²",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5eba5518b4240",
+            "label": "Home area",
+            "name": "home_area",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "m²",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5eba554cb4241",
+            "label": "Garage Size",
+            "name": "garage_size",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "m²",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -409,10 +358,10 @@
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "top",
+    "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1588586006
+    "modified": 1589270394
 }

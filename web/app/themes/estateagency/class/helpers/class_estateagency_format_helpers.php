@@ -60,7 +60,7 @@ class EstateAgencyFormatHelpers
      */
     public static function format_price(): ?string
     {
-        $price = number_format_i18n(get_sub_field("price"));
+        $price = number_format_i18n(get_field("price"));
         return $price;
     }
 }

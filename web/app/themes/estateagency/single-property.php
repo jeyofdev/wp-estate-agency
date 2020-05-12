@@ -84,30 +84,22 @@
                                                                 </tr>
                                                             <?php endwhile; ?>
                                                         <?php endif; ?>
-                                                        <?php if (have_rows("specifications")) : ?>
-                                                            <?php while (have_rows("specifications")) : the_row() ?>
-                                                                <tr>
-                                                                    <td class="pt-name"><?= __("Bathrooms", "estateagency"); ?></td>
-                                                                    <td class="p-value"><?= get_sub_field("bathrooms"); ?></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="pt-name"><?= __("Rooms", "estateagency"); ?></td>
-                                                                    <td class="p-value"><?= get_sub_field("total_rooms"); ?></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="pt-name"><?= __("Parking lots", "estateagency"); ?></td>
-                                                                    <?= estateagency_check_specification_exist("parking", "number_of_parkings"); ?>
-                                                                </tr>
-                                                            <?php endwhile; ?>
-                                                        <?php endif; ?>
-                                                        <?php if (have_rows("surface")) : ?>
-                                                            <?php while (have_rows("surface")) : the_row() ?>
-                                                                <tr>
-                                                                    <td class="pt-name"><?= __("Lot area", "estateagency"); ?></td>
-                                                                    <td class="p-value"><?= __(get_sub_field("total_area") . " sqft", "estateagency"); ?></td>
-                                                                </tr>
-                                                            <?php endwhile; ?>
-                                                        <?php endif; ?>
+                                                        <tr>
+                                                            <td class="pt-name"><?= __("Bathrooms", "estateagency"); ?></td>
+                                                            <td class="p-value"><?= get_field("bathrooms"); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pt-name"><?= __("Rooms", "estateagency"); ?></td>
+                                                            <td class="p-value"><?= get_field("total_rooms"); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pt-name"><?= __("Parking lots", "estateagency"); ?></td>
+                                                            <?= estateagency_check_specification_exist("parking", "number_of_parkings"); ?>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pt-name"><?= __("Lot area", "estateagency"); ?></td>
+                                                            <td class="p-value"><?= __(get_field("total_area") . " sqft", "estateagency"); ?></td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                                 <table class="right-table">
@@ -128,30 +120,22 @@
                                                             <td class="pt-name"><?= __("Contract type", "estateagency"); ?></td>
                                                             <td class="p-value"><?= get_the_terms($post->ID, "property_contract_type")[0]->name; ?></td>
                                                         </tr>
-                                                        <?php if (have_rows("specifications")) : ?>
-                                                            <?php while (have_rows("specifications")) : the_row() ?>
-                                                                <tr>
-                                                                    <td class="pt-name"><?= __("Beds", "estateagency"); ?></td>
-                                                                    <td class="p-value"><?= get_sub_field("bedrooms"); ?></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="pt-name"><?= __("Garages", "estateagency"); ?></td>
-                                                                    <?= estateagency_check_specification_exist("garage", "number_of_garages"); ?>
-                                                                </tr>
-                                                            <?php endwhile; ?>
-                                                        <?php endif; ?>
-                                                        <?php if (have_rows("surface")) : ?>
-                                                            <?php while (have_rows("surface")) : the_row() ?>
-                                                                <tr>
-                                                                    <td class="pt-name"><?= __("Home area", "estateagency"); ?></td>
-                                                                    <td class="p-value"><?= __(get_sub_field("home_area") . " sqft", "estateagency"); ?></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="pt-name"><?= __("Gara Size", "estateagency"); ?></td>
-                                                                    <?= estateagency_check_specification_exist("garage", "garage_size"); ?>
-                                                                </tr>
-                                                            <?php endwhile; ?>
-                                                        <?php endif; ?>
+                                                        <tr>
+                                                            <td class="pt-name"><?= __("Beds", "estateagency"); ?></td>
+                                                            <td class="p-value"><?= get_field("bedrooms"); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pt-name"><?= __("Garages", "estateagency"); ?></td>
+                                                            <?= estateagency_check_specification_exist("garage", "number_of_garages"); ?>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pt-name"><?= __("Home area", "estateagency"); ?></td>
+                                                            <td class="p-value"><?= __(get_field("home_area") . " sqft", "estateagency"); ?></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pt-name"><?= __("Gara Size", "estateagency"); ?></td>
+                                                            <?= estateagency_check_specification_exist("garage", "garage_size"); ?>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -161,7 +145,7 @@
                                         </div>
                                         <div class="tab-pane fade" id="tab-3" role="tabpanel">
                                             <div class="pd-table-amenities">
-                                                <?php if (have_rows("surface")) : ?>
+                                                <?php if (have_rows("overview")) : ?>
                                                     <?php while (have_rows("overview")) : the_row() ?>
                                                         <?= get_sub_field("amenities"); ?>
                                                     <?php endwhile; ?>

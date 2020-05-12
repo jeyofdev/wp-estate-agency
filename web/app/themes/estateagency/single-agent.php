@@ -1,10 +1,21 @@
 <?php get_header(); ?>
 
 
+<!-- breadcrumb -->
+<?php get_template_part("template-parts/breadcrumb"); ?>
+
+
 <?php
     $args = [
         "post_type" => "property",
-        "posts_per_page" => 3
+        "tax_query" => [
+            [
+                "taxonomy" => "property_agent",
+                "field"    => "slug",
+                "terms"    => $wp_query->query_vars["agent"],
+            ],
+        ],
+        "posts_per_page" => 4,
     ];
 
     $query = new WP_Query($args);

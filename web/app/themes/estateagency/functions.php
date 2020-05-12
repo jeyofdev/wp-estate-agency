@@ -31,8 +31,8 @@ function estateagency_check_specification_exist (?string $fieldToCheck, string $
     if ($fieldToReturn === "garage_size") {
         $unit = __(" sqft", "estateagency");
     }
-    if (get_sub_field($fieldToCheck) !== "no") {
-        $value = '<td class="p-value">' . get_sub_field($fieldToReturn) . $unit . '</td>';
+    if (get_field($fieldToCheck) !== "no") {
+        $value = '<td class="p-value">' . get_field($fieldToReturn) . $unit . '</td>';
     } else {
         $value = '<td class="p-value">0</td>';
     }
