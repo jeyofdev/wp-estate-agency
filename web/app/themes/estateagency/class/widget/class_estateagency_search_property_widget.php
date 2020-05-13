@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Widget_Search_Property class
+ */
+
 class EstateagencySearchPropertyWidget extends WP_Widget
 {
     public $fields = [];

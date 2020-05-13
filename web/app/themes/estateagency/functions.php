@@ -15,10 +15,12 @@ require_once "inc/admin.php";
 require_once "inc/query/property.php";
 
 require_once "class/helpers/class_estateagency_format_helpers.php";
+require_once "class/helpers/class_estateagency_social_link_helpers.php";
 require_once "class/options/class_estateagency_option_agency.php";
 require_once "class/widget/class_estateagency_best_agents_widget.php";
 require_once "class/widget/class_estateagency_search_property_widget.php";
 require_once "class/widget/class_estateagency_contact_widget.php";
+require_once "class/widget/class_estateagency_social_links_widget.php";
 require_once "class/class_estateagency_title.php";
 require_once "class/walkers/class_estateagency_comment_walker.php";
 require_once "class/walkers/class_estateagency_contract_types_radio_walker.php";

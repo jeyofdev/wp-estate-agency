@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Widget_Best_Agents class
+ */
+
 class EstateagencyBestAgentsWidget extends WP_Widget
 {
     public $fields = [];

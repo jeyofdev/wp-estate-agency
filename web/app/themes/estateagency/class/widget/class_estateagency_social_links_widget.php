@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Widget_Contact class
+ * Widget_Social_links class
  */
 
-class EstateagencyContactWidget extends WP_Widget
+class EstateagencySocialLinksWidget extends WP_Widget
 {
     public $fields = [];
 
 
     public function __construct()
     {
-        parent::__construct("estateagency_contact_widget", __("Contact", "estateagency"), [
-            "classname" => "contact",
-			"description" => __("Display contact modes."),
+        parent::__construct("estateagency_social_links_widget", __("Social links", "estateagency"), [
+            "classname" => "social_links",
+			"description" => __("Display the links to the agency's social networks."),
 			"customize_selective_refresh" => true,
         ]);
 
@@ -29,14 +29,14 @@ class EstateagencyContactWidget extends WP_Widget
         echo $args["before_widget"];
         ?>
 
-        <div class="col-lg-3">
+        <div class="col-lg-2">
             <div class="footer-widget">
                 <?php
                     // title
-                    $title = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"]) : __("Contact Us", "estateagency");
+                    $title = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"]) : __("Social", "estateagency");
                     echo $args["before_title"] . $title . $args["after_title"];
 
-                    $template = locate_template("template-parts/widget/contact.php");
+                    $template = locate_template("template-parts/widget/social-links.php");
                     if (!empty($template)) {
                         include($template);
                     }
