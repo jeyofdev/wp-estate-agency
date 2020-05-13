@@ -134,7 +134,12 @@
                                         <div class="fi-pic set-bg" data-setbg="<?= estateagency_post_thumbnail_background($post, 'property_feature_thumbnail', 'properties'); ?>">
                                             <div class="pic-tag">
                                             <div class="f-text"><?= __("feature", "estateagency"); ?></div>
-                                            <div class="s-text"><?= get_the_terms($post->ID, "property_contract_type")[0]->name; ?></div>
+                                            <div class="s-text">
+                                                <?php $contract_type = get_the_terms($post->ID, "property_contract_type")[0]; ?>
+                                                <a href="<?= get_post_type_archive_link("property") . '?property_contract_type=' . $contract_type->slug; ?>">
+                                                    <?= sprintf(__("For %s", $contract_type->name, "estateagency"), $contract_type->name); ?>
+                                                </a>
+                                            </div>
                                             </div>
                                             <div class="feature-author">
                                                 <div class="fa-pic">
@@ -155,7 +160,9 @@
                                         </div>
                                         <div class="fi-text">
                                             <div class="inside-text">
-                                                <h4><?= the_title(); ?></h4>
+                                                <a href="<?= the_permalink(); ?>">
+                                                    <h4><?= the_title(); ?></h4>
+                                                </a>
                                                 <?php if (have_rows("overview")) : ?>
                                                     <?php while (have_rows("overview")) : the_row() ?>
                                                         <ul>
@@ -283,7 +290,12 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="stp-text">
-                                            <div class="s-text"><?= sprintf(__("For %s", $value, "estateagency"), get_the_terms($post->ID, "property_contract_type")[0]->name); ?></div>
+                                            <div class="s-text">
+                                                <?php $contract_type = get_the_terms($post->ID, "property_contract_type")[0]; ?>
+                                                <a href="<?= get_post_type_archive_link("property") . '?property_contract_type=' . $contract_type->slug; ?>">
+                                                    <?= sprintf(__("For %s", $contract_type->name, "estateagency"), $contract_type->name); ?>
+                                                </a>
+                                            </div>
                                             <a href="<?= the_permalink(); ?>">
                                                 <h2 class="r-title"><?= the_title(); ?></h2>
                                             </a>

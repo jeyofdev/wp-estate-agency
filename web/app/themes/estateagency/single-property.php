@@ -173,7 +173,9 @@
                                                 <div class="agent-desc">
                                                     <?= estateagency_post_thumbnail($post, "property_single_agent", 336, 224); ?>
                                                     <div class="agent-title">
-                                                        <h5><?= the_title(); ?></h5>
+                                                        <a href="<?= the_permalink(); ?>">
+                                                            <h5><?= the_title(); ?></h5>
+                                                        </a>
                                                         <span><?= get_field("job"); ?></span>
                                                     </div>
                                                     <div class="agent-social">

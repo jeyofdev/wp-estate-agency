@@ -37,7 +37,8 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
-                            <h5><?= the_title(); ?> <span><?= get_field("job"); ?></span></h5>
+                            
+                            <h5><a href="<?= the_permalink(); ?>"><?= the_title(); ?></a><span><?= get_field("job"); ?></span></h5>
                         </div>
                     </div>
                 <?php endwhile; ?>

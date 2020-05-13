@@ -5,7 +5,7 @@
 .property-pagination {
     padding-top: 10px;
 
-    a {
+    a, span {
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -16,11 +16,12 @@
         color: $theme-lighten-500;
         transition: all .3s;
         margin-right: 6px;
+    }
 
-        &:hover {
-            background: $theme-primary;
-            border-color: $theme-lighten;
-            color: $theme-light;
-        }
+    a:hover,
+    span.current {
+        background: $theme-primary;
+        border-color: $theme-lighten;
+        color: $theme-light;
     }
 }

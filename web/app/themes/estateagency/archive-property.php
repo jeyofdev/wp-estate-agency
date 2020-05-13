@@ -14,6 +14,17 @@
             <!-- Sidebar end -->
 
 
+
+<?php
+    $args = [
+        "post_type" => "property",
+        "post_per_page" => 4
+    ];
+
+    $query = new WP_Query($args);
+?>
+
+
             <!-- Properties list -->
             <div class="col-lg-9">
                 <h4 class="property-title"><?= __("Property", "estateagency"); ?></h4>
@@ -29,7 +40,12 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="property-text">
-                                            <div class="s-text"><?= sprintf(__("For %s", $value, "estateagency"), get_the_terms($post->ID, "property_contract_type")[0]->name); ?></div>
+                                            <div class="s-text">
+                                                <?php $contract_type = get_the_terms($post->ID, "property_contract_type")[0]; ?>
+                                                <a href="<?= get_post_type_archive_link("property") . '?property_contract_type=' . $contract_type->slug; ?>">
+                                                    <?= sprintf(__("For %s", $contract_type->name, "estateagency"), $contract_type->name); ?>
+                                                </a>
+                                            </div>
                                             <a href="<?= the_permalink(); ?>">
                                                 <h5 class="r-title"><?= the_title(); ?></h5>
                                             </a>
@@ -48,6 +64,9 @@
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
                     </div>
+
+                    <!-- pagination -->
+                    <?= estateagency_property_pagination(); ?>
                 <?php endif; ?>
             </div>
             <!-- Properties list end -->
