@@ -46,7 +46,9 @@ class EstateAgencyTitle {
             self::$pageTitle = single_tag_title(__("Articles of the tag : ", "estateagency"));
         } elseif (is_singular("agent")) {
             self::$pageTitle = single_post_title(__("Properties managed by the agent : ", "estateagency"));
-        } else {
+        } elseif (is_tax("property_city")) {
+            self::$pageTitle = single_term_title(__("Properties located in : ", "estateagency"));
+        }else {
             self::$pageTitle = get_the_title();
         }
     }
@@ -68,7 +70,9 @@ class EstateAgencyTitle {
             self::$pageTitle = self::AddBreadcrumbMultiple ("News", "Tag", "tag");
         } elseif (is_singular("agent")) {
             self::$pageTitle = self::AddBreadcrumbMultiple ("Agent", null, "agent");
-        }else {
+        } elseif (is_tax("property_city")) {
+            self::$pageTitle = self::AddBreadcrumbMultiple ("City", null, "property_city");
+        } else {
             self::$pageTitle = get_the_title();
         }
     }

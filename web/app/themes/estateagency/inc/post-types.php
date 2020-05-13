@@ -299,7 +299,11 @@ function estateagency_add_post_type () : void
             "back_to_items"              => __( "&larr; Back to Cities", "estateagency"),
         ],
         "hierarchical" => true,
-        "meta_box_cb" => "post_categories_meta_box"
+        "meta_box_cb" => "post_categories_meta_box",
+        "has_archive" => true,
+        "rewrite" => [
+            "slug" => _x("city", "URL", "estateagency")
+        ],
     ]);
 }
 

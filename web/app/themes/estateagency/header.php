@@ -20,7 +20,7 @@
         <div class="language-bar">
             <?php get_template_part("template-parts/header/header-languages"); ?>
             <div class="property-btn">
-                <a href="#" class="property-sub"><?= __("Submit Property", "estateagency"); ?></a>
+                <a href="<?= get_post_type_archive_link("property"); ?>" class="property-sub"><?= __("Submit Property", "estateagency"); ?></a>
             </div>
         </div>
 
@@ -56,7 +56,7 @@
                     <div class="col-lg-5">
                         <div class="top-right">
                             <?php get_template_part("template-parts/header/header-languages"); ?>
-                            <a href="#" class="property-sub"><?= __("Submit Property", "estateagency"); ?></a>
+                            <a href="<?= get_post_type_archive_link("property"); ?>" class="property-sub"><?= __("Submit Property", "estateagency"); ?></a>
                         </div>
                     </div>
                 </div>

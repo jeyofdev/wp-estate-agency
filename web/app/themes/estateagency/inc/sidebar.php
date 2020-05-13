@@ -27,6 +27,7 @@ function estateagency_footer_sidebar () : void
 {
     register_widget(EstateagencyContactWidget::class);
     register_widget(EstateagencySocialLinksWidget::class);
+    register_widget(EstateagencyCityPropertyWidget::class);
 
     register_sidebar([
         "id" => "footer",

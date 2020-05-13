@@ -24,7 +24,7 @@
 ?>
 
 
-<form action="" class="sidebar-search">
+<form action="<?= get_post_type_archive_link("property"); ?>" class="sidebar-search">
     <div class="sidebar-btn">
         <div class="bt-item">
             <input type="radio" name="property_contract_type" id="sale" value="sale" <?php checked(!$isRent); ?>>
