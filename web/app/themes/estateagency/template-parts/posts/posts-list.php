@@ -11,10 +11,15 @@
         <div class="row">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
-                    <div class="col-lg-4 col-md-6">
-                        <?php get_template_part("template-parts/posts/post-card"); ?>
-                    </div>
+                    <?php get_template_part("template-parts/posts/post-card"); ?>
                 <?php endwhile; ?>
+
+                <!-- pagination -->
+                <?php if ($wp_query->max_num_pages > 1) : ?>
+                    <div class="col-lg-12 loadmore">
+                        <div class="primary-btn load">Load More</div>
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
     </div>

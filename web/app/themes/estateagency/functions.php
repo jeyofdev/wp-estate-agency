@@ -10,6 +10,7 @@ require_once "inc/sidebar.php";
 require_once "inc/terms.php";
 require_once "inc/forms.php";
 require_once "inc/comments.php";
+require_once "inc/pagination.php";
 require_once "inc/customize.php";
 require_once "inc/admin.php";
 
@@ -68,49 +69,4 @@ function get_title_section (string $fieldTitle, string $fieldSubtitle) : string
     $output .= '</div>';
 
     return $output;
-}
-
-
-/**
- * Pagination of type post 'property'
- */
-function estateagency_property_pagination () {
-    global $query;
-
-    $big = 999999999;
-
-    $args = [
-        "type" => "array",
-        "base" => str_replace($big, "%#%", get_pagenum_link($big)),
-        "format" => "?paged=%#%",
-        "current" => max(1, get_query_var("paged")),
-    ];
-
-    if (is_single() || is_tax("property_city")) {
-        $args["total"] = $query->max_num_pages;
-    }
-
-    $pages = paginate_links($args);
-
-    if ($pages === null) {
-        return;
-    }
-
-    $output = '<div class="property-pagination">';
-
-    foreach ($pages as $key => $value) {
-        if (strpos($value, "next") !== false || strpos($value, "prev") !== false) {
-            unset($pages[$key]);
-        } else {
-            if (strpos($value, "current") === false) {
-                $output .= str_replace('class="page-numbers" ', '', $value);
-            } else {
-                $output .= $value;
-            }
-        }
-    }
-
-    $output .= '</div>';
-
-	return $output;
 }

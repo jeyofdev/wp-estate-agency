@@ -6,6 +6,8 @@ import 'slicknav/dist/jquery.slicknav.js'
 import './app/jquery-ui.min.js'
 import 'owl.carousel'
 import './app/main.js'
+import './app/loadmore'
+
 
 
 
