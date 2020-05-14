@@ -67,6 +67,18 @@
 
                     <!-- pagination -->
                     <?= estateagency_property_pagination(); ?>
+                <?php elseif (
+                    get_query_var("property_contract_type") !== '' ||
+                    get_query_var("property_type") !== '' ||
+                    get_query_var("property_city") !== '' ||
+                    get_query_var("bedrooms") !== '' ||
+                    get_query_var("bathrooms") !== '' ||
+                    get_query_var("garages") !== '' ||
+                    get_query_var("parkings") !== ''
+                ) : ?>
+                    <p class="alert alert-danger"><?= __("There are no properties that match your search criteria.", "estateagency"); ?></p>
+                <?php else : ?>
+                    <p class="alert alert-danger"><?= __("There are no property listings online yet", "estateagency"); ?></p>
                 <?php endif; ?>
             </div>
             <!-- Properties list end -->

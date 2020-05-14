@@ -350,7 +350,7 @@
                     <div class="col-lg-12">
                         <div class="properties-title">
                             <?= get_title_section("top_properties_title", "top_properties_subtitle"); ?>
-                            <a href="<?= home_url('/property'); ?>" class="top-property-all"><?= get_sub_field("button_label"); ?></a>
+                            <a href="<?= home_url('/property'); ?>" class="top-property-all"><?= get_field("button_label"); ?></a>
                         </div>
                     </div>
                 </div>
@@ -423,32 +423,31 @@
         </section>
 
         <!-- Latest posts section -->
-        <section class="blog-section latest-blog spad">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <?= get_title_section("latest_posts_title", "latest_posts_subtitle"); ?>
+        <?php
+            $query = new WP_Query([
+                "post_type" => "post",
+                "posts_per_page" => 3
+            ]);
+        ?>
+        <?php if ($query->have_posts()) : ?>
+            <section class="blog-section latest-blog spad">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <?= get_title_section("latest_posts_title", "latest_posts_subtitle"); ?>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <?php
-                        $query = new WP_Query([
-                            "post_type" => "post",
-                            "posts_per_page" => 3
-                        ]);
-                    ?>
-
-                    <?php if ($query->have_posts()) : ?>
+                    <div class="row">
                         <?php while ($query->have_posts()) : $query->the_post(); ?>
                             <div class="col-lg-4">
                                 <?php get_template_part("template-parts/posts/post-card"); ?>
                             </div>
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
-                    <?php endif; ?>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
         <!-- Latest posts section End -->
     <?php endwhile; ?>
 <?php endif; ?>

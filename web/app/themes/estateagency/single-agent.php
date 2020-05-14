@@ -76,6 +76,8 @@
 
                     <!-- pagination -->
                     <?= estateagency_property_pagination(); ?>
+                <?php else : ?>
+                    <p class="alert alert-danger"><?= __("There are no real estate ads online managed by " . get_the_title(), "estateagency"); ?></p>
                 <?php endif; ?>
             </div>
             <!-- Properties list end -->

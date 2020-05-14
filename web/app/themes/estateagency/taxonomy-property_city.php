@@ -77,6 +77,8 @@
 
                     <!-- pagination -->
                     <?= estateagency_property_pagination(); ?>
+                <?php else : ?>
+                    <p class="alert alert-danger"><?= __("There are no real estate listings online for the city of " . ucfirst(str_replace("-", " ", $wp_query->query_vars["property_city"])), "estateagency"); ?></p>
                 <?php endif; ?>
             </div>
             <!-- Properties list end -->
