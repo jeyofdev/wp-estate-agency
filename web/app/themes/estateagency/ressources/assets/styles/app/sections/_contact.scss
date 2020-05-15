@@ -92,6 +92,10 @@
     margin-bottom: 10px;
     transition: all .3s;
 
+    &[type=submit] {
+        width: auto;
+    }
+
     &:focus {
         border-color: $theme-primary;
         color: $theme-darken;
