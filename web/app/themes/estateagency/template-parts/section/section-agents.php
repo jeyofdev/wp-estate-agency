@@ -30,9 +30,9 @@
                                 <div class="hover-social">
                                     <?php if (have_rows("social_media")) : ?>
                                         <?php while (have_rows("social_media")) : the_row() ?>
-                                            <a class="facebook" href="https://www.facebook.com/<?= get_sub_field("facebook"); ?>/"><i class="fa fa-facebook"></i></a>
-                                            <a class="twitter" href="https://twitter.com/<?= get_sub_field("twitter"); ?>/"><i class="fa fa-twitter"></i></a>
-                                            <a class="instagram" href="https://www.instagram.com/<?= get_sub_field("instagram"); ?>/"><i class="fa fa-instagram"></i></a>
+                                            <a class="facebook" href="https://www.facebook.com/<?= get_sub_field("facebook"); ?>/"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="twitter" href="https://twitter.com/<?= get_sub_field("twitter"); ?>/"><i class="fab fa-twitter"></i></a>
+                                            <a class="instagram" href="https://www.instagram.com/<?= get_sub_field("instagram"); ?>/"><i class="fab fa-instagram"></i></a>
                                         <?php endwhile; ?>
                                     <?php endif; ?>
                                 </div>

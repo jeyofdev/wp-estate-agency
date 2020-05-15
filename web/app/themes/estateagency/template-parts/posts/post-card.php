@@ -21,8 +21,8 @@
         </div>
         <div class="sb-text">
             <ul>
-                <li><i class="fa fa-user"></i> <?= get_the_author(); ?></li>
-                <li><i class="fa fa-clock-o"></i> <?= EstateAgencyFormatHelpers::format_date(); ?></li>
+                <li><i class="fas fa-user"></i> <?= get_the_author(); ?></li>
+                <li><i class="far fa-clock"></i> <?= EstateAgencyFormatHelpers::format_date(); ?></li>
             </ul>
             <h4><a href="<?= the_permalink(); ?>"><?= the_title() ?></a></h4>
         </div>

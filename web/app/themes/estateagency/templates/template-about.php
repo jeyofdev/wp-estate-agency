@@ -30,7 +30,7 @@
                             <div class="video-text set-bg empty" data-setbg="">
                         <?php endif; ?>
                             <a href="<?= the_field("video_url"); ?>" class="play-btn video-popup">
-                                <i class="fa fa-play"></i>
+                                <i class="fas fa-play"></i>
                             </a>
                             <h4><?= the_field("video_title"); ?></h4>
                             <h2><?= the_field("video_subtitle"); ?></h2>

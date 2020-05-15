@@ -10,6 +10,7 @@ require_once "inc/sidebar.php";
 require_once "inc/terms.php";
 require_once "inc/forms.php";
 require_once "inc/comments.php";
+require_once "inc/share.php";
 require_once "inc/pagination.php";
 require_once "inc/customize.php";
 require_once "inc/admin.php";

@@ -18,8 +18,8 @@
                             <?php endforeach; ?>
                             <h2><?= the_title() ?></h2>
                             <ul>
-                                <li><i class="fa fa-user"></i> <?= get_the_author(); ?></li>
-                                <li><i class="fa fa-clock-o"></i> <?= EstateAgencyFormatHelpers::format_date(); ?></li>
+                                <li><i class="fas fa-user"></i> <?= get_the_author(); ?></li>
+                                <li><i class="far fa-clock"></i> <?= EstateAgencyFormatHelpers::format_date(); ?></li>
                             </ul>
                         </div>
                     </div>

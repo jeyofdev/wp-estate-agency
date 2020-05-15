@@ -14,7 +14,7 @@
                     <h2><?= EstateAgencyTitle::get_page_title(); ?></h2>
                     <div class="breadcrumb-option">
                         <span>
-                            <a href="<?= home_url('/'); ?>"><i class="fa fa-home"></i> <?= __("Home", "estateagency"); ?></a>
+                            <a href="<?= home_url('/'); ?>"><i class="fas fa-home"></i> <?= __("Home", "estateagency"); ?></a>
                         </span>
                         <span><?= EstateAgencyTitle::get_page_breadcrumb(); ?></span>
                     </div>

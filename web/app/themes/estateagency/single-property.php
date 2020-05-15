@@ -31,11 +31,9 @@
                     <div class="col-lg-9">
                         <div class="pd-details-text">
                             <div class="pd-details-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-send"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-print"></i></a>
-                                <a href="#"><i class="fa fa-cloud-download"></i></a>
+                                <?php if (function_exists("sharing_display")) : ?>
+                                    <?php sharing_display('', true); ?>
+                                <?php endif; ?>
                             </div>
                             <div class="pd-desc">
                                 <h4><?= __("Description", "estateagency"); ?></h4>
@@ -181,10 +179,10 @@
                                                     <div class="agent-social">
                                                         <?php if (have_rows("social_media")) : ?>
                                                             <?php while (have_rows("social_media")) : the_row() ?>
-                                                                <a href="https://www.facebook.com/<?= get_sub_field("facebook"); ?>/"><i class="fa fa-facebook"></i></a>
-                                                                <a href="https://twitter.com/<?= get_sub_field("twitter"); ?>/"><i class="fa fa-twitter"></i></a>
-                                                                <a href="https://www.instagram.com/<?= get_sub_field("instagram"); ?>/"><i class="fa fa-instagram"></i></a>
-                                                                <a href="<?= get_sub_field("email"); ?>"><i class="fa fa-envelope"></i></a>
+                                                                <a href="https://www.facebook.com/<?= get_sub_field("facebook"); ?>/"><i class="fab fa-facebook-f"></i></a>
+                                                                <a href="https://twitter.com/<?= get_sub_field("twitter"); ?>/"><i class="fab fa-twitter"></i></a>
+                                                                <a href="https://www.instagram.com/<?= get_sub_field("instagram"); ?>/"><i class="fab fa-instagram"></i></a>
+                                                                <a href="<?= get_sub_field("email"); ?>"><i class="fas fa-envelope"></i></a>
                                                             <?php endwhile; ?>
                                                         <?php endif; ?>
                                                     </div>

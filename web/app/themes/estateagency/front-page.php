@@ -261,13 +261,13 @@
                                                 <?php if (have_rows("overview")) : ?>
                                                     <?php while (have_rows("overview")) : the_row() ?>
                                                         <ul>
-                                                            <li><i class="fa fa-map-marker"></i> 
+                                                            <li><i class="fas fa-map-marker-alt"></i> 
                                                                 <?php if (strlen(get_sub_field("address")) > 28) : ?>
                                                                     <?= substr(get_sub_field("address"), 0, 28) . "..."; ?></li>
                                                                 <?php else : ?>
                                                                     <?= get_sub_field("address"); ?></li>
                                                                 <?php endif; ?>
-                                                            <li><i class="fa fa-tag"></i><?= get_the_terms($post->ID, "property_type")[0]->name; ?></li>
+                                                            <li><i class="fas fa-tag"></i><?= get_the_terms($post->ID, "property_type")[0]->name; ?></li>
                                                         </ul>
                                                         <h5 class="price">
                                                             <?php foreach (get_the_terms($post->ID, "property_contract_type") as $term) : ?>
@@ -285,19 +285,19 @@
                                             </div>
                                             <ul class="room-features">
                                                 <li>
-                                                    <i class="fa fa-arrows"></i>
+                                                    <i class="fas fa-arrows-alt"></i>
                                                     <p><?= get_field("total_area") . __(" sqft", "estateagency"); ?></p>
                                                 </li>
                                                 <li>
-                                                    <i class="fa fa-bed"></i>
+                                                    <i class="fas fa-bed"></i>
                                                     <p><?= get_field("bedrooms"); ?></p>
                                                 </li>
                                                 <li>
-                                                    <i class="fa fa-bath"></i>
+                                                    <i class="fas fa-bath"></i>
                                                     <p><?= get_field("bathrooms"); ?></p>
                                                 </li>
                                                 <li>
-                                                    <i class="fa fa-car"></i>
+                                                    <i class="fas fa-car"></i>
                                                     <p>
                                                         <?php if (get_field("garage") !== "no") : ?>
                                                             <?= get_field("number_of_garages"); ?>
@@ -331,7 +331,7 @@
                     <div class="col-lg-12">
                         <div class="video-text">
                             <a href="<?= the_field("video_url"); ?>" class="play-btn video-popup">
-                                <i class="fa fa-play"></i>
+                                <i class="fas fa-play"></i>
                             </a>
                             <h4><?= the_field("video_title"); ?></h4>
                             <h2><?= the_field("video_subtitle"); ?></h2>

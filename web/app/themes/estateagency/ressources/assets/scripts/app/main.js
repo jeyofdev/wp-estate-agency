@@ -193,7 +193,7 @@
         loop: true,
         smartSpeed: 1200,
         nav: true,
-        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+        navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>']
     })
 
     /* -------------------
@@ -207,7 +207,7 @@
         loop: true,
         smartSpeed: 1200,
         nav: true,
-        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
         responsive: {
             320: {
                 items: 1
