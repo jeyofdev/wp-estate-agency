@@ -45,6 +45,13 @@
             <div class="container">
                 <div class="footer-text">
                     <div class="row">
+                        <div class="col-lg-3">
+                            <div class="footer-logo">
+                                <div class="logo">
+                                    <img src="<?= get_theme_mod("logo_footer"); ?>" alt="">
+                                </div>
+                            </div>
+                        </div>
                         <?php get_sidebar("footer"); ?>
                         
                     </div>

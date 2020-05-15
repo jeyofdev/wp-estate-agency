@@ -68,7 +68,7 @@
                     <div class="col-lg-3">
                         <div class="logo">
                             <a href="<?= home_url('/'); ?>" title="<?= __('Home page', 'estateagency'); ?>">
-                                <img src="<?= get_theme_mod("logo"); ?>" alt="">
+                                <img src="<?= get_theme_mod("logo_header"); ?>" alt="">
                             </a>
                         </div>
                     </div>
