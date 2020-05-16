@@ -25,6 +25,8 @@ function estateagency_image_size () : void
     add_image_size("home_testimonial_video_background", 1920, 500, true);
     add_image_size("property_agent_sidebar", 100, 80, true);
     add_image_size("footer_background", 1920, 400, true);
+    add_image_size("property_gallery_large", 850, 405, true);
+    add_image_size("property_gallery_thumbnail", 162, 113, true);
 }
 
 
@@ -63,4 +65,39 @@ function estateagency_post_thumbnail_background (WP_POST $post, ?string $size = 
     }
 
     return $thumbnail;
+}
+
+
+
+/**
+ * Display the gallery of the single property
+ */
+function estateagency_property_single_slider () : ?string
+{
+    $output = '<div class="property-more-pic">';
+        $output .= '<div class="product-pic-zoom">';
+            $output .= '<img class="product-big-img" src="' . get_sub_field("image_1")["sizes"]["property_gallery_large"] . '" alt="">';
+        $output .= '</div>';
+        $output .= '<div class="product-thumbs">';
+            $output .= '<div class="product-thumbs-track ps-slider owl-carousel">';
+
+    $num = 0;
+    $thumbs = [];
+    
+    foreach (get_row() as $row) {
+        $num += 1;
+
+        if ($row !== '') {
+            $thumbs[$num] = '<div class="pt" data-imgbigurl="' . get_sub_field("image_" . $num)["sizes"]["property_gallery_large"] . '">';
+            $thumbs[$num] .= '<img src="' . get_sub_field("image_" . $num)["sizes"]["property_gallery_thumbnail"] . '" alt="">';
+            $thumbs[$num] .= '</div>';
+        }
+    }
+
+    $output .= implode('', $thumbs);
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '</div>';
+
+    return $output;
 }

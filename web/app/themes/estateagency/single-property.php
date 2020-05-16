@@ -35,6 +35,13 @@
                                     <?php sharing_display('', true); ?>
                                 <?php endif; ?>
                             </div>
+
+                            <?php if (have_rows("property_gallery")) : ?>
+                                <?php while (have_rows("property_gallery")) : the_row() ?>
+                                    <?= estateagency_property_single_slider(); ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+
                             <div class="pd-desc">
                                 <h4><?= __("Description", "estateagency"); ?></h4>
                                 <p><?= the_content(); ?>
