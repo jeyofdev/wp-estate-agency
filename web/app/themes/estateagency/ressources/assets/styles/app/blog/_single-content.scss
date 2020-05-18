@@ -220,6 +220,15 @@
 }
 
 @include media-breakpoint-down(md) {
+    .blog-details-social {
+        h6, .social-list {
+            display: inline-block;
+        }
+
+        h6 {
+            margin-right: 10px;
+        }
+    }
     .blog-details-section > .container > .row:first-child > div:last-child {
         margin-top: 100px;
     }

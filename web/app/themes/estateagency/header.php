@@ -18,7 +18,6 @@
             <i class="icon_close"></i>
         </div>
         <div class="language-bar">
-            <?php get_template_part("template-parts/header/header-languages"); ?>
             <div class="property-btn">
                 <a href="<?= get_post_type_archive_link("property"); ?>" class="property-sub"><?= __("Submit Property", "estateagency"); ?></a>
             </div>
@@ -55,7 +54,6 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="top-right">
-                            <?php get_template_part("template-parts/header/header-languages"); ?>
                             <a href="<?= get_post_type_archive_link("property"); ?>" class="property-sub"><?= __("Submit Property", "estateagency"); ?></a>
                         </div>
                     </div>
@@ -65,14 +63,14 @@
         <div class="nav-logo">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-2">
                         <div class="logo">
                             <a href="<?= home_url('/'); ?>" title="<?= __('Home page', 'estateagency'); ?>">
                                 <img src="<?= get_theme_mod("logo_header"); ?>" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-10">
                         <!-- header infos -->
                         <?php get_template_part("template-parts/header/header-infos"); ?>
                     </div>

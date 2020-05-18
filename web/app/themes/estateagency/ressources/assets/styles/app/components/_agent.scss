@@ -16,6 +16,10 @@
     background: $theme-light;
 }
 
+.agent-section .agent-carousel.owl-carousel .owl-nav.disabled {
+    display: block !important;
+}
+
 .agent-section .agent-carousel.owl-carousel .owl-nav button,
 .agent-section.about-page .agent-carousel.owl-carousel .owl-nav button {
     color: $theme-primary;
@@ -172,38 +176,5 @@
         color: $theme-lighten-500;
         font-weight: 400;
         margin-top: 12px;
-    }
-}
-
-
-/* ------------------------------ Responsive Media Styles ------------------------------ */
-
-@include media-breakpoint-only(lg) {
-    .agent-carousel.owl-carousel .owl-nav,
-    .top-properties-carousel.owl-carousel .owl-nav {
-        position: relative;
-        text-align: center;
-
-        button[type=button] {
-            position: relative;
-            transform: translateY(0);
-            left: 0 !important;
-            margin: 0 10px;
-        }
-    }
-}
-
-@include media-breakpoint-down(sm) {
-    .agent-carousel.owl-carousel .owl-nav,
-    .top-properties-carousel.owl-carousel .owl-nav {
-        position: relative;
-        text-align: center;
-
-        button[type=button] {
-            position: relative;
-            transform: translateY(0);
-            left: 0 !important;
-            margin: 0 10px;
-        }
     }
 }

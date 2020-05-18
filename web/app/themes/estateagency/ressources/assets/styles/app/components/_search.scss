@@ -44,16 +44,24 @@
     padding: 30px;
     box-shadow: 0 0 42px 5px rgba(44, 44, 44, .2);
 
+    .row {
+        display: grid;
+        row-gap: 15px;
+        column-gap: 30px;
+    }
+
     .form-group {
         position: relative;
         display: flex;
         align-items: stretch;
         height: 46px;
+        margin-bottom: 0;
 
         &:last-child input[type=number] {
             margin-right: 0;
         }
 
+        .nice-select,
         input[type=number] {
             width: 100%;
             height: 44px;
@@ -61,7 +69,6 @@
             border: 1px solid #ebebeb;
             line-height: 46px;
             margin-bottom: 20px;
-            // overflow: hidden;
             background: lighten($theme-lighten, 3%);
             color: $theme-secondary;
         }
@@ -98,7 +105,6 @@
 
 
 .filter-form .sidebar-btn {
-    margin-bottom: 30px;
     overflow: hidden;
 
     .bt-item {
@@ -130,48 +136,7 @@
     }
 }
 
-.filter-form .first-row {
-    margin: 0;
-
-    .sidebar-btn {
-        width: 247px;
-        margin-right: 30px;
-        height: 46px;
-    }
-
-    .nice-select,
-    input[type=number] {
-        clear: none;
-        width: 247px;
-        margin-right: 30px;
-        height: 46px;
-        background: $theme-lighten-100;
-        border-radius: 0;
-        border: 1px solid $theme-lighten;
-        line-height: 46px;
-        margin-bottom: 30px;
-    
-        &:after {
-            border-bottom: 2px solid $theme-lighten-400;
-            border-right: 2px solid $theme-lighten-400;
-            height: 8px;
-            right: 20px;
-            margin-top: -6px;
-            width: 8px;
-        }
-    
-        &:last-child {
-            margin-right: 0;
-        }
-    
-        span {
-            font-size: 14px;
-            color: $theme-secondary;
-        }
-    }
-}
-
-.filter-form .first-row .nice-select.open .list {
+.filter-form .row .nice-select.open .list {
     opacity: 1;
     pointer-events: auto;
     transform: scale(1) translateY(0);
@@ -180,104 +145,8 @@
     margin-top: 0;
 }
 
-.filter-form .second-row {
-    margin: 0;
 
-    .form-group {
-        margin-bottom: 0;
-    }
-
-    .nice-select,
-    input[type=number] {
-        clear: none;
-        width: 247px;
-        margin-right: 30px;
-        height: 46px;
-        background: $theme-lighten-100;
-        border-radius: 0;
-        border: 1px solid $theme-lighten;
-        line-height: 46px;
-    
-        &.open .list {
-            opacity: 1;
-            pointer-events: auto;
-            transform: scale(1) translateY(0);
-            width: 100%;
-            border-radius: 0;
-            margin-top: 0;
-        }
-    
-        &:after {
-            border-bottom: 2px solid $theme-lighten-400;
-            border-right: 2px solid $theme-lighten-400;
-            height: 8px;
-            margin-top: -6px;
-            right: 20px;
-            width: 8px;
-        }
-    
-        span {
-            font-size: 14px;
-            color: $theme-secondary;
-        }
-    }
-}
-
-.filter-form .second-row .price-range-wrap {
-    width: 247px;
-    float: left;
-    margin-right: 30px;
-
-    .price-text {
-        margin-bottom: 9px;
-
-        label {
-            display: inline-block;
-            font-size: 14px;
-            color: $theme-secondary;
-            margin-bottom: 0;
-        }
-
-        input {
-            display: inline-block;
-            width: 165px;
-            font-size: 14px;
-            color: $theme-secondary;
-            border: none;
-            background: transparent;
-        }
-    }
-}
-
-.filter-form .second-row .room-size-range {
-    width: 247px;
-    float: left;
-    margin-right: 30px;
-
-    .price-text {
-        margin-bottom: 9px;
-
-        label {
-            display: inline-block;
-            font-size: 14px;
-            color: $theme-secondary;
-            margin-bottom: 0;
-        }
-
-        input {
-            display: inline-block;
-            width: 165px;
-            font-size: 14px;
-            color: $theme-secondary;
-            border: none;
-            outline: none;
-            background: transparent;
-        }
-    }
-}
-
-.filter-form .second-row button.search-btn {
-    width: 247px;
+.filter-form .row button.search-btn {
     font-size: 16px;
     height: 46px;
     background: $theme-primary;
@@ -310,59 +179,43 @@
 
 /* ------------------------------ Responsive Media Styles ------------------------------ */
 
-@include media-breakpoint-only(lg) {
-    .filter-form .first-row .nice-select,
-    .filter-form .first-row input[type=number] {
-        width: 195px;
-    }
-
-    .filter-form .second-row .nice-select,{
-        width: 195px;
-    }
-
-    .filter-form .second-row .price-range-wrap {
-        width: 195px;
-    }
-
-    .filter-form .second-row .room-size-range {
-        width: 195px;
-    }
-
-    .filter-form .second-row button.search-btn {
-        width: 195px;
-    }
-
-    .filter-form .second-row .price-range-wrap .price-text input {
-        width: 154px;
-    }
-
-    .filter-form .second-row .room-size-range .price-text input {
-        width: 160px;
+@include media-breakpoint-up(lg) {
+    .filter-form .row {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
 @include media-breakpoint-down(md) {
-    .filter-form .first-row .nice-select,
-    .filter-form .first-row input[type=number] {
+    .filter-form .form-group {
         width: 100%;
     }
 
-    .filter-form .second-row .nice-select {
+    .filter-form .row .sidebar-btn {
+        width: 100%;
+        margin-right: 0;
+
+        .bt-item {
+            width: 50%;
+        }
+    }
+
+    .filter-form .row .form-group input {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .filter-form .row .nice-select,
+    .filter-form .row input[type=number] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .filter-form .row .nice-select {
         width: 100%;
         margin-bottom: 25px;
     }
 
-    .filter-form .second-row .price-range-wrap {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .filter-form .second-row .room-size-range {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .filter-form .second-row button.search-btn {
+    .filter-form .row button.search-btn {
         width: 100%;
     }
 }

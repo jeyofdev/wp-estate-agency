@@ -102,7 +102,7 @@
                             </div>
                         </div>
                         <form action="<?= get_post_type_archive_link("property"); ?>" class="filter-form">
-                            <div class="first-row row">
+                            <div class="row">
                                 <div class="sidebar-btn">
                                     <div class="bt-item">
                                         <input type="radio" name="property_contract_type" id="sale" value="sale" <?php checked(!$isRent); ?>>
@@ -138,9 +138,7 @@
                                     <input type="number" name="bedrooms" id="bedrooms" placeholder="2" value="<?= esc_attr($currentBedrooms); ?>">
                                     <label for="bedrooms"><?= __("Bedroom", "estateagency"); ?></label>
                                 </div>
-                            </div>
-
-                            <div class="second-row row">
+                            
                                 <div class="form-group">
                                     <input type="number" name="bathrooms" id="bathrooms" placeholder="1" value="<?= esc_attr($currentBathrooms); ?>">
                                     <label for="bathrooms"><?= __("Bathroom", "estateagency"); ?></label>
@@ -154,6 +152,7 @@
                                     <input type="number" name="parkings" id="parkings" placeholder="1" value="<?= esc_attr($currentParkings); ?>">
                                     <label for="parkings"><?= __("Parkings", "estateagency"); ?></label>
                                 </div>
+
                                 <button type="submit" class="search-btn">Search</button>
                             </div>
                         </form>
