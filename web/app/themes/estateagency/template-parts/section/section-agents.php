@@ -15,7 +15,7 @@
 
     <?php
     $query = new WP_Query([
-        "post_type" => "agent"
+        "post_type" => "agent",
     ]);
     ?>
 

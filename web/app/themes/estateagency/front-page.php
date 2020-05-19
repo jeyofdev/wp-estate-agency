@@ -349,7 +349,7 @@
                     <div class="col-lg-12">
                         <div class="properties-title">
                             <?= get_title_section("top_properties_title", "top_properties_subtitle"); ?>
-                            <a href="<?= home_url('/property'); ?>" class="top-property-all"><?= get_field("button_label"); ?></a>
+                            <a href="<?= home_url('/property'); ?>" class="top-property-all"><?= get_field("top_properties_button_label"); ?></a>
                         </div>
                     </div>
                 </div>
