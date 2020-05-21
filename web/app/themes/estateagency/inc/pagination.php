@@ -59,7 +59,7 @@ function estateagency_loadmore_ajax_handler () : void
 
     if (have_posts()) :
         while (have_posts()) : the_post();
-            get_template_part("template-parts/posts/post-card");
+            get_template_part("template-parts/post/post-card");
         endwhile;
     endif;
     die; // here we exit the script and even no wp_reset_query() required!

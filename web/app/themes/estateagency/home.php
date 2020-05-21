@@ -2,11 +2,11 @@
 
 
 <!-- breadcrumb -->
-<?php get_template_part("template-parts/breadcrumb"); ?>
+<?php get_template_part("template-parts/section/breadcrumb"); ?>
 
 
 <!-- Blog list -->
-<?php get_template_part("template-parts/posts/posts-list"); ?>
+<?php get_template_part("template-parts/post/posts-list"); ?>
 
 
 <?php get_footer(); ?>

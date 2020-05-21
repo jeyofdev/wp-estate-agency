@@ -9,7 +9,7 @@
 
 
 <!-- breadcrumb -->
-<?php get_template_part("template-parts/breadcrumb"); ?>
+<?php get_template_part("template-parts/section/breadcrumb"); ?>
 
 
 <!-- Contact section  -->

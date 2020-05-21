@@ -1,3 +1,12 @@
+<?php
+
+/**
+ * Display the card of property
+ */
+
+?>
+
+
 <div class="s-text"><?= sprintf(__("For %s", $value, "estateagency"), get_the_terms($post->ID, "property_contract_type")[0]->name); ?></div>
 <a href="<?= the_permalink(); ?>">
     <h5 class="r-title"><?= the_title(); ?></h5>

@@ -9,7 +9,8 @@
 
 
 <!-- breadcrumb -->
-<?php get_template_part("template-parts/breadcrumb"); ?>
+<?php get_template_part("template-parts/section/breadcrumb"); ?>
+
 
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
@@ -106,7 +107,7 @@
 
         <!-- Agent section-->
         <section class="agent-section about-page spad">
-            <?php get_template_part("template-parts/section/section-agents"); ?>
+            <?php get_template_part("template-parts/section/agents"); ?>
         </section>
     <?php endwhile; ?>
 <?php endif; ?>

@@ -14,9 +14,9 @@
     </div>
 
     <?php
-    $query = new WP_Query([
-        "post_type" => "agent",
-    ]);
+        $query = new WP_Query([
+            "post_type" => "agent",
+        ]);
     ?>
 
     <div class="row">

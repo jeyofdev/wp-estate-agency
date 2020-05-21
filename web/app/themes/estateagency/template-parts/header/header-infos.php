@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Display the site language choices
+ * Display the header infos
  */
 
 ?>
