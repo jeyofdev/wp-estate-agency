@@ -4,7 +4,7 @@
  * Pagination of type post 'property'
  */
 function estateagency_property_pagination () {
-    global $query;
+    global $wp_query;
 
     $big = 999999999;
 
@@ -16,7 +16,7 @@ function estateagency_property_pagination () {
     ];
 
     if (is_single() || is_tax("property_city")) {
-        $args["total"] = $query->max_num_pages;
+        $args["total"] = $wp_query->max_num_pages;
     }
 
     $pages = paginate_links($args);

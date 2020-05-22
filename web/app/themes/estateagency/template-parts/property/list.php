@@ -41,3 +41,7 @@
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 </div>
+
+
+<!-- pagination -->
+<?= estateagency_property_pagination(); ?>

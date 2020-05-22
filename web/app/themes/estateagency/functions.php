@@ -6,6 +6,7 @@ require_once "inc/menus.php";
 require_once "inc/images.php";
 require_once "inc/text.php";
 require_once "inc/post-types.php";
+require_once "inc/taxonomy.php";
 require_once "inc/sidebar.php";
 require_once "inc/terms.php";
 require_once "inc/forms.php";
