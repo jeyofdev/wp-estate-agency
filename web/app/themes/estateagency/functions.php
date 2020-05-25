@@ -39,6 +39,23 @@ EstateAgencyOptionAgency::register();
 
 
 /**
+ * Filters the parts of the document title
+ */
+function estateagency_title_parts (array $title) : array
+{
+    if (!is_front_page()) {
+        unset($title["title"]);
+        unset($title["tagline"]);
+    }
+
+    return $title;
+}
+
+add_filter("document_title_parts", "estateagency_title_parts");
+
+
+
+/**
  * Check if a specification of the property exists
  */
 function estateagency_check_specification_exist (?string $fieldToCheck, string $fieldToReturn) : string
