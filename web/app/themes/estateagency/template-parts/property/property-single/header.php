@@ -16,7 +16,7 @@
                     <?php if (have_rows("overview")) : ?>
                         <?php while (have_rows("overview")) : the_row() ?>
                             <p class="room-location"><i class="icon_pin"></i> <?= get_sub_field("address"); ?></p>
-                            <h2><?= the_title(); ?></h2>
+                            <h2 class="secondary"><?= the_title(); ?></h2>
                             <?php get_template_part("template-parts/property/property-element/price"); ?>
                         <?php endwhile; ?>
                     <?php endif; ?>

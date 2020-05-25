@@ -33,7 +33,7 @@
                                     <?php if (have_rows("overview")) : ?>
                                         <?php while (have_rows("overview")) : the_row() ?>
                                             <p class="room-location"><i class="icon_pin"></i> <?= get_sub_field("address"); ?></p>
-                                            <h2><?= the_title(); ?></h2>
+                                            <h2 class="secondary"><?= the_title(); ?></h2>
                                             <div class="room-price">
                                                 <span><?= __("Start From:", "estateagency"); ?></span>
                                                 <p>

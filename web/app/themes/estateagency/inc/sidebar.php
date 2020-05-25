@@ -34,7 +34,7 @@ function estateagency_footer_sidebar () : void
         "name" => __("Footer sidebar", "estateagency"),
         "before_widget" => '',
         "after_widget" => '',
-        "before_title" => '<h4>',
+        "before_title" => '<h4 class="secondary">',
         "after_title" => '</h4>'
     ]);
 }

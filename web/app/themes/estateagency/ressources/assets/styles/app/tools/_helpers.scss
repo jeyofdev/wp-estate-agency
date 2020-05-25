@@ -2,6 +2,10 @@
     Helper CSS
 ----------------------- */
 
+section.secondary {
+    background: $theme-lighten-100;
+}
+
 .section-title {
     text-align: center;
     margin-bottom: 70px;
@@ -79,9 +83,9 @@
     display: inline-block;
     font-size: 14px;
     color: $theme-light !important;
-    background: $theme-primary !important;
+    background: $theme-primary;
     padding: 8px 30px 10px;
-    border: 1px solid $theme-primary !important;
+    border: 1px solid $theme-primary;
 }
 
 

@@ -32,5 +32,16 @@ function estateagency_assets_admin () : void
 
 
 
+/**
+ * Register and enqueue scripts for the customizer
+ */
+function estateagency_customize () {
+    wp_enqueue_script("estateagency_apparence", get_template_directory_uri() . "/inc/customize/js/customize-preview.js", ["jquery", "customize-preview"], '', true);
+}
+
+
+
 add_action("wp_enqueue_scripts", "estateagency_assets");
 add_action("admin_enqueue_scripts", "estateagency_assets_admin");
+add_action("customize_preview_init", "estateagency_customize");
+

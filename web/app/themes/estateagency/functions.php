@@ -13,10 +13,14 @@ require_once "inc/forms.php";
 require_once "inc/comments.php";
 require_once "inc/share.php";
 require_once "inc/pagination.php";
-require_once "inc/customize.php";
 require_once "inc/admin.php";
 
 require_once "inc/query/property.php";
+
+require_once "inc/customize/customize.php";
+require_once "inc/customize/customize-defaults.php";
+require_once "inc/customize/style.php";
+
 
 require_once "class/helpers/class_estateagency_format_helpers.php";
 require_once "class/helpers/class_estateagency_social_link_helpers.php";

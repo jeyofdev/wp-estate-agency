@@ -18,7 +18,7 @@
                             <span><?= $category->name; ?></span>
                         </a>
                     <?php endforeach; ?>
-                    <h2><?= the_title() ?></h2>
+                    <h2 class="secondary"><?= the_title() ?></h2>
                     <ul>
                         <li><i class="fas fa-user"></i> <?= get_the_author(); ?></li>
                         <li><i class="far fa-clock"></i> <?= EstateAgencyFormatHelpers::format_date(); ?></li>

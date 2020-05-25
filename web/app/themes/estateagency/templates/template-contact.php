@@ -15,7 +15,7 @@
 <!-- Contact section  -->
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-        <section class="contact-section">
+        <section class="contact-section secondary">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">

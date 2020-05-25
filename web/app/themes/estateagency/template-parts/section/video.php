@@ -19,8 +19,8 @@
                     <a href="<?= the_field("video_url"); ?>" class="play-btn video-popup">
                         <i class="fas fa-play"></i>
                     </a>
-                    <h4><?= the_field("video_title"); ?></h4>
-                    <h2><?= the_field("video_subtitle"); ?></h2>
+                    <h4 class="secondary"><?= the_field("video_title"); ?></h4>
+                    <h2 class="secondary"><?= the_field("video_subtitle"); ?></h2>
                 </div>
             </div>
         </div>

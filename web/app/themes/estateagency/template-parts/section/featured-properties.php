@@ -7,7 +7,7 @@
 ?>
 
 
-<section class="feature-section spad">
+<section class="feature-section spad secondary">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

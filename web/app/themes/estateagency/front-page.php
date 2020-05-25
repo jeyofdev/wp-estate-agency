@@ -29,7 +29,7 @@
 
 
         <!-- Agent section-->
-        <section class="agent-section spad">
+        <section class="agent-section spad secondary">
             <?php get_template_part("template-parts/section/agents"); ?>
         </section>
 
