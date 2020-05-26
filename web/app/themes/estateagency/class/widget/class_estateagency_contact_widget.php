@@ -13,7 +13,7 @@ class EstateagencyContactWidget extends WP_Widget
     {
         parent::__construct("estateagency_contact_widget", __("Contact", "estateagency"), [
             "classname" => "contact",
-			"description" => __("Display contact modes."),
+			"description" => __("Display the contact methods for contacting the agency.", "estateagency"),
 			"customize_selective_refresh" => true,
         ]);
 

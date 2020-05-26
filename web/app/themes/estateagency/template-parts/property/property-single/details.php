@@ -40,9 +40,9 @@
                                         <td class="p-value">
                                             <?php $term = get_the_terms($post->ID, "property_contract_type")[0]->slug; ?>
                                             <?php if ($term === "sale") : ?>
-                                                <?= sprintf(__("$%s", EstateAgencyFormatHelpers::format_price(), "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
+                                                <?= sprintf(__("$%s", "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
                                             <?php elseif ($term === "rent") : ?>
-                                                <?= sprintf(__("$%s / month", EstateAgencyFormatHelpers::format_price(), "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
+                                                <?= sprintf(__("$%s / month", "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
                                             <?php endif; ?>
                                         </td>
                                     </tr>
@@ -65,12 +65,12 @@
                                 <td class="p-value"><?= get_field("total_rooms"); ?></td>
                             </tr>
                             <tr>
-                                <td class="pt-name"><?= __("Parking lots", "estateagency"); ?></td>
+                                <td class="pt-name"><?= __("Parking", "estateagency"); ?></td>
                                 <?= estateagency_check_specification_exist("parking", "number_of_parkings"); ?>
                             </tr>
                             <tr>
                                 <td class="pt-name"><?= __("Lot area", "estateagency"); ?></td>
-                                <td class="p-value"><?= __(get_field("total_area") . " sqft", "estateagency"); ?></td>
+                                <td class="p-value"><?= get_field("total_area") . __(" sqft", "estateagency"); ?></td>
                             </tr>
                         </tbody>
                     </table>
@@ -93,7 +93,7 @@
                                 <td class="p-value"><?= get_the_terms($post->ID, "property_contract_type")[0]->name; ?></td>
                             </tr>
                             <tr>
-                                <td class="pt-name"><?= __("Beds", "estateagency"); ?></td>
+                                <td class="pt-name"><?= __("Bedrooms", "estateagency"); ?></td>
                                 <td class="p-value"><?= get_field("bedrooms"); ?></td>
                             </tr>
                             <tr>
@@ -102,7 +102,7 @@
                             </tr>
                             <tr>
                                 <td class="pt-name"><?= __("Home area", "estateagency"); ?></td>
-                                <td class="p-value"><?= __(get_field("home_area") . " sqft", "estateagency"); ?></td>
+                                <td class="p-value"><?= get_field("home_area") . __(" sqft", "estateagency"); ?></td>
                             </tr>
                             <tr>
                                 <td class="pt-name"><?= __("Gara Size", "estateagency"); ?></td>

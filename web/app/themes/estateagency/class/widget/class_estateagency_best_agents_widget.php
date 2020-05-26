@@ -19,7 +19,7 @@ class EstateagencyBestAgentsWidget extends WP_Widget
 
         $this->fields = [
             "title" => __("Title", "estateagency"),
-            "number" => __("Number of agents to show:", "estateagency")
+            "number" => __("Number of agents to show :", "estateagency")
         ];
     }
 
@@ -78,7 +78,7 @@ class EstateagencyBestAgentsWidget extends WP_Widget
                         <span><?= get_field("job", $agent->ID); ?></span>
                         <p class="property-items">
                             <?php if ($propertiesByAgent->post_count !== 0) : ?>
-                                <?= sprintf(_n("%d property", "%d properties", $propertiesByAgent->post_count, "estateagency"), $propertiesByAgent->post_count); ?>
+                                <?= sprintf(_n("%d property", __("%d properties", "estateagency"), $propertiesByAgent->post_count, "estateagency"), $propertiesByAgent->post_count); ?>
                             <?php else : ?>
                                 <?= __("0 property", "estateagency"); ?>
                             <?php endif; ?>

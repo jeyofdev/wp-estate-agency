@@ -25,7 +25,7 @@
                 ) : ?>
                     <p class="alert alert-danger"><?= __("There are no properties that match your search criteria.", "estateagency"); ?></p>
                 <?php else : ?>
-                    <p class="alert alert-danger"><?= __("There are no property listings online yet", "estateagency"); ?></p>
+                    <p class="alert alert-danger"><?= __("There are no property listings online yet.", "estateagency"); ?></p>
                 <?php endif; ?>
             </div>
         </div>

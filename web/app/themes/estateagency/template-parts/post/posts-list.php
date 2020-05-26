@@ -21,7 +21,7 @@
                     </div>
                 <?php endif; ?>
             <?php else : ?>
-                <p class="alert alert-danger text-center w-100"><?= __("There are no articles online yet", "estateagency"); ?></p>
+                <p class="alert alert-danger text-center w-100"><?= __("There are no articles online yet.", "estateagency"); ?></p>
             <?php endif; ?>
         </div>
     </div>

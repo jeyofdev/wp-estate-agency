@@ -141,7 +141,7 @@
     customize("color_content", "color", [
         ".single-howit-works p",
         ".single-top-properties p",
-        ".property-section p",
+        ".property-section .property-list p",
         ".property-details-section p",
         ".about-section p",
         ".testimonial-slider .ts-item p",

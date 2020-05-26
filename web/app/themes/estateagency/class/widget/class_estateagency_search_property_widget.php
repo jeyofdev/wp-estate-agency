@@ -13,7 +13,7 @@ class EstateagencySearchPropertyWidget extends WP_Widget
     {
         parent::__construct("estateagency_search_property_widget", __("Search Property", "estateagency"), [
             "classname" => "search_property",
-			"description" => __("Search properties according to one or more filters."),
+			"description" => __("Search properties according to one or more filters.", "estateagency"),
 			"customize_selective_refresh" => true,
         ]);
 

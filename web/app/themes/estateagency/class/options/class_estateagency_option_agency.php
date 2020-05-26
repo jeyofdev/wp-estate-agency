@@ -67,28 +67,28 @@ class EstateAgencyOptionAgency
         add_settings_field("agency_options_facebook", __("Facebook", "estateagency"), function () {
             ?>
                 <input type="url" name="<?= self::FACEBOOK; ?>" id="<?= self::FACEBOOK; ?>" class="regular-text ltr" value="<?= esc_html(get_option(self::FACEBOOK)); ?>">
-                <p class="description" id="facebook-description"><?= __("Lien Facebook (ex: https://www.facebook.com/pseudo).", "estateagency"); ?></p>
+                <p class="description" id="facebook-description"><?= __("Facebook link (ex: https://www.facebook.com/pseudo).", "estateagency"); ?></p>
             <?php
         }, self::GROUP, self::SECTION_SLUG);
 
         add_settings_field("agency_options_twitter", __("Twitter", "estateagency"), function () {
             ?>
                 <input type="url" name="<?= self::TWITTER; ?>" id="<?= self::TWITTER; ?>" class="regular-text ltr" value="<?= esc_html(get_option(self::TWITTER)); ?>">
-                <p class="description" id="twitter-description"><?= __("Lien Twitter (ex: https://twitter.com/pseudo).", "estateagency"); ?></p>
+                <p class="description" id="twitter-description"><?= __("Twitter link (ex: https://twitter.com/pseudo).", "estateagency"); ?></p>
             <?php
         }, self::GROUP, self::SECTION_SLUG);
 
         add_settings_field("agency_options_instagram", __("Instagram", "estateagency"), function () {
             ?>
                 <input type="url" name="<?= self::INSTAGRAM; ?>" id="<?= self::INSTAGRAM; ?>" class="regular-text ltr" value="<?= esc_html(get_option(self::INSTAGRAM)); ?>">
-                <p class="description" id="agency_options_instagram-description"><?= __("Lien Instagram (ex: https://www.instagram.com/pseudo).", "estateagency"); ?></p>
+                <p class="description" id="agency_options_instagram-description"><?= __("Instagram link (ex: https://www.instagram.com/pseudo).", "estateagency"); ?></p>
             <?php
         }, self::GROUP, self::SECTION_SLUG);
 
         add_settings_field("agency_options_opening_hours", __("Opening hours", "estateagency"), function () {
             ?>
                 <input type="text" name="<?= self::OPENING_HOURS; ?>" id="<?= self::OPENING_HOURS; ?>" class="regular-text ltr" value="<?= esc_html(get_option(self::OPENING_HOURS)); ?>">
-                <p class="description" id="agency_options_opening_hours-description"><?= __("opening_hours (ex: Mon - Sat, 08 AM - 06 PM).", "estateagency"); ?></p>
+                <p class="description" id="agency_options_opening_hours-description"><?= __("Opening hours (ex: Mon - Sat, 08 AM - 06 PM).", "estateagency"); ?></p>
             <?php
         }, self::GROUP, self::SECTION_SLUG);
     }

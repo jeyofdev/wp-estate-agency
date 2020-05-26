@@ -48,7 +48,7 @@ class EstateAgencyFormatHelpers
      */
     public static function format_date () : string
     {
-        return sprintf(__("%s", "estateagency"), get_the_date("jS M, Y"));
+        return sprintf("%s", get_the_date("jS M, Y"));
     }
 
 

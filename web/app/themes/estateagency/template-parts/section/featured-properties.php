@@ -42,7 +42,7 @@
                                         <div class="s-text">
                                             <?php $contract_type = get_the_terms($post->ID, "property_contract_type")[0]; ?>
                                             <a href="<?= get_post_type_archive_link("property") . '?property_contract_type=' . $contract_type->slug; ?>">
-                                                <?= sprintf(__("For %s", $contract_type->name, "estateagency"), $contract_type->name); ?>
+                                                <?= sprintf(__("For %s", "estateagency"), $contract_type->name); ?>
                                             </a>
                                         </div>
                                     </div>
@@ -82,14 +82,12 @@
                                                 <h5 class="price">
                                                     <?php foreach (get_the_terms($post->ID, "property_contract_type") as $term) : ?>
                                                         <?php if ($term->slug === "sale") : ?>
-                                                            <?= sprintf(__("$%s", EstateAgencyFormatHelpers::format_price(), "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
+                                                            <?= sprintf(__("$%s", "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
                                                         <?php elseif ($term->slug === "rent") : ?>
-                                                            <?= sprintf(__("month", "estateagency") . "%s<span>/" . __("month", "estateagency") . "</span>", EstateAgencyFormatHelpers::format_price()); ?>
+                                                            <?= sprintf(__("$%s", "estateagency") . "<span>/" . __("month", "estateagency") . "</span>", EstateAgencyFormatHelpers::format_price()); ?>
                                                         <?php endif; ?>
                                                     <?php endforeach; ?>
                                                 </h5>
-
-
                                             <?php endwhile; ?>
                                         <?php endif; ?>
                                     </div>

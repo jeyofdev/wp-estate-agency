@@ -13,7 +13,7 @@ class EstateagencySocialLinksWidget extends WP_Widget
     {
         parent::__construct("estateagency_social_links_widget", __("Social links", "estateagency"), [
             "classname" => "social_links",
-			"description" => __("Display the links to the agency's social networks."),
+			"description" => __("Display the links to the agency's social networks.", "estateagency"),
 			"customize_selective_refresh" => true,
         ]);
 

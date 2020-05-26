@@ -19,7 +19,7 @@
         </div>
         <div class="language-bar">
             <div class="property-btn">
-                <a href="<?= get_post_type_archive_link("property"); ?>" class="property-sub"><?= __("Submit Property", "estateagency"); ?></a>
+                <a href="<?= get_post_type_archive_link("property"); ?>" class="property-sub"><?= __("View the Properties", "estateagency"); ?></a>
             </div>
         </div>
 
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="top-right">
-                            <a href="<?= get_post_type_archive_link("property"); ?>" class="property-sub"><?= __("Submit Property", "estateagency"); ?></a>
+                            <a href="<?= get_post_type_archive_link("property"); ?>" class="property-sub"><?= __("View the Properties", "estateagency"); ?></a>
                         </div>
                     </div>
                 </div>

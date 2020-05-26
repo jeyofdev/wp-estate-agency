@@ -13,7 +13,7 @@ class EstateagencyCityPropertyWidget extends WP_Widget
     {
         parent::__construct("estateagency_city_property_widget", __("City Property", "estateagency"), [
             "classname" => "city_property",
-			"description" => __("Display the list of cities where the properties are located."),
+			"description" => __("Display the list of cities where the properties are located.", "estateagency"),
 			"customize_selective_refresh" => true,
         ]);
 

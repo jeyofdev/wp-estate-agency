@@ -35,20 +35,20 @@
                                             <p class="room-location"><i class="icon_pin"></i> <?= get_sub_field("address"); ?></p>
                                             <h2 class="secondary"><?= the_title(); ?></h2>
                                             <div class="room-price">
-                                                <span><?= __("Start From:", "estateagency"); ?></span>
+                                                <span><?= __("Start From :", "estateagency"); ?></span>
                                                 <p>
                                                     <?php foreach (get_the_terms($post->ID, "property_contract_type") as $term) : ?>
                                                         <?php if ($term->slug === "sale") : ?>
-                                                            <?= sprintf(__("$%s", EstateAgencyFormatHelpers::format_price(), "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
+                                                            <?= sprintf(__("$%s", "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
                                                         <?php elseif ($term->slug === "rent") : ?>
-                                                            <?= sprintf(__("$%s / month", EstateAgencyFormatHelpers::format_price(), "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
+                                                            <?= sprintf(__("$%s / month", "estateagency"), EstateAgencyFormatHelpers::format_price()); ?>
                                                         <?php endif; ?>
                                                     <?php endforeach; ?>
                                                 </p>
                                             </div>
                                         <?php endwhile; ?>
                                     <?php endif; ?>
-                                    <?php get_template_part("template-parts/property/room-features"); ?>
+                                    <?php get_template_part("template-parts/property/property-element/room-features"); ?>
                                 </div>
                             </div>
                         </div>

@@ -1,0 +1,1502 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: estateagency\n"
+"POT-Creation-Date: 2020-05-25 18:18+0200\n"
+"PO-Revision-Date: 2020-05-25 18:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_US\n"
+"X-Poedit-KeywordsList: __;_n;_e:1,2;_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive-property.php:14 inc/post-types.php:9 inc/post-types.php:12
+#: single-agent.php:39 taxonomy-property_city.php:23
+msgid "Property"
+msgstr ""
+
+#: archive-property.php:26
+msgid "There are no properties that match your search criteria."
+msgstr ""
+
+#: archive-property.php:28
+msgid "There are no property listings online yet"
+msgstr ""
+
+#: class/class_estateagency_title.php:44
+msgid "Articles of the category : "
+msgstr ""
+
+#: class/class_estateagency_title.php:46
+msgid "Articles of the tag : "
+msgstr ""
+
+#: class/class_estateagency_title.php:48
+msgid "Properties managed by the agent : "
+msgstr ""
+
+#: class/class_estateagency_title.php:50
+msgid "Properties located in : "
+msgstr ""
+
+#: class/class_estateagency_title.php:66
+msgid "Blog Default"
+msgstr ""
+
+#: class/helpers/class_estateagency_format_helpers.php:51
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:46
+msgid "Phone"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:49
+msgid "Agency phone number (ex: 01 12 34 56 78)."
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:53
+msgid "Address"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:56
+msgid "Agency address (ex: 16 Creek Ave. Farming, NY)."
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:60 inc/comments.php:31
+msgid "Email"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:63
+msgid "Agency email (ex: monsite@contact.com)."
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:67
+msgid "Facebook"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:70
+msgid "Lien Facebook (ex: https://www.facebook.com/pseudo)."
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:74
+msgid "Twitter"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:77
+msgid "Lien Twitter (ex: https://twitter.com/pseudo)."
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:81
+msgid "Instagram"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:84
+msgid "Lien Instagram (ex: https://www.instagram.com/pseudo)."
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:88
+msgid "Opening hours"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:91
+msgid "opening_hours (ex: Mon - Sat, 08 AM - 06 PM)."
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:106
+#: class/options/class_estateagency_option_agency.php:125
+msgid "Agency information"
+msgstr ""
+
+#: class/options/class_estateagency_option_agency.php:107
+msgid "Agency"
+msgstr ""
+
+#: class/walkers/class_estateagency_comment_walker.php:53
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: class/walkers/class_estateagency_comment_walker.php:55
+msgid "Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved."
+msgstr ""
+
+#: class/walkers/class_estateagency_comment_walker.php:80
+msgid "Reply"
+msgstr ""
+
+#: class/walkers/class_estateagency_comment_walker.php:82
+msgid "Edit"
+msgstr ""
+
+#: class/widget/class_estateagency_best_agents_widget.php:14
+msgid "Best agents"
+msgstr ""
+
+#: class/widget/class_estateagency_best_agents_widget.php:16
+msgid "A list of the best real estate agents."
+msgstr ""
+
+#: class/widget/class_estateagency_best_agents_widget.php:21
+#: class/widget/class_estateagency_city_property_widget.php:21
+#: class/widget/class_estateagency_contact_widget.php:21
+#: class/widget/class_estateagency_search_property_widget.php:21
+#: class/widget/class_estateagency_social_links_widget.php:21
+msgid "Title"
+msgstr ""
+
+#: class/widget/class_estateagency_best_agents_widget.php:22
+msgid "Number of agents to show:"
+msgstr ""
+
+#: class/widget/class_estateagency_best_agents_widget.php:33
+msgid "Best Agents"
+msgstr ""
+
+#: class/widget/class_estateagency_best_agents_widget.php:81
+#, php-format
+msgid "%d property"
+msgstr ""
+
+#: class/widget/class_estateagency_best_agents_widget.php:83
+msgid "0 property"
+msgstr ""
+
+#: class/widget/class_estateagency_city_property_widget.php:14
+msgid "City Property"
+msgstr ""
+
+#: class/widget/class_estateagency_city_property_widget.php:16
+msgid "Display the list of cities where the properties are located."
+msgstr ""
+
+#: class/widget/class_estateagency_city_property_widget.php:36
+msgid "Property City"
+msgstr ""
+
+#: class/widget/class_estateagency_contact_widget.php:14
+msgid "Contact"
+msgstr ""
+
+#: class/widget/class_estateagency_contact_widget.php:16
+msgid "Display contact modes."
+msgstr ""
+
+#: class/widget/class_estateagency_contact_widget.php:36
+#: template-parts/property/property-single/contact.php:11
+msgid "Contact Us"
+msgstr ""
+
+#: class/widget/class_estateagency_search_property_widget.php:14
+#: class/widget/class_estateagency_search_property_widget.php:32
+msgid "Search Property"
+msgstr ""
+
+#: class/widget/class_estateagency_search_property_widget.php:16
+msgid "Search properties according to one or more filters."
+msgstr ""
+
+#: class/widget/class_estateagency_social_links_widget.php:14
+msgid "Social links"
+msgstr ""
+
+#: class/widget/class_estateagency_social_links_widget.php:16
+msgid "Display the links to the agency's social networks."
+msgstr ""
+
+#: class/widget/class_estateagency_social_links_widget.php:36
+msgid "Social"
+msgstr ""
+
+#: functions.php:66
+#: template-parts/property/property-element/room-features.php:12
+#: template-parts/property/property-single/details.php:73
+#: template-parts/property/property-single/details.php:105
+#: template-parts/section/featured-properties.php:99
+msgid " sqft"
+msgstr ""
+
+#: header.php:22 header.php:57
+msgid "Submit Property"
+msgstr ""
+
+#: header.php:68
+msgid "Home page"
+msgstr ""
+
+#: inc/admin.php:10 inc/admin.php:58 inc/admin.php:85
+msgid "Thumbnail"
+msgstr ""
+
+#: inc/admin.php:12 inc/post-types.php:48 inc/post-types.php:51
+#: inc/post-types.php:87 inc/post-types.php:257 inc/taxonomy.php:63
+#: template-parts/property/property-single/details.php:80
+msgid "Agent"
+msgstr ""
+
+#: inc/admin.php:13 template-parts/section/search.php:72
+#: template-parts/widget/search-property.php:56
+msgid "City"
+msgstr ""
+
+#: inc/admin.php:14 inc/post-types.php:205 inc/taxonomy.php:11
+#: template-parts/property/property-single/details.php:92
+msgid "Contract type"
+msgstr ""
+
+#: inc/admin.php:169
+#, php-format
+msgid "+ %s"
+msgstr ""
+
+#: inc/comments.php:30
+msgid "Name"
+msgstr ""
+
+#: inc/comments.php:32
+msgid "Website"
+msgstr ""
+
+#: inc/comments.php:58
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: inc/comments.php:65
+msgid "Send Message"
+msgstr ""
+
+#: inc/comments.php:67
+msgid "Leave A Comment"
+msgstr ""
+
+#: inc/customize/customize.php:9 inc/customize/customize.php:30
+msgid "Theme appearance"
+msgstr ""
+
+#: inc/customize/customize.php:18
+msgid "Upload a logo for header"
+msgstr ""
+
+#: inc/customize/customize.php:39
+msgid "Upload a logo for footer"
+msgstr ""
+
+#: inc/customize/customize.php:52
+msgid "Colors"
+msgstr ""
+
+#: inc/customize/customize.php:60
+msgid "Background color"
+msgstr ""
+
+#: inc/customize/customize.php:67
+msgid "Background color secondary"
+msgstr ""
+
+#: inc/customize/customize.php:74
+msgid "Primary color"
+msgstr ""
+
+#: inc/customize/customize.php:81
+msgid "Headings color"
+msgstr ""
+
+#: inc/customize/customize.php:88
+msgid "Headings color secondary"
+msgstr ""
+
+#: inc/customize/customize.php:95
+msgid "Text color"
+msgstr ""
+
+#: inc/menus.php:8
+msgid "main navigation"
+msgstr ""
+
+#: inc/post-types.php:11
+msgid "Properties"
+msgstr ""
+
+#: inc/post-types.php:13
+msgid "Edit property"
+msgstr ""
+
+#: inc/post-types.php:14
+msgid "New property"
+msgstr ""
+
+#: inc/post-types.php:15
+msgid "View property"
+msgstr ""
+
+#: inc/post-types.php:16
+msgid "View properties"
+msgstr ""
+
+#: inc/post-types.php:17
+msgid "Search properties"
+msgstr ""
+
+#: inc/post-types.php:18
+msgid "No properties found."
+msgstr ""
+
+#: inc/post-types.php:19
+msgid "No properties found in Trash"
+msgstr ""
+
+#: inc/post-types.php:20
+msgid "All properties"
+msgstr ""
+
+#: inc/post-types.php:21
+msgid "Property archive"
+msgstr ""
+
+#: inc/post-types.php:22
+msgid "Property attributes"
+msgstr ""
+
+#: inc/post-types.php:23
+msgid "Insert into property"
+msgstr ""
+
+#: inc/post-types.php:24
+msgid "Uploaded to this property"
+msgstr ""
+
+#: inc/post-types.php:25
+msgid "Filter properties list"
+msgstr ""
+
+#: inc/post-types.php:26
+msgid "Properties list navigation"
+msgstr ""
+
+#: inc/post-types.php:27
+msgid "Properties list"
+msgstr ""
+
+#: inc/post-types.php:28
+msgid "Property published."
+msgstr ""
+
+#: inc/post-types.php:29
+msgid "Property published privately."
+msgstr ""
+
+#: inc/post-types.php:30
+msgid "Property reverted to draft."
+msgstr ""
+
+#: inc/post-types.php:31
+msgid "Property scheduled."
+msgstr ""
+
+#: inc/post-types.php:32
+msgid "Property updated."
+msgstr ""
+
+#: inc/post-types.php:50 inc/post-types.php:256 inc/taxonomy.php:62
+msgid "Agents"
+msgstr ""
+
+#: inc/post-types.php:52
+msgid "Edit agent"
+msgstr ""
+
+#: inc/post-types.php:53
+msgid "New agent"
+msgstr ""
+
+#: inc/post-types.php:54
+msgid "View agent"
+msgstr ""
+
+#: inc/post-types.php:55
+msgid "View agents"
+msgstr ""
+
+#: inc/post-types.php:56
+msgid "Search agents"
+msgstr ""
+
+#: inc/post-types.php:57
+msgid "No agents found."
+msgstr ""
+
+#: inc/post-types.php:58
+msgid "No agents found in Trash"
+msgstr ""
+
+#: inc/post-types.php:59
+msgid "All agents"
+msgstr ""
+
+#: inc/post-types.php:60
+msgid "Agent archive"
+msgstr ""
+
+#: inc/post-types.php:61
+msgid "Agent attributes"
+msgstr ""
+
+#: inc/post-types.php:62
+msgid "Insert into agent"
+msgstr ""
+
+#: inc/post-types.php:63
+msgid "Uploaded to this agent"
+msgstr ""
+
+#: inc/post-types.php:64
+msgid "Filter agents list"
+msgstr ""
+
+#: inc/post-types.php:65 inc/post-types.php:271 inc/taxonomy.php:77
+msgid "Agents list navigation"
+msgstr ""
+
+#: inc/post-types.php:66 inc/post-types.php:272 inc/taxonomy.php:78
+msgid "Agents list"
+msgstr ""
+
+#: inc/post-types.php:67
+msgid "Agent published."
+msgstr ""
+
+#: inc/post-types.php:68
+msgid "Agent published privately."
+msgstr ""
+
+#: inc/post-types.php:69
+msgid "Agent reverted to draft."
+msgstr ""
+
+#: inc/post-types.php:70
+msgid "Agent scheduled."
+msgstr ""
+
+#: inc/post-types.php:71
+msgid "Agent updated."
+msgstr ""
+
+#: inc/post-types.php:89
+msgid "Partners"
+msgstr ""
+
+#: inc/post-types.php:90
+msgid "Partner"
+msgstr ""
+
+#: inc/post-types.php:91
+msgid "Edit partner"
+msgstr ""
+
+#: inc/post-types.php:92
+msgid "New partner"
+msgstr ""
+
+#: inc/post-types.php:93
+msgid "View partner"
+msgstr ""
+
+#: inc/post-types.php:94
+msgid "View partners"
+msgstr ""
+
+#: inc/post-types.php:95
+msgid "Search partners"
+msgstr ""
+
+#: inc/post-types.php:96
+msgid "No partners found."
+msgstr ""
+
+#: inc/post-types.php:97
+msgid "No partners found in Trash"
+msgstr ""
+
+#: inc/post-types.php:98
+msgid "All partners"
+msgstr ""
+
+#: inc/post-types.php:99
+msgid "Partner archive"
+msgstr ""
+
+#: inc/post-types.php:100
+msgid "Partner attributes"
+msgstr ""
+
+#: inc/post-types.php:101
+msgid "Insert into partner"
+msgstr ""
+
+#: inc/post-types.php:102
+msgid "Uploaded to this partner"
+msgstr ""
+
+#: inc/post-types.php:103
+msgid "Filter partners list"
+msgstr ""
+
+#: inc/post-types.php:104
+msgid "Partners list navigation"
+msgstr ""
+
+#: inc/post-types.php:105
+msgid "Partners list"
+msgstr ""
+
+#: inc/post-types.php:106
+msgid "Partner published."
+msgstr ""
+
+#: inc/post-types.php:107
+msgid "Partner published privately."
+msgstr ""
+
+#: inc/post-types.php:108
+msgid "Partner reverted to draft."
+msgstr ""
+
+#: inc/post-types.php:109
+msgid "Partner scheduled."
+msgstr ""
+
+#: inc/post-types.php:110
+msgid "Partner updated."
+msgstr ""
+
+#: inc/post-types.php:126 inc/post-types.php:129
+msgid "Skill"
+msgstr ""
+
+#: inc/post-types.php:128
+msgid "Skills"
+msgstr ""
+
+#: inc/post-types.php:130
+msgid "Edit skill"
+msgstr ""
+
+#: inc/post-types.php:131
+msgid "New skill"
+msgstr ""
+
+#: inc/post-types.php:132
+msgid "View skill"
+msgstr ""
+
+#: inc/post-types.php:133
+msgid "View skills"
+msgstr ""
+
+#: inc/post-types.php:134
+msgid "Search skills"
+msgstr ""
+
+#: inc/post-types.php:135
+msgid "No skills found."
+msgstr ""
+
+#: inc/post-types.php:136
+msgid "No skills found in Trash"
+msgstr ""
+
+#: inc/post-types.php:137
+msgid "All skills"
+msgstr ""
+
+#: inc/post-types.php:138
+msgid "Partner skill"
+msgstr ""
+
+#: inc/post-types.php:139
+msgid "Skill attributes"
+msgstr ""
+
+#: inc/post-types.php:140
+msgid "Insert into skill"
+msgstr ""
+
+#: inc/post-types.php:141
+msgid "Uploaded to this skill"
+msgstr ""
+
+#: inc/post-types.php:142
+msgid "Filter skills list"
+msgstr ""
+
+#: inc/post-types.php:143
+msgid "Skills list navigation"
+msgstr ""
+
+#: inc/post-types.php:144
+msgid "Skills list"
+msgstr ""
+
+#: inc/post-types.php:145
+msgid "Skill published."
+msgstr ""
+
+#: inc/post-types.php:146
+msgid "Skill published privately."
+msgstr ""
+
+#: inc/post-types.php:147
+msgid "Skill reverted to draft."
+msgstr ""
+
+#: inc/post-types.php:148
+msgid "Skill scheduled."
+msgstr ""
+
+#: inc/post-types.php:149
+msgid "Skill updated."
+msgstr ""
+
+#: inc/post-types.php:165 inc/post-types.php:168
+msgid "Testimonial"
+msgstr ""
+
+#: inc/post-types.php:167
+msgid "Testimonials"
+msgstr ""
+
+#: inc/post-types.php:169
+msgid "Edit testimonial"
+msgstr ""
+
+#: inc/post-types.php:170
+msgid "New testimonial"
+msgstr ""
+
+#: inc/post-types.php:171
+msgid "View testimonial"
+msgstr ""
+
+#: inc/post-types.php:172
+msgid "View testimonials"
+msgstr ""
+
+#: inc/post-types.php:173
+msgid "Search testimonials"
+msgstr ""
+
+#: inc/post-types.php:174
+msgid "No testimonials found."
+msgstr ""
+
+#: inc/post-types.php:175
+msgid "No testimonials found in Trash"
+msgstr ""
+
+#: inc/post-types.php:176
+msgid "All testimonials"
+msgstr ""
+
+#: inc/post-types.php:177
+msgid "Partner testimonial"
+msgstr ""
+
+#: inc/post-types.php:178
+msgid "Testimonial attributes"
+msgstr ""
+
+#: inc/post-types.php:179
+msgid "Insert into testimonial"
+msgstr ""
+
+#: inc/post-types.php:180
+msgid "Uploaded to this testimonial"
+msgstr ""
+
+#: inc/post-types.php:181
+msgid "Filter testimonials list"
+msgstr ""
+
+#: inc/post-types.php:182
+msgid "Testimonials list navigation"
+msgstr ""
+
+#: inc/post-types.php:183
+msgid "Testimonials list"
+msgstr ""
+
+#: inc/post-types.php:184
+msgid "Testimonial published."
+msgstr ""
+
+#: inc/post-types.php:185
+msgid "Testimonial published privately."
+msgstr ""
+
+#: inc/post-types.php:186
+msgid "Testimonial reverted to draft."
+msgstr ""
+
+#: inc/post-types.php:187
+msgid "Testimonial scheduled."
+msgstr ""
+
+#: inc/post-types.php:188
+msgid "Testimonial updated."
+msgstr ""
+
+#: inc/post-types.php:204 inc/taxonomy.php:10
+msgid "Contract types"
+msgstr ""
+
+#: inc/post-types.php:206 inc/taxonomy.php:12
+msgid "Search Contract types"
+msgstr ""
+
+#: inc/post-types.php:207 inc/taxonomy.php:13
+msgid "Popular Contract types"
+msgstr ""
+
+#: inc/post-types.php:208 inc/taxonomy.php:14
+msgid "All Contract types"
+msgstr ""
+
+#: inc/post-types.php:209 inc/taxonomy.php:15
+msgid "Edit Contract type"
+msgstr ""
+
+#: inc/post-types.php:210 inc/taxonomy.php:16
+msgid "View Contract type"
+msgstr ""
+
+#: inc/post-types.php:211 inc/taxonomy.php:17
+msgid "Update Contract type"
+msgstr ""
+
+#: inc/post-types.php:212 inc/taxonomy.php:18
+msgid "Add New Contract type"
+msgstr ""
+
+#: inc/post-types.php:213 inc/taxonomy.php:19
+msgid "New Contract type Name"
+msgstr ""
+
+#: inc/post-types.php:214 inc/taxonomy.php:20
+msgid "Separate Contract types with commas"
+msgstr ""
+
+#: inc/post-types.php:215 inc/taxonomy.php:21
+msgid "Add or remove Contract types"
+msgstr ""
+
+#: inc/post-types.php:216 inc/taxonomy.php:22
+msgid "Choose from the most used Contract types"
+msgstr ""
+
+#: inc/post-types.php:217 inc/taxonomy.php:23
+msgid "No Contract types found."
+msgstr ""
+
+#: inc/post-types.php:218 inc/taxonomy.php:24
+msgid "No Contract types"
+msgstr ""
+
+#: inc/post-types.php:219 inc/taxonomy.php:25
+msgid "Contract types list navigation"
+msgstr ""
+
+#: inc/post-types.php:220 inc/taxonomy.php:26
+msgid "Contract types list"
+msgstr ""
+
+#: inc/post-types.php:221 inc/taxonomy.php:27
+msgid "&larr; Back to Contract types"
+msgstr ""
+
+#: inc/post-types.php:230 inc/taxonomy.php:36
+#: template-parts/section/search.php:62
+#: template-parts/widget/search-property.php:46
+msgid "Types"
+msgstr ""
+
+#: inc/post-types.php:231 inc/taxonomy.php:37
+msgid "Type"
+msgstr ""
+
+#: inc/post-types.php:232 inc/taxonomy.php:38
+msgid "Search Types"
+msgstr ""
+
+#: inc/post-types.php:233 inc/taxonomy.php:39
+msgid "Popular Types"
+msgstr ""
+
+#: inc/post-types.php:234 inc/taxonomy.php:40
+msgid "All Types"
+msgstr ""
+
+#: inc/post-types.php:235 inc/taxonomy.php:41
+msgid "Edit Type"
+msgstr ""
+
+#: inc/post-types.php:236 inc/taxonomy.php:42
+msgid "View Type"
+msgstr ""
+
+#: inc/post-types.php:237 inc/taxonomy.php:43
+msgid "Update Type"
+msgstr ""
+
+#: inc/post-types.php:238 inc/taxonomy.php:44
+msgid "Add New Type"
+msgstr ""
+
+#: inc/post-types.php:239 inc/taxonomy.php:45
+msgid "New Type Name"
+msgstr ""
+
+#: inc/post-types.php:240 inc/taxonomy.php:46
+msgid "Separate Types with commas"
+msgstr ""
+
+#: inc/post-types.php:241 inc/taxonomy.php:47
+msgid "Add or remove Types"
+msgstr ""
+
+#: inc/post-types.php:242 inc/taxonomy.php:48
+msgid "Choose from the most used Types"
+msgstr ""
+
+#: inc/post-types.php:243 inc/taxonomy.php:49
+msgid "No Types found."
+msgstr ""
+
+#: inc/post-types.php:244 inc/taxonomy.php:50
+msgid "No Types"
+msgstr ""
+
+#: inc/post-types.php:245 inc/taxonomy.php:51
+msgid "Types list navigation"
+msgstr ""
+
+#: inc/post-types.php:246 inc/taxonomy.php:52
+msgid "Types list"
+msgstr ""
+
+#: inc/post-types.php:247 inc/taxonomy.php:53
+msgid "&larr; Back to Types"
+msgstr ""
+
+#: inc/post-types.php:258 inc/taxonomy.php:64
+msgid "Search Agents"
+msgstr ""
+
+#: inc/post-types.php:259 inc/taxonomy.php:65
+msgid "Popular Agents"
+msgstr ""
+
+#: inc/post-types.php:260 inc/taxonomy.php:66
+msgid "All Agents"
+msgstr ""
+
+#: inc/post-types.php:261 inc/taxonomy.php:67
+msgid "Edit Agent"
+msgstr ""
+
+#: inc/post-types.php:262 inc/taxonomy.php:68
+msgid "View Agent"
+msgstr ""
+
+#: inc/post-types.php:263 inc/taxonomy.php:69
+msgid "Update Agent"
+msgstr ""
+
+#: inc/post-types.php:264 inc/taxonomy.php:70
+msgid "Add New Agent"
+msgstr ""
+
+#: inc/post-types.php:265 inc/taxonomy.php:71
+msgid "New Agent Name"
+msgstr ""
+
+#: inc/post-types.php:266 inc/taxonomy.php:72
+msgid "Separate Agents with commas"
+msgstr ""
+
+#: inc/post-types.php:267 inc/taxonomy.php:73
+msgid "Add or remove Agents"
+msgstr ""
+
+#: inc/post-types.php:268 inc/taxonomy.php:74
+msgid "Choose from the most used Agents"
+msgstr ""
+
+#: inc/post-types.php:269 inc/taxonomy.php:75
+msgid "No Agents found."
+msgstr ""
+
+#: inc/post-types.php:270 inc/taxonomy.php:76
+msgid "No Agents"
+msgstr ""
+
+#: inc/post-types.php:273 inc/taxonomy.php:79
+msgid "&larr; Back to Agents"
+msgstr ""
+
+#: inc/post-types.php:282 inc/post-types.php:283 inc/taxonomy.php:88
+#: inc/taxonomy.php:89
+msgid "Cities"
+msgstr ""
+
+#: inc/post-types.php:284 inc/taxonomy.php:90
+msgid "Search Cities"
+msgstr ""
+
+#: inc/post-types.php:285 inc/taxonomy.php:91
+msgid "Popular Cities"
+msgstr ""
+
+#: inc/post-types.php:286 inc/taxonomy.php:92
+msgid "All Cities"
+msgstr ""
+
+#: inc/post-types.php:287 inc/taxonomy.php:93
+msgid "Edit City"
+msgstr ""
+
+#: inc/post-types.php:288 inc/taxonomy.php:94
+msgid "View City"
+msgstr ""
+
+#: inc/post-types.php:289 inc/taxonomy.php:95
+msgid "Update City"
+msgstr ""
+
+#: inc/post-types.php:290 inc/taxonomy.php:96
+msgid "Add New City"
+msgstr ""
+
+#: inc/post-types.php:291 inc/taxonomy.php:97
+msgid "New City Name"
+msgstr ""
+
+#: inc/post-types.php:292 inc/taxonomy.php:98
+msgid "Separate Cities with commas"
+msgstr ""
+
+#: inc/post-types.php:293 inc/taxonomy.php:99
+msgid "Add or remove Cities"
+msgstr ""
+
+#: inc/post-types.php:294 inc/taxonomy.php:100
+msgid "Choose from the most used Cities"
+msgstr ""
+
+#: inc/post-types.php:295 inc/taxonomy.php:101
+msgid "No Cities found."
+msgstr ""
+
+#: inc/post-types.php:296 inc/taxonomy.php:102
+msgid "No Cities"
+msgstr ""
+
+#: inc/post-types.php:297 inc/taxonomy.php:103
+msgid "Cities list navigation"
+msgstr ""
+
+#: inc/post-types.php:298 inc/taxonomy.php:104
+msgid "Cities list"
+msgstr ""
+
+#: inc/post-types.php:299 inc/taxonomy.php:105
+msgid "&larr; Back to Cities"
+msgstr ""
+
+#: inc/post-types.php:305 inc/taxonomy.php:111
+msgctxt "URL"
+msgid "city"
+msgstr ""
+
+#: inc/query/property.php:149
+msgctxt "URL"
+msgid "sale"
+msgstr ""
+
+#: inc/query/property.php:150 template-parts/section/search.php:11
+#: template-parts/widget/search-property.php:10
+msgctxt "URL"
+msgid "rent"
+msgstr ""
+
+#: inc/query/property.php:154
+msgctxt "URL"
+msgid "property"
+msgstr ""
+
+#: inc/sidebar.php:13
+msgid "Property sidebar"
+msgstr ""
+
+#: inc/sidebar.php:34
+msgid "Footer sidebar"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:161
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:169
+#: ressources/node_modules/yargs/lib/usage.js:158
+msgid "Commands:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:169
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:179
+#: ressources/node_modules/yargs/lib/usage.js:166
+msgid "aliases:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:228
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:241
+#: ressources/node_modules/yargs/lib/usage.js:225
+msgid "boolean"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:229
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:242
+#: ressources/node_modules/yargs/lib/usage.js:226
+msgid "count"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:230
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:231
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:243
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:244
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+#: ressources/node_modules/yargs/lib/usage.js:227
+#: ressources/node_modules/yargs/lib/usage.js:228
+msgid "string"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:232
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:245
+#: ressources/node_modules/yargs/lib/usage.js:229
+msgid "array"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:233
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:246
+#: ressources/node_modules/yargs/lib/usage.js:230
+msgid "number"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:237
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:250
+#: ressources/node_modules/yargs/lib/usage.js:234
+msgid "required"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:238
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:251
+#: ressources/node_modules/yargs/lib/usage.js:235
+msgid "choices:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:257
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:270
+#: ressources/node_modules/yargs/lib/usage.js:254
+msgid "Examples:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:358
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:385
+#: ressources/node_modules/yargs/lib/usage.js:354
+msgid "generated-value"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:380
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:177
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:407
+#: ressources/node_modules/yargs/lib/usage.js:376
+msgid "default:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:26
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:49
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:26
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:49
+#: ressources/node_modules/yargs/lib/validation.js:22
+#: ressources/node_modules/yargs/lib/validation.js:37
+#, javascript-format
+msgid "Not enough non-option arguments: got %s, need at least %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:37
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:37
+#: ressources/node_modules/yargs/lib/validation.js:26
+#, javascript-format
+msgid "Too many non-option arguments: got %s, maximum of %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:183
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:185
+#: ressources/node_modules/yargs/lib/validation.js:171
+msgid "Invalid values:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:186
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:188
+#: ressources/node_modules/yargs/lib/validation.js:174
+#, javascript-format
+msgid "Argument: %s, Given: %s, Choices: %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:212
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:218
+#: ressources/node_modules/yargs/lib/validation.js:200
+#, javascript-format
+msgid "Argument check failed: %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:276
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:283
+#: ressources/node_modules/yargs/lib/validation.js:270
+msgid "Implications failed:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:305
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:313
+#, javascript-format
+msgid "Arguments %s and %s are mutually exclusive"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:324
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:332
+#: ressources/node_modules/yargs/lib/validation.js:294
+#, javascript-format
+msgid "Did you mean %s?"
+msgstr ""
+
+#: ressources/node_modules/sass-graph/node_modules/yargs-parser/index.js:301
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:382
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:392
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:446
+#: ressources/node_modules/yargs-parser/index.js:301
+#, javascript-format
+msgid "Not enough arguments following: %s"
+msgstr ""
+
+#: ressources/node_modules/sass-graph/node_modules/yargs-parser/index.js:449
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:591
+#: ressources/node_modules/yargs-parser/index.js:449
+#, javascript-format
+msgid "Invalid JSON config file: %s"
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:372
+#, javascript-format
+msgid "Argument unexpected for: %s"
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:941
+#, javascript-format
+msgid "Invalid configuration: %s, opts.count excludes opts.array."
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:944
+#, javascript-format
+msgid "Invalid configuration: %s, opts.count excludes opts.narg."
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "big_int"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "num"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "template_head"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "comment2"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "regexp"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "operator"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "eof"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "expand"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "punc"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "arrow"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "name"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "atom"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "keyword"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "("
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ")"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ":"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ";"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ","
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "]"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "}"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "{"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "["
+msgstr ""
+
+#: single-agent.php:55 template-parts/property/list.php:23
+#: template-parts/property/property-list-card.php:10
+#: template-parts/section/featured-properties.php:45
+#: template-parts/section/top-properties.php:53
+#, php-format
+msgid "For %s"
+msgstr ""
+
+#: single-agent.php:80
+msgid "There are no real estate ads online managed by "
+msgstr ""
+
+#: taxonomy-property_city.php:27
+msgid "There are no real estate listings online for the city of "
+msgstr ""
+
+#: template-parts/error/404.php:13
+msgid "Page not found"
+msgstr ""
+
+#: template-parts/error/404.php:16
+msgid "we are sorry, but the page you requested was not found"
+msgstr ""
+
+#: template-parts/header/header-infos.php:14
+msgid "Phone:"
+msgstr ""
+
+#: template-parts/header/header-infos.php:21
+msgid "Address:"
+msgstr ""
+
+#: template-parts/header/header-infos.php:28
+msgid "Email:"
+msgstr ""
+
+#: template-parts/post/post-single/content.php:13
+#: template-parts/post/post-single/tag.php:19
+msgid "Share:"
+msgstr ""
+
+#: template-parts/post/post-single/featured-posts.php:24
+msgid "You May Also Like"
+msgstr ""
+
+#: template-parts/post/posts-list.php:24
+msgid "There are no articles online yet"
+msgstr ""
+
+#: template-parts/property/property-element/price.php:10
+#: template-parts/section/property-hero.php:38
+msgid "Start From:"
+msgstr ""
+
+#: template-parts/property/property-element/price.php:21
+#: template-parts/property/property-single/details.php:43
+#: template-parts/section/featured-properties.php:85
+#: template-parts/section/property-hero.php:42
+#, php-format
+msgid "$%s"
+msgstr ""
+
+#: template-parts/property/property-element/price.php:23
+#: template-parts/property/property-single/details.php:45
+#: template-parts/section/property-hero.php:44
+#, php-format
+msgid "$%s / month"
+msgstr ""
+
+#: template-parts/property/property-element/room-features.php:16
+#, php-format
+msgid "%d Bedroom"
+msgstr ""
+
+#: template-parts/property/property-element/room-features.php:20
+#, php-format
+msgid "%d Bathroom"
+msgstr ""
+
+#: template-parts/property/property-element/room-features.php:26
+#, php-format
+msgid "%d Garage"
+msgstr ""
+
+#: template-parts/property/property-element/room-features.php:28
+msgid "0 garage"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:11
+#: template-parts/property/property-single/details.php:23
+msgid "Description"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:20
+msgid "Overview"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:26
+msgid "Amenities"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:39
+msgid "Price"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:50
+msgid "Property Type"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:54
+msgid "Year Built"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:60
+msgid "Bathrooms"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:64
+msgid "Rooms"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:68
+msgid "Parking lots"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:72
+msgid "Lot area"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:86
+msgid "Reference"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:96
+msgid "Beds"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:100
+msgid "Garages"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:104
+msgid "Home area"
+msgstr ""
+
+#: template-parts/property/property-single/details.php:108
+msgid "Gara Size"
+msgstr ""
+
+#: template-parts/section/breadcrumb.php:17
+msgid "Home"
+msgstr ""
+
+#: template-parts/section/featured-properties.php:41
+msgid "feature"
+msgstr ""
+
+#: template-parts/section/featured-properties.php:87
+msgid "month"
+msgstr ""
+
+#: template-parts/section/search.php:47
+#: template-parts/widget/search-property.php:31
+msgid "Sale"
+msgstr ""
+
+#: template-parts/section/search.php:51
+#: template-parts/widget/search-property.php:35
+msgid "Rent"
+msgstr ""
+
+#: template-parts/section/search.php:57
+#: template-parts/widget/search-property.php:41
+msgid "All types"
+msgstr ""
+
+#: template-parts/section/search.php:67
+#: template-parts/widget/search-property.php:51
+msgid "All cities"
+msgstr ""
+
+#: template-parts/section/search.php:77
+#: template-parts/widget/search-property.php:61
+msgid "Bedroom"
+msgstr ""
+
+#: template-parts/section/search.php:82
+#: template-parts/widget/search-property.php:66
+msgid "Bathroom"
+msgstr ""
+
+#: template-parts/section/search.php:86
+#: template-parts/widget/search-property.php:71
+msgid "Garage"
+msgstr ""
+
+#: template-parts/section/search.php:91
+#: template-parts/widget/search-property.php:76
+msgid "Parkings"
+msgstr ""

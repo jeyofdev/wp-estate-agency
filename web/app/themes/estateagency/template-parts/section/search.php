@@ -88,10 +88,10 @@
 
                         <div class="form-group">
                             <input type="number" name="parkings" id="parkings" placeholder="1" value="<?= esc_attr($currentParkings); ?>">
-                            <label for="parkings"><?= __("Parkings", "estateagency"); ?></label>
+                            <label for="parkings"><?= __("Parking", "estateagency"); ?></label>
                         </div>
 
-                        <button type="submit" class="search-btn">Search</button>
+                        <button type="submit" class="search-btn"><?= __("Search", "estateagency"); ?></button>
                     </div>
                 </form>
             </div>
