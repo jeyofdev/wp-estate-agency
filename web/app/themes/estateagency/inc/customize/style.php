@@ -79,6 +79,11 @@ function estateagency_custom_styles (string $custom)
         ".pd-details-text .pd-details-social a:hover"
     ]);
 
+    // color secondary
+    $custom .= estateagency_generate_styles("color_secondary", "background-color", [
+        ".feature-carousel .feature-item .fi-pic .f-text"
+    ]);
+
     // headings color
     $custom .= estateagency_generate_styles("color_headings", "color", [
         "h1", "h2", "h3", "h4", "h5", "h6",
@@ -101,7 +106,8 @@ function estateagency_custom_styles (string $custom)
         ".footer-text .footer-widget h4",
         ".testimonial-section .section-title h2",
         ".about-section .video-text h4",
-        ".single-hero-item .hero-text h2"
+        ".single-hero-item .hero-text h2",
+        ".testimonial-slider .ts-item p",
     ]);
 
     // Text color
@@ -111,7 +117,6 @@ function estateagency_custom_styles (string $custom)
         ".property-section .property-list p",
         ".property-details-section p",
         ".about-section p",
-        ".testimonial-slider .ts-item p",
         ".blog-details-section p",
         ".blog-details-content .wp-block-quote p"
     ]);

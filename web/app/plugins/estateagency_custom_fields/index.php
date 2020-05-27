@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Custom fields for theme 'estateagency'
+ *
+ * Plugin Name:  estateagency_custom_fields
+ * Requires PHP: 7.1
+ *
+ */
+
 use WordPlate\Acf\ConditionalLogic;
 use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Location;
@@ -13,13 +21,8 @@ use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Fields\Wysiwyg;
 
-/**
- * Custom fields for theme 'estateagency'
- *
- * Plugin Name:  estateagency_custom_fields
- * Requires PHP: 7.1
- *
- */
+
+defined("ABSPATH") or die("unauthorized");
 
 if (!function_exists("register_extended_field_group")) {
     return;

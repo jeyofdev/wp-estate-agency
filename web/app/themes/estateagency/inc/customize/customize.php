@@ -75,6 +75,13 @@ function estateagency_customize_colors (WP_Customize_Manager $manager) : void
     ]);
 
 
+    // secondary color
+    add_setting_and_control($manager, "color_secondary", [], [
+        "section" => "estateagency_colors_general",
+        "label" => __("Secondary color", "estateagency")
+    ]);
+
+
     // headings color
     add_setting_and_control($manager, "color_headings", [], [
         "section" => "estateagency_colors_general",

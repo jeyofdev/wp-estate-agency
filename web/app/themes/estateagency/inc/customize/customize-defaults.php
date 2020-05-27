@@ -9,6 +9,7 @@ function estateagency_options (string $control)
         "background_color_primary" => "#fff",
         "background_color_secondary" => "#f2f4f5",
 		"color_primary" => "#2cbdb8",
+		"color_secondary" => "#e1481f",
 		"color_headings" => "#19191a",
 		"color_secondary_headings" => "#fff",
 		"color_content" => "#707079"

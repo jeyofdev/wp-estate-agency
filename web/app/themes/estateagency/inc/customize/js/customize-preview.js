@@ -110,6 +110,12 @@
     ])
 
 
+    // color secondary
+    customize("color_secondary", "background-color", [
+        ".feature-carousel .feature-item .fi-pic .f-text"
+    ])
+
+
     // headings color
     customize("color_headings", "color", [
         "h1", "h2", "h3", "h4", "h5", "h6",
@@ -133,7 +139,8 @@
         ".footer-text .footer-widget h4",
         ".testimonial-section .section-title h2",
         ".about-section .video-text h4",
-        ".single-hero-item .hero-text h2"
+        ".single-hero-item .hero-text h2",
+        ".blog-details-section p",
     ])
 
 
@@ -145,7 +152,6 @@
         ".property-details-section p",
         ".about-section p",
         ".testimonial-slider .ts-item p",
-        ".blog-details-section p",
         ".blog-details-content .wp-block-quote p"
     ])
 })(jQuery);
