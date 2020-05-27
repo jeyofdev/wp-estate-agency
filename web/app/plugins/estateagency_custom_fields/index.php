@@ -40,7 +40,7 @@ register_extended_field_group([
         Text::make(__("Subtitle", "estateagency"), "work_subtitle")->required()
     ],
     "location" => [
-        Location::if("page", "==", "5")
+        Location::if("page_type", "==", "front_page")
     ],
     "menu_order" => 1,
 	"position" => "normal",
@@ -62,7 +62,7 @@ register_extended_field_group([
         Text::make(__("Subtitle", "estateagency"), "featured_properties_subtitle")->required(),
     ],
     "location" => [
-        Location::if("page", "==", "5")
+        Location::if("page_type", "==", "front_page")
     ],
     "menu_order" => 2,
 	"position" => "normal",
@@ -90,7 +90,7 @@ register_extended_field_group([
         Url::make(__("Video", "estateagency"), "video_url")->required()
     ],
     "location" => [
-        Location::if("page", "==", "5"),
+        Location::if("page_type", "==", "front_page"),
         Location::if("page_template", "==", "templates/template-about.php")
     ],
     "menu_order" => 0,
@@ -114,7 +114,7 @@ register_extended_field_group([
         Text::make(__("Button label", "estateagency"), "top_properties_button_label")->required()
     ],
     "location" => [
-        Location::if("page", "==", "5")
+        Location::if("page_type", "==", "front_page")
     ],
     "menu_order" => 4,
 	"position" => "normal",
@@ -136,7 +136,7 @@ register_extended_field_group([
         Text::make(__("Subtitle", "estateagency"), "agents_subtitle")->required(),
     ],
     "location" => [
-        Location::if("page", "==", "5"),
+        Location::if("page_type", "==", "front_page"),
         Location::if("page_template", "==", "templates/template-about.php")
     ],
     "menu_order" => 5,
@@ -159,7 +159,7 @@ register_extended_field_group([
         Text::make(__("Subtitle", "estateagency"), "latest_posts_subtitle")->required()
     ],
     "location" => [
-        Location::if("page", "==", "5")
+        Location::if("page_type", "==", "front_page")
     ],
     "menu_order" => 6,
 	"position" => "normal",
@@ -185,7 +185,7 @@ register_extended_field_group([
             ->library("all")
     ],
     "location" => [
-        Location::if("page", "==", "5")
+        Location::if("page_type", "==", "front_page")
     ],
     "menu_order" => 10,
 	"position" => "normal",

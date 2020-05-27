@@ -33,7 +33,7 @@
                             <?php endwhile; ?>
                         <?php endif; ?>
                         <p><?= the_excerpt(); ?></p>
-                        <?php get_template_part("template-parts/property/room-features"); ?>
+                        <?php get_template_part("template-parts/property/property-element/room-features"); ?>
                     </div>
                 </div>
             </div>
