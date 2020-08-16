@@ -22,7 +22,7 @@ web/app/themes/estateagency/ressources/yarn.*
 
 # Dependencies
 /vendor
-/web/app/themes/estateagency/ressources/node_modules
+/**/node_modules
 
 # WP-CLI
 wp-cli.local.yml

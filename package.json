@@ -1,10 +1,24 @@
 {
   "name": "wp-estate-agency",
   "version": "1.0.0",
+  "description": "Create a theme having as subject a real estate agency",
   "main": "index.js",
-  "repository": "git@github.com:jeyofdev/wp-estate-agency.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeyofdev/wp-estate-agency.git"
+  },
+  "keywords": [
+    "webpack",
+    "wordpress",
+    "php",
+    "timber"
+  ],
   "author": "jeyofdev <jgregoire.pro@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeyofdev/wp-estate-agency/issues"
+  },
+  "homepage": "https://github.com/jeyofdev/wp-estate-agency#readme",
   "devDependencies": {
     "maildev": "^1.1.0"
   }
