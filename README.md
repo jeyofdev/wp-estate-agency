@@ -36,7 +36,7 @@ Some images are available on [Unsplash](https://unsplash.com/) by :
 
 ## Install all the dependencies :
 ```sh
-$ cd web/app/themes/estateagency/ressources
+$ cd web/app/themes/estateagency/
 $ yarn install
 $ composer install
 ```
@@ -45,26 +45,22 @@ $ composer install
 
 ## Generate the assets for static files
 
-Set the proxyTarget property in web/app/themes/estateagency/ressources/compiler/config.js:
-```js
-module.exports = {
-    ...
-    proxyTarget: 'http://localhost:8000/',
-    ...
-}
-```
-
 Go to resources folder
 ```sh
-$ cd web/app/themes/estateagency/ressources
+$ cd web/app/themes/estateagency/
 ```
 
 Production mode :
 ```sh
-$ yarn run build
+$ yarn build
+```
+
+Production mode with the assets minified :
+```sh
+$ yarn build:production
 ```
 
 Dev mode :
 ```sh
-$ yarn run start
+$ yarn start
 ```
